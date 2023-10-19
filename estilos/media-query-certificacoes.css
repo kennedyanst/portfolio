@@ -139,7 +139,25 @@
         text-indent: 30px;
     }
 
+
+    .container-parallax h2{
+        margin-left: auto;
+        text-align: center;
+        margin-bottom: 0px;
+        font-size: 40px;
+        
+    }
+     
+    section.module p {
+        padding: 50px;
+        margin-top: 30px;
+        margin-right: 40px;
+        font-family: var(--varFont);
+        font-size: 18px;
+        font-weight: bolder;
+    }
     
+
     section.module.parallax h1{
         height: 150px;
         width: 70%;
