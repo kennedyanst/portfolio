@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c9f5871d83.js" crossorigin="anonymous"></script>
+    <title>Media Query</title>
+</head>
+<body onresize="mudouTamanho">
+    <header>
+        <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
+        <menu class="container">
+            <ul class="parent-link">
+                <li><a href="index.html" class="social-links" id="neon">Início</a></li>
+                <li><a href="certificações.html" class="social-links">Certificações</a></li>
+                <li><a href="experiencias.html" class="social-links">Experiência</a></li>
+                <li><a href="projetos.html" class="social-links">Projetos</a></li>
+                <li><a href="contatos.html" class="social-links">Contatos</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.instagram.com/kennedyanst/" class="sm-icon" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/kennedyanst/" class="sm-icon" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://twitter.com/KennedyANS" class="sm-icon" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://github.com/kennedyanst" class="sm-icon" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+            </ul>
+        </menu>
+    </header>
+    <main class="header-container">
+        <article class="hdr-container-inner">
+            <h1>Bem Vindo ao meu Portfólio</h1>
+            <hr>
+            <p style="text-indent: 50px;"> 
+                
+                Olá, me chamo Kennedy Anderson, sou um <strong>Analista de Dados e BI</strong> com experiência em panejamento estrategico de negócios. Tenho habilidade com <strong>processos ETL</strong> em Python, Microsoft Power BI e Excel, além de conhecimentos em SQL, R, Linguagem DAX e M. Consigo desenvolver dashboards e relatórios para tomada de decisão, trazendo para a empresa uma visão mais ampla de seus dados.  
+            </p>
+            <hr>
+            
+        </article>
+    </main>
+    <img src="imagens/34.png" alt="imagem" class="img">
+    <script>
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        }
+           
+    </script>
+    <script>
+        function clickMenu() {
+            let menu = document.querySelector('menu');
+            if (menu.style.display == 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
