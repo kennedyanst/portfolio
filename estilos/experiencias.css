@@ -177,6 +177,11 @@ menu ul li a:hover{
         filter:blur(0);
     }
 }
+
+.see-more > a{
+    text-decoration: none;
+}
+
 .buttons{
     position: absolute;
     bottom:30px;
