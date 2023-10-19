@@ -138,7 +138,9 @@ menu ul li a:hover{
 
 .titulos > p{
     color: white;
-    font-size: 15px;
+    font-size: 13px;
+    padding: 10px;
+    text-align: justify;
 }
 
 .titulos:hover > p{
@@ -188,7 +190,9 @@ font-size: 17px;
 
 .titulos-2 > p{
 color: white;
-font-size: 15px;
+font-size: 13px;
+padding: 10px;
+text-align: justify;
 }
 
 
@@ -233,7 +237,9 @@ font-size: 15px;
     
     .titulos-3 > p{
     color: white;
-    font-size: 15px;
+    font-size: 13px;
+    padding: 10px;
+    text-align: justify;
     }
     
 

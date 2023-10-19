@@ -122,18 +122,19 @@
     }
 
     .titulos > h1, .titulos-2 > h1, .titulos-3 > h1{
-        font-size: 25px;
+        font-size: 27px;
         text-align: center;
+        padding: 20px;
     }
 
     .titulos > h2, .titulos-2 > h2, .titulos-3 > h2{
-        font-size: 21px;
-        margin-top: 10px;
+        font-size: 20px;
+        
     }
 
     .titulos > p, .titulos-2 > p, .titulos-3 > p{
-        font-size: 16px;
-        margin-top: 10px;
+        font-size: 14px;
+        padding: 30px;
         text-align: justify;
         text-indent: 30px;
     }
