@@ -101,6 +101,16 @@
         transition: 0.2s;
     
     }
+
+    h1{
+        width: 90%;
+        font-size: 50px;
+    }
+
+    p{
+        width: 90%;
+        font-size: 21px;
+    }
     
 
 }
