@@ -93,7 +93,7 @@ menu ul li a:hover{
     margin-top:50px;
 }
 .item{
-    width:170px;
+    width:130px;
     height:200px;
     background-position: 50% 50%;
     display: inline-block;
@@ -130,7 +130,7 @@ menu ul li a:hover{
     opacity: 0;
 }
 .item .content{
-    background-color: #000000c7;
+    background-color: #000000e7;
     border: 1px solid #ffffff;
     border-radius: 20px;
     position: absolute;
@@ -148,24 +148,19 @@ menu ul li a:hover{
     z-index: 11111;
 }
 .item .name{
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
     opacity: 0;
     animation:showcontent 1s ease-in-out 1 forwards
 }
 .item .des{
-    background-color: #00000083;
-    margin-right: 100px;
+    padding: 20px;
     font-size: 13px;
     opacity: 0;
     animation:showcontent 1s ease-in-out 0.3s 1 forwards
 }
-.item button{
-    padding:10px 20px;
-    border:none;
-    opacity: 0;
-    animation:showcontent 1s ease-in-out 0.6s 1 forwards
-}
+
+
 @keyframes showcontent{
     from{
         opacity: 0;
@@ -178,9 +173,6 @@ menu ul li a:hover{
     }
 }
 
-.see-more > a{
-    text-decoration: none;
-}
 
 .buttons{
     position: absolute;

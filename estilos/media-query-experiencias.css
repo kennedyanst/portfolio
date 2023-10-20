@@ -106,8 +106,8 @@
     }
 
     .carrossel{
-        width: 80%;
-        height: 500px;
+        width: 900px;
+        height: 450px;
         margin: 50px auto
     }
 
@@ -121,13 +121,15 @@
     }
 
     .item .name{
-        font-size: 40px;
+        font-size: 30px;
         font-weight: bold;
         opacity: 0;
         animation:showcontent 1s ease-in-out 1 forwards
     }
     .item .des{
         margin:20px 0;
+        padding: 10px;
+        text-align: justify;
         opacity: 0;
         animation:showcontent 1s ease-in-out 0.3s 1 forwards
     }

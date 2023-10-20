@@ -149,11 +149,10 @@
     }
      
     section.module p {
-        padding: 50px;
+        padding: 30px;
         margin-top: 30px;
-        margin-right: 40px;
         font-family: var(--varFont);
-        font-size: 18px;
+        font-size: 15px;
         font-weight: bolder;
     }
     
