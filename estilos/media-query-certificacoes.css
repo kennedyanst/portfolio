@@ -113,6 +113,17 @@
 
     }
 
+    .titulos{
+        background-color: #40371ec4;
+    }
+
+    .titulos-2{
+        background-color: #8c5818cb;
+    }
+
+    .titulos-3{
+        background-color: #59380ec4;
+    }
 
     .titulos, .titulos-2, .titulos-3{
         display: block;
@@ -133,7 +144,7 @@
     }
 
     .titulos > p, .titulos-2 > p, .titulos-3 > p{
-        font-size: 12.5px;
+        font-size: 13.5px;
         padding: 30px;
         text-align: justify;
         text-indent: 30px;
@@ -142,7 +153,7 @@
 
     .container-parallax h2{
         margin-left: auto;
-        text-align: center;
+        text-align: left;
         margin-bottom: 0px;
         font-size: 40px;
         

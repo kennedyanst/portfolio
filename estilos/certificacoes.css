@@ -296,11 +296,13 @@ section.module.parallax h1{
     margin: auto;
     border: 7px solid var(--var6);
     text-align: center;
-    font-size: 25px;
+    font-size: 22px;
     z-index: 50;
     text-transform: uppercase;
     box-shadow: 8px 8px 18px 8px var(--var7);
 }
+
+
 
 
 section.module.parallax{
