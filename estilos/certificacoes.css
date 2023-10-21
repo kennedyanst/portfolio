@@ -316,6 +316,7 @@ section.module.parallax{
     background-attachment: fixed;
     background-size: cover;
     -o-background-size: cover;
+
 }
 
 section.module.parallax:after{
