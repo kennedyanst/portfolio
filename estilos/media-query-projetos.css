@@ -4,6 +4,15 @@
 @media screen and (min-width: 768px) {
    
 
+    body, html{
+        background-image: url("../imagens/img-desk-project.png");
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        overflow-x: hidden;
+    }
+
     menu ul li {
         display: inline-block;
         border: none;

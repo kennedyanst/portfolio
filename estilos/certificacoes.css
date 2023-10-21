@@ -26,7 +26,7 @@
 
 
 body, html{
-    background-image: url("../imagens/capa_mobile.svg");
+    background-image: linear-gradient(130deg, #F2DC6D 20%, #F2C166, #A65D05, #733906, #0D0D0D);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -96,7 +96,7 @@ menu ul li a:hover{
 .titulos{
     margin-top: 20px;
     display: inline-block;
-    background-color: #40371ecc;
+    background-color: #40371e;
     text-align: center;
     padding: 10px;
     box-shadow: 10px 10px 20px black;
@@ -152,7 +152,7 @@ menu ul li a:hover{
 .titulos-2{
     margin-top: 20px;
     display: inline-block;
-    background-color: #8c5818de;
+    background-color: #8c5818;
     text-align: center;
     padding: 10px;
     box-shadow: 10px 10px 20px black;
@@ -200,7 +200,7 @@ text-align: justify;
 .titulos-3{
     margin-top: 20px;
     display: inline-block;
-    background-color: #59380ebb;
+    background-color: #59380e;
     text-align: center;
     padding: 10px;
     box-shadow: 10px 10px 20px black;
@@ -259,9 +259,9 @@ text-align: justify;
 
 .container-parallax h2{
     margin-left: auto;
-    text-align: center;
+    text-align: left;
     margin-bottom: 0px;
-    font-size: 20px;
+    font-size: 17px;
     
 }
 
@@ -294,7 +294,7 @@ section.module.parallax h1{
     background-color: #000000ef;
     padding: 30px;
     margin: auto;
-    border: 14px solid var(--var6);
+    border: 7px solid var(--var6);
     text-align: center;
     font-size: 25px;
     z-index: 50;
@@ -307,7 +307,7 @@ section.module.parallax{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh !important;
+    height: 130vh;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -328,27 +328,27 @@ section.module.parallax:after{
 }
 
 section.module.parallax-1{
-    background-image: url("../imagens/42.png");
+    background-image: url("../imagens-mobile/5.png");
 }
 
 section.module.parallax-2{
-    background-image: url("../imagens/43.png");
+    background-image: url("../imagens-mobile/6.png");
 }
 
 section.module.parallax-3{
-    background-image: url("../imagens/44.png");
+    background-image: url("../imagens-mobile/7.png");
 }
 
 section.module.parallax-4{
-    background-image: url("../imagens/45.png");
+    background-image: url("../imagens-mobile/8.png");
 }
 section.module.parallax-5{
-    background-image: url("../imagens/");
+    background-image: url("../imagens-mobile/9.png");
 }
 section.module.parallax-6{
-    background-image: url("../imagens/");
+    background-image: url("../imagens-mobile/5.png");
 }
 section.module.parallax-7{
-    background-image: url("../imagens/");
+    background-image: url("../imagens-mobile/6.png");
 }
 

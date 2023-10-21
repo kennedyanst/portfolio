@@ -189,4 +189,16 @@
         background-image: url("../imagens/45.png");
     }
 
+    section.module.parallax-5{
+        background-image: url("../imagens/42.png");
+    }
+
+    section.module.parallax-6{
+        background-image: url("../imagens/43.png");
+    }
+
+    section.module.parallax-7{
+        background-image: url("../imagens/44.png");
+    }
+
 }
