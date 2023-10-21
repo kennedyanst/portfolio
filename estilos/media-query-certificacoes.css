@@ -172,6 +172,10 @@
         box-shadow: 8px 8px 8px 8px var(--var7);
     }
 
+
+    section.module.parallax{
+        background-attachment: fixed;
+    }
     
     section.module.parallax-1{
         background-image: url("../imagens/42.png");
