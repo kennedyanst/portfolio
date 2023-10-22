@@ -150,21 +150,25 @@
         text-indent: 30px;
     }
 
+    .container-parallax{
+        display: block;
+    }
+
 
     .container-parallax h2{
-        margin-left: auto;
-        text-align: left;
-        margin-bottom: 0px;
+        margin-left: 25px;
+        text-align: center;
         font-size: 40px;
         
     }
      
     section.module p {
-        padding: 30px;
-        margin-top: 30px;
-        font-family: var(--varFont);
-        font-size: 15px;
-        font-weight: bolder;
+        padding: 10px;
+        font-size: 16px;
+        text-align: left;
+        margin: auto;
+        
+        
     }
     
 
