@@ -107,7 +107,7 @@
 
     .carrossel{
         width: 900px;
-        height: 450px;
+        height: 550px;
         margin: 50px auto
     }
 
@@ -118,7 +118,10 @@
     .item{
         width: 200px;
         height: 300px;
+        transform: translate(0, -50%);
     }
+
+    
 
     .item .name{
         font-size: 30px;
@@ -127,6 +130,8 @@
         animation:showcontent 1s ease-in-out 1 forwards
     }
     .item .des{
+        width: 200px;
+        height: 300px;
         margin:20px 0;
         padding: 10px;
         text-align: justify;
