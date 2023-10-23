@@ -78,7 +78,7 @@ menu ul li a:hover{
     position: relative;
     margin:100px 40px;
     width:60%;
-    height:450px;
+    height:500px;
     padding:50px;
     background-color: #f5f5f5;
     box-shadow: 0 30px 50px #dbdbdb71;
@@ -102,7 +102,7 @@ menu ul li a:hover{
     position: absolute;
     z-index: 1;
     top:50%;
-    transform: translate(0,-50%);
+    transform: translate(70%,-50%);
     border-radius: 20px;
     box-shadow:  0 30px 60px #06fcfc;
 }
@@ -148,12 +148,13 @@ menu ul li a:hover{
     z-index: 11111;
 }
 .item .name{
-    font-size: 17px;
+    font-size: 25px;
     font-weight: bold;
     opacity: 0;
     animation:showcontent 1s ease-in-out 1 forwards
 }
 .item .des{
+    width: 50%;
     padding: 20px;
     font-size: 13px;
     opacity: 0;
