@@ -120,5 +120,21 @@
         width: 90%;
         font-size: 21px;
     }
+
+    .Front-end{
+        margin-top: 680px;
+    }
+
+    .content{
+        height: 550px;
+        width: 1080px;
+        top: 200%;
+    }
+
+    .content-2{
+        height: 550px;
+        width: 1080px;
+        top: 412%;
+    }
     
     }
