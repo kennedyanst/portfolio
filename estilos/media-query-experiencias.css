@@ -124,6 +124,10 @@
 
     .item .content{
         width: 400px;
+        border: none;
+        background: rgba(0, 0, 0, 0.356);
+        color: white;
+        box-shadow: 10px 10px 10px 10px rgba(7, 156, 167, 0.527);
     }
 
     .item .name{
