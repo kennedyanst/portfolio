@@ -113,6 +113,7 @@
 
     .slide{
         width: 100%;
+    
     }
 
     .item{
@@ -121,7 +122,9 @@
         transform: translate(0, -50%);
     }
 
-    
+    .item .content{
+        width: 400px;
+    }
 
     .item .name{
         font-size: 30px;
@@ -130,10 +133,10 @@
         animation:showcontent 1s ease-in-out 1 forwards
     }
     .item .des{
-        width: 200px;
+        font-size: 14px;
+        width: 80%;
         height: 300px;
-        margin:20px 0;
-        padding: 10px;
+        margin: auto;
         text-align: justify;
         opacity: 0;
         animation:showcontent 1s ease-in-out 0.3s 1 forwards
