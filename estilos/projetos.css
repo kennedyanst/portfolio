@@ -121,7 +121,7 @@ p{
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-    margin: 10px 50px;
+    margin: 10px auto;
 }
 
 .content-2{
@@ -130,7 +130,7 @@ p{
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-    margin: 10px 50px;
+    margin: 50px auto;
 }
 
 .navegation{
