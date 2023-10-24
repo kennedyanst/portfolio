@@ -106,23 +106,22 @@ p{
 .Front-end{
     background-color: #0000008a;
     width: 90%;
-    margin: 30px auto;
+    margin: 10px auto;
 
 }
 
 .Front-end h1{
-    margin-top: 400px;
+    margin-top: 100px;
 }
+
 
 .content{
     height: 230px;
     width: 375px;
     border-radius: 20px;
     overflow: hidden;
-    position: absolute;
-    top: 180%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    margin: 10px 50px;
 }
 
 .content-2{
@@ -130,10 +129,8 @@ p{
     width: 375px;
     border-radius: 20px;
     overflow: hidden;
-    position: absolute;
-    top: 337%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    margin: 10px 50px;
 }
 
 .navegation{
