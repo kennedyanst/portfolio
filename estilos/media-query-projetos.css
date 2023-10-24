@@ -133,5 +133,19 @@
         width: 1080px;
         top: 412%;
     }
+
+    .content-3 {
+        height: 550px;
+        width: 1080px;
+        top: 625%;
     
     }
+
+    .content-4 {
+        height: 550px;
+        width: 1080px;
+        top: 837%;
+    
+    }
+
+}
