@@ -86,20 +86,22 @@ h1{
 }
 
 p{  
-    font-size: 18px;  
-    background-image: linear-gradient(90deg,#131626, #213A40, #32735B, #38A673, #4AD988);
+    font-size: 11px;  
+    background-image: linear-gradient(140deg,#ffffff 80%, #38A673, #4AD988);
     padding: 20px;
     margin: 90px auto;
     width: 70%;
-    height: 350px;
+    height: 450px;
     border: 2px solid #000000;
+    color: green;
+    box-shadow: inset 0 0 10px #000000;
     
 }
 
 .powerbi{
     
     width: 90%;
-    margin: 30px auto;
+    margin: 10px auto;
     
 }
 
@@ -194,9 +196,10 @@ p{
 }
 
 .bar{
+    background-color: rgba(0, 0, 0, 0.568);
     width: 30px;
     height: 10px;
-    border: 2px solid #ffffff7c;
+    border: 2px solid #4AD988;
     margin: 6px;
     border-radius: 5px;
     cursor: pointer;
@@ -204,7 +207,7 @@ p{
 }
 
 .bar:hover{
-    background: #ffffff;
+    background: #ffffffa2;
 }
 
 input{
@@ -243,6 +246,11 @@ input{
 }
 
 .slide-2 img{
+    width: 100%;
+    height: 100%;
+}
+
+.slide-2 video{
     width: 100%;
     height: 100%;
 }
