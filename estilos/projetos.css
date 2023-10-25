@@ -100,6 +100,8 @@ p{
     
 }
 
+
+
 .powerbi{
     
     width: 90%;
@@ -107,15 +109,23 @@ p{
     
 }
 
-.Front-end{
+.frontend{
     
-    width: 90%;
+    width: 95%;
     margin: 10px auto;
 }
 
+.frontend > p {
+    height: 780px;
+}
+
 .python{
-    width: 90%;
+    width: 95%;
     margin: 10px auto;
+}
+
+.python > p {
+    height: 800px;
 }
 
 .r{
