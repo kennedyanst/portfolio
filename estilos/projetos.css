@@ -147,7 +147,7 @@ p{
 .content-3 {
     height: 230px;
     width: 375px;
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
     position: relative;
     margin: 10px auto;
@@ -247,10 +247,6 @@ input{
     height: 100%;
 }
 
-.slide-2 img{
-    width: 100%;
-    height: 100%;
-}
 
 .slide-2 video{
     width: 100%;
@@ -258,9 +254,10 @@ input{
     border-radius: 20px;
 }
 
-.slide-3 img{
+.slide-3 video{
     width: 100%;
     height: 100%;
+    border-radius: 20px;
 }
 
 .slide-4 img{

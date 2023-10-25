@@ -118,7 +118,7 @@
 
     p{
         width: 90%;
-        height: 500px;
+        height: 550px;
         font-size: 16px;
     }
 
@@ -136,9 +136,12 @@
         top: 412%;
     }
 
+    
+
     .content-3 {
-        height: 550px;
-        width: 1080px;
+        height: 595px;
+        width: 1050px;
+        border-radius: 20px;
         top: 625%;
     
     }
