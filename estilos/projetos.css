@@ -270,9 +270,10 @@ input{
     border-radius: 20px;
 }
 
-.slide-4 img{
+.slide-4 video{
     width: 100%;
     height: 100%;
+    border-radius: 20px;
 }
 
 #slide1:checked ~ .s1{
