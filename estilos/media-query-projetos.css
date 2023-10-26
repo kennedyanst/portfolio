@@ -155,8 +155,9 @@
     }
 
     .content-4 {
-        height: 550px;
+        height: 580px;
         width: 1080px;
+        border-radius: 20px;
         top: 837%;
     
     }
