@@ -125,7 +125,7 @@ p{
 }
 
 .python > p {
-    height: 860px;
+    height: 870px;
 }
 
 .r{
@@ -133,6 +133,9 @@ p{
     margin: 10px auto;
 }
 
+.r > p {
+    height: 850px;
+}
 
 
 
