@@ -126,6 +126,10 @@ article p{
 }
 
 footer{
-    
-    background-color: rgba(255, 255, 255, 0.377);
+    margin-top: 50px;
+    background-color: rgba(238, 130, 238, 0.815);
+    color: black;
+    font-size: 10px;
+    text-align: center;
+    border: 1px solid black;
 }

@@ -105,6 +105,8 @@
         transition: 0.2s;
     }
 
+    
+
     .cartoes{
         display: flex;
         flex-direction: row;

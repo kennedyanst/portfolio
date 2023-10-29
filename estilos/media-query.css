@@ -145,15 +145,16 @@ Grandes telas: acima de 1200px
         display: block;
         margin-right: 40px;
         margin-top: -385px;
-        border: 2px solid white;
+        border: 2px solid transparent;
         box-shadow: 0 0 2px violet,
                                 0 0 12.5px rgb(248, 1, 248),
                                 0 0 25px rgb(248, 1, 248),
                                 0 0 50px rgb(248, 1, 248);
 
 
-        animation: borderAnimation 8s infinite linear,
-                    shadowAnimation 8s infinite linear;
+        animation: borderAnimation 5s infinite linear,
+                    shadowAnimation 3s infinite linear;
+
         }
         
         @keyframes borderAnimation {
@@ -177,10 +178,10 @@ Grandes telas: acima de 1200px
         
         @keyframes shadowAnimation{
             0% {
-                box-shadow: 0 0 2px violet,
-                                0 0 12.5px rgb(248, 1, 248),
+                box-shadow: 0 0 5px violet,
                                 0 0 25px rgb(248, 1, 248),
-                                0 0 50px rgb(248, 1, 248);
+                                0 0 50px rgb(248, 1, 248),
+                                0 0 100px rgb(248, 1, 248);
             }
 
             25% {
@@ -191,10 +192,10 @@ Grandes telas: acima de 1200px
             }
 
             50% {
-                box-shadow: 0 0 2px violet,
-                                0 0 12.5px rgb(248, 1, 248),
+                box-shadow: 0 0 5px violet,
                                 0 0 25px rgb(248, 1, 248),
-                                0 0 50px rgb(248, 1, 248);
+                                0 0 50px rgb(248, 1, 248),
+                                0 0 100px rgb(248, 1, 248);
             }
 
             100% {
@@ -205,10 +206,16 @@ Grandes telas: acima de 1200px
             }
 
         }
+
     
 
     footer{
+        background-color: rgba(0, 0, 0, 0.836);
+        color: rgb(228, 193, 228);
         margin-top: 30px;
+        font-size: 12px;
+        text-align: center;
+        border: 1px solid violet;
     }
 
 }
