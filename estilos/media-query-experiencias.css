@@ -106,9 +106,50 @@
     }
 
     .carrossel{
-        width: 900px;
-        height: 550px;
-        margin: 50px auto
+        width: 1080px;
+        height: 720px;
+        margin: 50px auto;
+        border: 2px solid cyan;
+        background-size: contain;
+        animation: shadowAnimation 7s infinite linear;
+
+    }
+
+    @keyframes shadowAnimation {
+        0% {
+            box-shadow: 0 0 5px cyan,
+                            0 0 25px cyan,
+                            0 0 50px cyan,
+                            0 0 200px cyan;
+        }
+
+        25% {
+            box-shadow: 0 0 5px rgb(0, 0, 0),
+                            0 0 25px rgb(0, 0, 0),
+                            0 0 50px rgb(0, 0, 0),
+                            0 0 200px rgb(0, 0, 0);
+        }
+
+        50% {
+            box-shadow: 0 0 5px cyan,
+                            0 0 25px cyan,
+                            0 0 50px cyan,
+                            0 0 200px cyan;
+        }
+
+        75% {
+            box-shadow: 0 0 5px rgb(0, 0, 0),
+                            0 0 25px rgb(0, 0, 0),
+                            0 0 50px rgb(0, 0, 0),
+                            0 0 200px rgb(0, 0, 0);
+        }
+
+        100% {
+            box-shadow: 0 0 5px cyan,
+                            0 0 25px cyan,
+                            0 0 50px cyan,
+                            0 0 200px cyan;
+        }
     }
 
     .slide{
@@ -119,21 +160,47 @@
     .item{
         width: 200px;
         height: 300px;
-        transform: translate(0, -50%);
+        transform: translate(50%, -50%);
+
     }
 
     .item .content{
         width: 400px;
         border: none;
-        background: rgba(0, 0, 0, 0.356);
-        color: white;
+        background: rgba(0, 0, 0, 0.664);
+        color: cyan;
+        border: 2px solid cyan;
+        animation: borderAnimation 5s infinite linear;
+    }
+
+
+    @keyframes borderAnimation {
+        0% {
+            border-color: cyan;
+        }
+
+        25% {
+            border-color: rgb(0, 0, 0);
+        }
+
+        50% {
+            border-color: cyan;
+        }
+
+        75% {
+            border-color: rgb(0, 0, 0);
+        }
+
+        100% {
+            border-color: cyan;
+        }
     }
 
     .item .name{
         font-size: 30px;
         font-weight: bold;
         opacity: 0;
-        animation:showcontent 1s ease-in-out 1 forwards
+        animation:showcontent 2s ease-in-out 1 forwards
     }
     .item .des{
         font-size: 14px;
@@ -142,10 +209,17 @@
         margin: auto;
         text-align: justify;
         opacity: 0;
-        animation:showcontent 1s ease-in-out 0.3s 1 forwards
+        animation:showcontent 2s ease-in-out 0.3s 1 forwards;
     }
 
 
-
+    footer{
+        background-color: rgba(0, 0, 0, 0.836);
+        color: cyan;
+        margin-top: 30px;
+        font-size: 12px;
+        text-align: center;
+        border: 1px solid cyan;
+    }
 
 }

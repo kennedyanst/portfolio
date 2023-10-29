@@ -334,4 +334,12 @@
         background-image: url("../imagens/parallax-imagens/cert-10.svg");
     }
 
+    footer{
+        background-color: rgba(0, 0, 0, 0.836);
+        color: var(--var7);
+        font-size: 12px;
+        text-align: center;
+        border: 2px solid var(--var6);
+    }
+
 }

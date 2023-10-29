@@ -97,7 +97,7 @@ menu ul li a:hover{
     height:200px;
     background-position: 50% 50%;
     display: inline-block;
-    transition: 0.5s;
+    transition: 1s;
     background-size: cover;
     position: absolute;
     z-index: 1;
@@ -130,8 +130,8 @@ menu ul li a:hover{
     opacity: 0;
 }
 .item .content{
-    background-color: #000000e7;
-    border: 1px solid #ffffff;
+    background-color: #000000f3;
+    border: 1px solid cyan;
     border-radius: 20px;
     position: absolute;
     top:50%;
@@ -195,8 +195,9 @@ menu ul li a:hover{
 }
 
 footer{
-    background-image: linear-gradient(90deg, #0d0d0da6, #f299a996, rgba(255, 255, 255, 0.548));
-    margin-top: 50px;
-    color: white;
-    transform: translate(0%, 50%);
+    background-color: rgba(0, 255, 255, 0.473);
+    color: black;
+    font-size: 10px;
+    text-align: center;
+    border: 1px solid black;
 }

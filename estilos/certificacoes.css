@@ -356,6 +356,10 @@ section.module.parallax-7{
 
 
 
-footer{
-    background-color: wheat;
+footer{ 
+    background-color: #f2ca50c9;
+    color: black;
+    font-size: 10px;
+    text-align: center;
+    border: 1px solid black;
 }
