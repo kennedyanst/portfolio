@@ -75,24 +75,27 @@ menu ul li a:hover{
 }
 
 
-.header-container {
+.tela_fundo {
     display: block;
     position: relative;   
     background: rgba(255, 255, 255, 0.568);
     backdrop-filter: blur(25px);
     border: 2px solid #F2A2D6;
     width: 70%; 
+    height: 100%;
     margin: 30px auto;
     padding: 3em 2.5em;
 
    
 }
 
-.hdr-container-inner{
+.tela_frente{
     width: 100%;
+    height: 100%;
     padding: 15px auto;
     border-radius: 20px 20px;
     box-shadow: 10px 10px 10px 10px #F299A9;
+    border: 2px solid #F2A2D6;
 }
 
 
@@ -106,8 +109,8 @@ h1 {
 }
 
 h2{
-    font-size: 34px;
-    margin-bottom: 48px;
+    text-align: center;
+    font-size: 30px;
 }
 
 p{
@@ -122,6 +125,13 @@ strong{
     font-weight: bolder;
 }
 
+em{
+    display: block;
+    background-color: #81525a7e;
+    width: 100%;
+    text-align: center;
+}
+
 .ul{
     font-size: 18px;;
     margin-left: 30px;
@@ -129,13 +139,25 @@ strong{
     
 
 .li{
-    margin-left: 30px;
-    font-size: 14px;
-    padding: 15px;
+    width: 70%;
+    margin: 10px 30px;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #81525a;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px #0000004f;
+    list-style-type: none;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.zap{
+    text-decoration: none;
+    color: rgb(37, 161, 37);
 }
 
 footer{
-background-image: linear-gradient(90deg, #0d0d0da6, #f299a996, rgba(255, 255, 255, 0.548));
+background-image: linear-gradient(90deg, #0d0d0dec, #f299a9e8,  #0d0d0dec);
 margin-top: 50px;
 color: white;
 }
