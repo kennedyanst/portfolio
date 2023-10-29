@@ -109,6 +109,10 @@ p{
     
 }
 
+.powerbi > p {
+    height: 950px;
+}
+
 .frontend{
     
     width: 95%;
