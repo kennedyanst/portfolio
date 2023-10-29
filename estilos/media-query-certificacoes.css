@@ -6,6 +6,13 @@
 @media screen and (min-width: 768px) {
     body, html{
         background-image: url("../imagens/47.png");
+        background-color: rgba(0, 0, 0, 0.582); /* Aqui, o último valor (0.5) controla a opacidade da cor de fundo */
+        background-blend-mode: darken; /* Isso ajuda a escurecer a imagem de fundo */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        
+        
     }
 
 
@@ -105,8 +112,6 @@
         transition: 0.2s;
     }
 
-    
-
     .cartoes{
         display: flex;
         flex-direction: row;
@@ -152,9 +157,115 @@
         text-indent: 30px;
     }
 
+    
+    section.module.parallax h1{
+        height: 250px;
+        width: 100%;
+        color: var(--var7);
+        background-color: transparent;
+        padding: 30px 0px;
+        margin: auto;
+        border: transparent;
+        text-align: center;
+        text-shadow: 3px 3px 3px black;
+        font-size: 65px;
+        z-index: 50;
+        text-transform: uppercase;
+        box-shadow: none;
+    }
+
+
+    .area-8{
+        animation: wobble-hor-bottom 3s infinite both;
+
+    }
+    
+    
+    @keyframes wobble-hor-bottom {
+        0%,
+        100% {
+          transform: translateX(0%);
+          transform-origin: 50% 50%;
+        }
+        15% {
+          transform: translateX(-30px) rotate(-6deg);
+        }
+        30% {
+          transform: translateX(15px) rotate(6deg);
+        }
+        45% {
+          transform: translateX(-15px) rotate(-3.6deg);
+        }
+        60% {
+          transform: translateX(9px) rotate(2.4deg);
+        }
+        75% {
+          transform: translateX(-6px) rotate(-1.2deg);
+        }
+      }
+      
+      .area-9{
+        animation: heartbeat 1.5s ease-in-out infinite both;
+
+      }
+
+      @keyframes heartbeat {
+        from {
+          transform: scale(1);
+          transform-origin: center center;
+          animation-timing-function: ease-out;
+        }
+        10% {
+          transform: scale(0.91);
+          animation-timing-function: ease-in;
+        }
+        17% {
+          transform: scale(0.98);
+          animation-timing-function: ease-out;
+        }
+        33% {
+          transform: scale(0.87);
+          animation-timing-function: ease-in;
+        }
+        45% {
+          transform: scale(1);
+          animation-timing-function: ease-out;
+        }
+      }
+      
+      .area-10{
+        animation: shake-horizontal 3s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+      }
+
+      @keyframes shake-horizontal {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        10%,
+        30%,
+        50%,
+        70% {
+          transform: translateX(-10px);
+        }
+        20%,
+        40%,
+        60% {
+          transform: translateX(10px);
+        }
+        80% {
+          transform: translateX(8px);
+        }
+        90% {
+          transform: translateX(-8px);
+        }
+      }
+      
+
     .container-parallax{
         display: block;
         height: 380px;
+        border-radius: 10px;
     }
 
 
@@ -164,64 +275,59 @@
         font-size: 40px;
         
     }
-     
+    
+    
     section.module p {
         padding: 10px;
         font-size: 15px;
         text-align: justify;
         margin: auto;
-        text-indent: 30px;
-
-        
+        text-indent: 30px;       
     }
     
-
-    section.module.parallax h1{
-        height: 150px;
-        width: 70%;
-        color: var(--var7);
-        background-color: #000000ef;
-        padding: 30px 0px;
-        margin: auto;
-        border: 2px solid var(--var6);
-        text-align: center;
-        font-size: 40px;
-        z-index: 50;
-        text-transform: uppercase;
-        box-shadow: 8px 8px 8px 8px var(--var7);
-    }
-
 
     section.module.parallax{
         background-attachment: fixed;
     }
     
     section.module.parallax-1{
-        background-image: url("../imagens/42.png");
+        background-image: url("../imagens/parallax-imagens/cert-1.svg");
     }
 
     section.module.parallax-2{
-        background-image: url("../imagens/43.png");
+        background-image: url("../imagens/parallax-imagens/cert-2.svg");
     }
 
     section.module.parallax-3{
-        background-image: url("../imagens/44.png");
+        background-image: url("../imagens/parallax-imagens/cert-3.svg");
     }
 
     section.module.parallax-4{
-        background-image: url("../imagens/45.png");
+        background-image: url("../imagens/parallax-imagens/cert-4.svg");
     }
 
     section.module.parallax-5{
-        background-image: url("../imagens/42.png");
+        background-image: url("../imagens/parallax-imagens/cert-5.svg");
     }
 
     section.module.parallax-6{
-        background-image: url("../imagens/43.png");
+        background-image: url("../imagens/parallax-imagens/cert-6.svg");
     }
 
     section.module.parallax-7{
-        background-image: url("../imagens/44.png");
+        background-image: url("../imagens/parallax-imagens/cert-7.svg");
+    }
+
+    section.module.parallax-8{
+        background-image: url("../imagens/parallax-imagens/cert-8.svg");
+    }
+
+    section.module.parallax-9{
+        background-image: url("../imagens/parallax-imagens/cert-9.svg");
+    }
+
+    section.module.parallax-10{
+        background-image: url("../imagens/parallax-imagens/cert-10.svg");
     }
 
 }
