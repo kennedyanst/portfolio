@@ -365,6 +365,11 @@ input{
     margin-left: -80%;
 }
 
-footer{
-    background-color: green;
+footer{ 
+    background-color:rgba(144, 238, 144, 0.74);
+    color: black;
+    margin-top: 30px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid black;
 }
