@@ -129,7 +129,7 @@ Grandes telas: acima de 1200px
             display: block;
             background: #fffcfc;
             color: rgb(148, 0, 148);
-            box-shadow: 0 0 5px #F2DC6D,
+            box-shadow: 0 0 5px violet,
                                 0 0 25px rgb(248, 1, 248),
                                 0 0 50px rgb(248, 1, 248),
                                 0 0 200px rgb(248, 1, 248);
@@ -140,16 +140,75 @@ Grandes telas: acima de 1200px
             transition: 0.5s;
         }
     img {
-        position: absolute;
+        width: 28%;
+        height: fit-content;
         display: block;
-        top: 220px;
-        left: 900px;
-        width: 30%;
-        height: 60%;
-        background-size: cover;
-        margin: auto;
-        margin-top: 10px;
-    }
+        margin-right: 40px;
+        margin-top: -385px;
+        border: 2px solid white;
+        box-shadow: 0 0 2px violet,
+                                0 0 12.5px rgb(248, 1, 248),
+                                0 0 25px rgb(248, 1, 248),
+                                0 0 50px rgb(248, 1, 248);
 
+
+        animation: borderAnimation 8s infinite linear,
+                    shadowAnimation 8s infinite linear;
+        }
+        
+        @keyframes borderAnimation {
+            0% {
+                border-color: cyan;
+            }
+
+            25% {
+                border-color: violet;
+            }
+
+            50% {
+                border-color: cyan;
+            }
+
+            100% {
+                border-color: violet;
+            }
+
+            }
+        
+        @keyframes shadowAnimation{
+            0% {
+                box-shadow: 0 0 2px violet,
+                                0 0 12.5px rgb(248, 1, 248),
+                                0 0 25px rgb(248, 1, 248),
+                                0 0 50px rgb(248, 1, 248);
+            }
+
+            25% {
+                box-shadow: 0 0 2px cyan,
+                                0 0 12.5px cyan,
+                                0 0 25px cyan,
+                                0 0 50px cyan;
+            }
+
+            50% {
+                box-shadow: 0 0 2px violet,
+                                0 0 12.5px rgb(248, 1, 248),
+                                0 0 25px rgb(248, 1, 248),
+                                0 0 50px rgb(248, 1, 248);
+            }
+
+            100% {
+                box-shadow: 0 0 2px cyan,
+                                0 0 12.5px cyan,
+                                0 0 25px cyan,
+                                0 0 50px cyan;
+            }
+
+        }
+    
+
+    footer{
+        margin-top: 30px;
+    }
 
 }

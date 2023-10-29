@@ -151,9 +151,18 @@ em{
     font-weight: bolder;
 }
 
+address{
+    background-color: rgba(0, 0, 0, 0.233);
+    font-style: normal;
+}
+
 .zap{
     text-decoration: none;
-    color: rgb(37, 161, 37);
+    color: rgb(5, 87, 5);
+}
+
+.email {
+    text-decoration: none;
 }
 
 footer{

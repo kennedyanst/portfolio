@@ -364,3 +364,7 @@ input{
 #slide20:checked ~ .s4{
     margin-left: -80%;
 }
+
+footer{
+    background-color: green;
+}

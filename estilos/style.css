@@ -106,15 +106,14 @@ main h1 {
 
 
 img {
-    width: 70vw;
+    width: 60%;
     display: block;
     margin: auto;
     margin-top: 10px;
-    background-position: right center;
-    background-attachment: fixed;
     background-size: cover;
     border-radius: 10px;
 }
+
 
 article h2{
     padding-bottom: 20px;
@@ -124,4 +123,9 @@ article p{
     padding-bottom: 10px;
     text-align: justify;
     text-indent: 20px;
+}
+
+footer{
+    
+    background-color: rgba(255, 255, 255, 0.377);
 }
