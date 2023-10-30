@@ -5,7 +5,8 @@
 
 @media screen and (min-width: 768px) {
     body, html{
-        background-image: url("../imagens/powerbi2.png");
+        background-image: url("../imagens/imgs-exp/fundo.svg");
+        background-size: cover;
     }
 
 
@@ -106,11 +107,11 @@
     }
 
     .carrossel{
-        width: 1080px;
-        height: 720px;
+        width: 960px;
+        height: 480px;
         margin: 50px auto;
         border: 2px solid cyan;
-        background-size: contain;
+        background-size: cover;
         animation: shadowAnimation 7s infinite linear;
 
     }
@@ -161,13 +162,14 @@
         width: 200px;
         height: 300px;
         transform: translate(50%, -50%);
+        background-size: cover;
 
     }
 
+
     .item .content{
-        width: 400px;
-        border: none;
-        background: rgba(0, 0, 0, 0.664);
+       
+        background: rgba(0, 0, 0, 0.61);
         color: cyan;
         border: 2px solid cyan;
         animation: borderAnimation 5s infinite linear;

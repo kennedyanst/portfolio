@@ -153,7 +153,7 @@ Grandes telas: acima de 1200px
 
 
         animation: borderAnimation 5s infinite linear,
-                    shadowAnimation 3s infinite linear;
+                    shadowAnimation 5s infinite linear;
 
         }
         
@@ -181,28 +181,35 @@ Grandes telas: acima de 1200px
                 box-shadow: 0 0 5px violet,
                                 0 0 25px rgb(248, 1, 248),
                                 0 0 50px rgb(248, 1, 248),
-                                0 0 100px rgb(248, 1, 248);
+                                0 0 200px rgb(248, 1, 248);
             }
 
             25% {
-                box-shadow: 0 0 2px cyan,
-                                0 0 12.5px cyan,
-                                0 0 25px cyan,
-                                0 0 50px cyan;
+                box-shadow: 0 0 5px darkviolet,
+                                0 0 25px darkviolet,
+                                0 0 50px darkviolet,
+                                0 0 200px darkviolet;
             }
 
             50% {
                 box-shadow: 0 0 5px violet,
                                 0 0 25px rgb(248, 1, 248),
                                 0 0 50px rgb(248, 1, 248),
-                                0 0 100px rgb(248, 1, 248);
+                                0 0 200px rgb(248, 1, 248);
+            }
+
+            75% {
+                box-shadow: 0 0 5px darkviolet,
+                                0 0 25px darkviolet,
+                                0 0 50px darkviolet,
+                                0 0 200px darkviolet;
             }
 
             100% {
-                box-shadow: 0 0 2px cyan,
-                                0 0 12.5px cyan,
-                                0 0 25px cyan,
-                                0 0 50px cyan;
+                box-shadow: 0 0 5px violet,
+                                0 0 25px rgb(248, 1, 248),
+                                0 0 50px rgb(248, 1, 248),
+                                0 0 200px rgb(248, 1, 248);
             }
 
         }

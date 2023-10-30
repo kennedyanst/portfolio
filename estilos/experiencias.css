@@ -85,6 +85,7 @@ menu ul li a:hover{
     word-wrap: break-word;
     overflow-wrap: break-word;
     overflow-x: hidden;
+    overflow-y: hidden;
 
 }
 
