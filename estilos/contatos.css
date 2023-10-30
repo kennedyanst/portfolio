@@ -78,7 +78,7 @@ menu ul li a:hover{
 .tela_fundo {
     display: block;
     position: relative;   
-    background: rgba(255, 255, 255, 0.568);
+    background: rgb(255, 255, 255);
     backdrop-filter: blur(25px);
     border: 2px solid #F2A2D6;
     width: 70%; 
@@ -140,7 +140,7 @@ em{
 
 .li{
     width: 70%;
-    margin: 10px 30px;
+    margin: 10px auto;
     font-size: 16px;
     padding: 10px;
     border: 1px solid #81525a;
@@ -158,15 +158,15 @@ address{
 
 .zap{
     text-decoration: none;
-    color: #F299A9;
-    text-shadow: 3px 3px 3px #0000004f;
+    color: #f50c33;
+    font-weight: bolder;
     
 }
 
 .email {
     text-decoration: none;
-    color: #f8a0b0;
-    text-shadow: 3px 3px 3px #0000004f;
+    color:  #f50c33;
+    font-weight: bolder;
 }
 
 footer{
