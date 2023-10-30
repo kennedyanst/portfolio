@@ -124,6 +124,47 @@
 
     }
 
+    .tela_frente{
+        animation:  shadowAnimation 5s infinite linear;
+    }
+
+    @keyframes shadowAnimation{
+        0% {
+            box-shadow: 0 0 5px  #834EA6,
+                            0 0 50px #834EA6,
+                            0 0 50px #834EA6,
+                            0 0 200px #834EA6;
+        }
+
+        50% {
+            box-shadow: 0 0 2px #F2CECE,
+        2                   0 0 12.5px #F2CECE,
+                            0 0 50px #F2CECE,
+                            0 0 200px #F2CECE;
+    }
+
+        50% {
+            box-shadow: 0 0 5px  #834EA6,
+                            0 0 50px #834EA6,
+                            0 0 50px #834EA6,
+                            0 0 200px #834EA6;
+        }
+
+        75% {
+            box-shadow: 0 0 2px #F2CECE,
+                            0 0 12.5px #F2CECE,
+                            0 0 50px #F2CECE,
+                            0 0 200px #F2CECE;
+    }
+
+        100% {
+            box-shadow: 0 0 5px  #834EA6,
+                            0 0 50px #834EA6,
+                            0 0 50px #834EA6,
+                            0 0 200px #834EA6;
+        }
+
+    }    
 
     .ul{
         display: flex;
@@ -135,6 +176,74 @@
 
     }
 
+    #primeiro{
+        animation: flicker-1 2s linear infinite both;
+    }
+
+    @keyframes flicker-1 {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        41.99% {
+          opacity: 1;
+        }
+        42% {
+          opacity: 0;
+        }
+        43% {
+          opacity: 0;
+        }
+        43.01% {
+          opacity: 1;
+        }
+        47.99% {
+          opacity: 1;
+        }
+        48% {
+          opacity: 0;
+        }
+        49% {
+          opacity: 0;
+        }
+        49.01% {
+          opacity: 1;
+        }
+      }
+
+      #segundo li{
+        animation: shake-tr 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+      }
+      
+      @keyframes shake-tr {
+        0%,
+        100% {
+          transform: rotate(0deg);
+          transform-origin: 100% 0;
+        }
+        10% {
+          transform: rotate(2deg);
+        }
+        20%,
+        40%,
+        60% {
+          transform: rotate(-4deg);
+        }
+        30%,
+        50%,
+        70% {
+          transform: rotate(4deg);
+        }
+        80% {
+          transform: rotate(-2deg);
+        }
+        90% {
+          transform: rotate(2deg);
+        }
+      }
+      
+      
+
     .li{
         width: 100%;
         height: 70px;
@@ -143,5 +252,14 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
+    }
+
+    footer{
+        background-color: rgba(0, 0, 0, 0.822);
+        color:  #F2CECE;
+        margin-top: 30px;
+        font-size: 12px;
+        text-align: center;
+        border: 1px solid  #F2CECE;
     }
 }

@@ -158,15 +158,22 @@ address{
 
 .zap{
     text-decoration: none;
-    color: rgb(5, 87, 5);
+    color: #F299A9;
+    text-shadow: 3px 3px 3px #0000004f;
+    
 }
 
 .email {
     text-decoration: none;
+    color: #f8a0b0;
+    text-shadow: 3px 3px 3px #0000004f;
 }
 
 footer{
-background-image: linear-gradient(90deg, #0d0d0dec, #f299a9e8,  #0d0d0dec);
-margin-top: 50px;
-color: white;
+    background-color: rgba(0, 0, 0, 0.822);
+    color:  #F2CECE;
+    margin-top: 30px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid  #F2CECE;
 }
