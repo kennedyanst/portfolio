@@ -36,7 +36,7 @@ sr.reveal('.area-7', {
 sr.reveal('.area-8', {
     origin: 'left',  // Define a origem da animação (pode ser 'top', 'bottom', 'right', 'left', etc.)
     distance: '100px', // Define a distância inicial do elemento
-    duration: 1000,   // Define a duração da animação em milissegundos
+    duration: 2500,   // Define a duração da animação em milissegundos
     delay: 0,         // Define um atraso antes da animação
     reset: true      
 });
@@ -45,7 +45,7 @@ sr.reveal('.area-8', {
 sr.reveal('.area-9', {
     origin: 'top',
     distance: '100px',
-    duration: 1000,
+    duration: 2500,
     delay: 200, // Atraso de 200ms
     reset: true
 });
@@ -54,6 +54,6 @@ sr.reveal('.area-9', {
 sr.reveal('.area-10', {
     origin: 'right',
     distance: '100px',
-    duration: 1000,
+    duration: 2500,
     delay: 400, // Atraso de 400ms
     reset: true});
