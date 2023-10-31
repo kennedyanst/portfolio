@@ -288,17 +288,15 @@ section.module.content{
 
 
 section.module.parallax h1{
-    height: 180px;
-    width: 60%;
+    width: 70%;
     color: var(--var7);
     background-color: #000000ef;
     padding: 30px;
     margin: auto;
-    border: 7px solid var(--var6);
+    border: 2px solid var(--var6);
     text-align: center;
-    font-size: 22px;
+    font-size: 21px;
     z-index: 50;
-    text-transform: uppercase;
     box-shadow: 8px 8px 18px 8px var(--var7);
 }
 
@@ -330,28 +328,49 @@ section.module.parallax:after{
 }
 
 section.module.parallax-1{
-    background-image: url("../imagens-mobile/5.jpg");
+    background-image: url("../imagens-mobile/fundo-cert/18.svg");
 }
 
 section.module.parallax-2{
-    background-image: url("../imagens-mobile/6.jpg");
+        background-image: url("../imagens-mobile/fundo-cert/19.svg");
+
 }
 
 section.module.parallax-3{
-    background-image: url("../imagens-mobile/7.jpg");
+        background-image: url("../imagens-mobile/fundo-cert/python.svg");
+
 }
 
 section.module.parallax-4{
-    background-image: url("../imagens-mobile/8.jpg");
+        background-image: url("../imagens-mobile/fundo-cert/21.svg");
+
 }
 section.module.parallax-5{
-    background-image: url("../imagens-mobile/9.jpg");
+        background-image: url("../imagens-mobile/fundo-cert/23.svg");
+
 }
 section.module.parallax-6{
-    background-image: url("../imagens-mobile/5.jpg");
+        background-image: url("../imagens-mobile/fundo-cert/gato.svg");
+
 }
 section.module.parallax-7{
-    background-image: url("../imagens-mobile/6.jpg");
+        background-image: url("../imagens-mobile/fundo-cert/fone-2.svg");
+
+}
+
+section.module.parallax-8{
+        background-image: url("../imagens-mobile/fundo-cert/python-2.svg");
+
+}
+
+section.module.parallax-9{
+        background-image: url("../imagens-mobile/fundo-cert/fone.svg");
+
+}
+
+section.module.parallax-10{    
+        background-image: url("../imagens-mobile/fundo-cert/gato-2.svg");
+
 }
 
 
