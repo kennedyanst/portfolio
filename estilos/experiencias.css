@@ -90,7 +90,7 @@ menu ul li a:hover{
 }
 
 #slide{
-    width:60%;
+    width:100%;
     margin-top:50px;
 }
 .item{
@@ -103,7 +103,7 @@ menu ul li a:hover{
     position: absolute;
     z-index: 1;
     top:50%;
-    transform: translate(70%,-50%);
+    transform: translate(-70%,-30%);
     border-radius: 20px;
     box-shadow:  0 30px 60px #06fcfc;
 }
@@ -118,16 +118,16 @@ menu ul li a:hover{
     box-shadow: none;
 }
 .item:nth-child(3){
-    left:50%;
+    left:75%;
 }
 .item:nth-child(4){
-    left:calc(50% + 220px);
+    left:calc(75% + 28vw);
 }
 .item:nth-child(5){
-    left:calc(50% + 440px);
+    left:calc(75% + 56vw);
 }
 .item:nth-child(n+6){
-    left:calc(50% + 660px);
+    left:calc(75% + 84vw);
     opacity: 0;
 }
 .item .content{
@@ -156,7 +156,7 @@ menu ul li a:hover{
 }
 .item .des{
     width: 50%;
-    padding: 20px;
+    padding: 2vw;
     font-size: 13px;
     opacity: 0;
     animation:showcontent 1s ease-in-out 0.3s 1 forwards
