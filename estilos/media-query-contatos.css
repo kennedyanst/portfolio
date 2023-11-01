@@ -30,16 +30,16 @@
         display: flex;
         justify-content: space-around;
         background-image: linear-gradient(20deg,  #8C8C8C,  #F2F2F2, #D9D9D9, #A6A6A6, #737373);
-        height: 200px;
+        height: 15vw;
     }
 
-    .parent-link{
-        font-size: 1em;
+    .parent-link, .sm-icon{
+        font-size: 1.5vw;
     }
 
     
     .parent-link, .icons{
-        margin: 100px 40px; 
+        margin: auto;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -51,7 +51,7 @@
     }
 
     .social-links{
-        padding: 0 2.5rem;
+        padding: 0 3vw;
         margin: 0;
         color: black;
         font-weight: 500;
@@ -68,7 +68,7 @@
                             0 0 50px #834EA6,
                             0 0 200px #834EA6;
         -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-        border-radius: 10px;
+        border-radius: 1vw;
         margin: 5px;
         padding: 5px;
         transition: 0.5s;
@@ -84,13 +84,13 @@
                             0 0 50px #834EA6,
                             0 0 200px #834EA6;
         -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-        border-radius: 10px;
+        border-radius: 1vw;
         margin: 5px;
         padding: 5px;
     }
     
     .sm-icon {
-        padding: 0 0.2rem;
+        padding: 0 0.3vw;
         margin: 0;
         color: white;
     }
@@ -112,15 +112,15 @@
     }
 
     h1{
-        font-size: 45px;
+        font-size: 3vw;
     }
 
     p{
-        font-size: 22px;
+        font-size: 1.5vw;
     }
 
     .tela_fundo{
-        width: 90%;
+        width: 85%;
         background-color:  rgb(255, 255, 255, 0.568);
 
     }
@@ -246,10 +246,11 @@
       
 
     .li{
-        width: 100%;
-        height: 70px;
-        margin: 10px 30px;
-        font-size: 18px;
+        
+        height: 5.5vw;
+        margin: 1vw 3vw;
+        padding: 2vw;
+        font-size: 1.5vw;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -260,7 +261,7 @@
         background-color: rgba(0, 0, 0, 0.822);
         color:  #F2CECE;
         margin-top: 30px;
-        font-size: 12px;
+        font-size: 0.7vw;
         text-align: center;
         border: 1px solid  #F2CECE;
     }
