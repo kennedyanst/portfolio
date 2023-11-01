@@ -11,6 +11,7 @@ Grandes telas: acima de 1200px
 
 */
 
+
 @media screen and (min-width: 768px) {
     body, html{
         background-image: url("../imagens/20.png");
@@ -27,18 +28,20 @@ Grandes telas: acima de 1200px
         border: none;
     }
 
+
     menu ul li:hover{    
         background: none;
     }
     
-
+    main{
+        display: flex;
+        margin: 45px auto;
+    }
  
-    main { 
-        margin-left: 50px;
-        margin-top: 30px;
+    article { 
+        margin: 10px 30px;
         background-color: rgba(0, 0, 0, 0.342);
         width: 50%;
-        height: 350px;
         padding: 15px;
         border-radius: 0px 20px;
         box-shadow: 10px 10px 30px 10px rgba(238, 130, 238, 0.678);
@@ -46,11 +49,11 @@ Grandes telas: acima de 1200px
 
     main > article > h1{
         text-align: center;
-        font-size: 40px;
+        font-size: 2.5vw;
     }
 
     article p {
-        font-size: 22px;
+        font-size: 1.5vw;
     }
 
     #burguer {
@@ -61,16 +64,17 @@ Grandes telas: acima de 1200px
         display: flex;
         justify-content: space-around;
         background-image: linear-gradient(rgb(0,0,0),rgba(243, 8, 184, 0.6),rgb(0,0,0));
-        height: 200px;
+        height: 15vw;
     }
 
-    .parent-link{
-        font-size: 1em;
+    .parent-link, .sm-icon{
+        font-size: 1.5vw;
     }
+
 
     
     .parent-link, .icons{
-        margin: 100px 40px; 
+        margin: auto; 
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -82,7 +86,7 @@ Grandes telas: acima de 1200px
     }
 
     .social-links{
-        padding: 0 1.5rem;
+        padding: 0 3vw;
         margin: 0;
         color: rgb(255, 255, 255);
         font-weight: 500;
@@ -98,7 +102,7 @@ Grandes telas: acima de 1200px
                             0 0 50px violet,
                             0 0 200px violet;
         -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-        border-radius: 10px;
+        border-radius: 1vw;
         margin: 5px;
         padding: 5px;
         transition: 0.5s;
@@ -113,14 +117,14 @@ Grandes telas: acima de 1200px
                             0 0 50px violet,
                             0 0 200px violet;
         -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-        border-radius: 10px;
+        border-radius: 1vw;
         margin: 5px;
         padding: 5px;
     }
 
    
     .sm-icon {
-        padding: 0 0.2rem;
+        padding: 0 0.3vw;
         margin: 0;
         color: white;
     }
@@ -139,12 +143,14 @@ Grandes telas: acima de 1200px
             padding: 5px;
             transition: 0.5s;
         }
-    img {
+    
+    
+        img {
         width: 28%;
         height: fit-content;
+        image-rendering: auto;
         display: block;
         margin-right: 40px;
-        margin-top: -385px;
         border: 2px solid transparent;
         box-shadow: 0 0 2px violet,
                                 0 0 12.5px rgb(248, 1, 248),
@@ -216,11 +222,13 @@ Grandes telas: acima de 1200px
 
     
 
-    footer{
+    footer{ 
+        margin-top: 147px;
+        display: flex;
+        justify-content: space-around;
         background-color: rgba(0, 0, 0, 0.836);
         color: rgb(228, 193, 228);
-        margin-top: 30px;
-        font-size: 12px;
+        font-size: 0.7vw;
         text-align: center;
         border: 1px solid violet;
     }
