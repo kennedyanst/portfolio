@@ -1,0 +1,186 @@
+/* style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000000;
+  color: #f0f0f0;
+  line-height: 1.6;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.932), rgba(0, 0, 0, 0.918)), url('imagem_fundo.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #000;
+  border-bottom: 2px solid #3e1f0d;
+  padding: 20px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* permite quebrar se necessário */
+}
+
+.logo {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+  white-space: nowrap; /* evita quebra da logo */
+}
+
+.logo span {
+  color: #d35400; /* laranja escuro */
+
+}
+
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  list-style: none;
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f0f0f0;
+  font-weight: 100;
+  transition: color 0.3s;
+  letter-spacing: 0.15em;
+}
+
+nav a:hover,
+nav a.active {
+  color: #d35400;
+  font-weight: bold;
+}
+
+main {
+  padding: 60px;
+  
+}
+
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.about-text {
+  max-width: 50%;
+}
+
+.about-text h1 {
+  font-size: 4rem;
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.about-text h2 {
+  font-size: 1.8rem;
+  color: #b87333; /* Marrom metálico */
+  margin-bottom: 20px;
+}
+
+.about-text h2 span {
+  color: #d35400;
+}
+
+.about-text p {
+  font-size: 1.3rem;
+  color: #ccc;
+}
+
+.about-image img {
+  width: 460px;
+  border-radius: 50px;
+}
+
+/* === Seção Formação === */
+.formacao {
+  margin-top: 80px;
+  padding: 0 60px;
+}
+
+/* Título centralizado entre linhas */
+.section-title {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-title::before,
+.section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #444;
+}
+.section-title span {
+  padding: 0 20px;
+  color: #f0f0f0;
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+/* Conteúdo em duas colunas */
+.formacao-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* Estilo da coluna de graduação */
+.graduacao h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #d35400;
+}
+.graduacao ul {
+  list-style: disc inside;
+  color: #ccc;
+}
+.graduacao li {
+  margin-bottom: 8px;
+}
+
+/* Estilo dos cursos complementares (sub-colunas) */
+.complementares {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.complementares .col h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #d35400;
+}
+.complementares ul {
+  list-style: disc inside;
+  color: #ccc;
+}
+.complementares li {
+  margin-bottom: 6px;
+}
