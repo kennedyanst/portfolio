@@ -90,14 +90,14 @@ nav a.active {
 
 
 .about-text h1 {
-  font-size: 5rem;
+  font-size: 6rem;
   color: #fff;
   margin-bottom: 20px;
   letter-spacing: 2px;
 }
 
 .about-text h2 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   color: #b87333; /* Marrom metálico */
   margin-bottom: 20px;
 }
@@ -108,9 +108,9 @@ nav a.active {
 
 .about-text p {
   text-align: justify;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #ccc;
-  max-width: 54%;
+  max-width: 50%;
 }
 
 .about-image img {
