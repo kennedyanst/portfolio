@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projetos – Kennedy ANS</title>
+  <link rel="stylesheet" href="estilos/style.css"><!-- seus estilos globais -->
+  <link rel="stylesheet" href="estilos/projetos.css"><!-- estilos desta página -->
+</head>
+<body>
+  <header>
+    <div class="logo">kennedy<span>ans.</span></div>
+    <nav>
+      <ul class="centered-nav">
+        <li><a href="sobre.html">SOBRE</a></li>
+        <li><a href="projetos.html" class="active">PROJETOS</a></li>
+        <li><a href="formacao.html">FORMAÇÃO</a></li>
+        <li><a href="experiencias.html">EXPERIÊNCIAS</a></li>
+        <li><a href="contato.html">CONTATOS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="projects">
+    <!-- INTRODUÇÃO / TÍTULO PRINCIPAL -->
+    <section class="projects-intro">
+      <div class="intro-text">
+        <h1>
+          <span>Dashboards com</span><br>
+          <strong>Power BI</strong>
+        </h1>
+      </div>
+      <div class="intro-paragraphs">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat optio libero quibusdam ad corrupti minima cupiditate nostrum ipsa, quasi, illo fugiat?</p>
+        <p>Porro natus maxime molestias minima impedit tempora ut quas! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Quos ullam cupiditate dolore hic, libero magni corporis reprehenderit quidem, magnam facere, nemo eligendi alias adipisci minima aut fugit aliquam distinctio ratione.</p>
+      </div>
+    </section>
+        
+    <section class="projects-carousel">
+    <div class="carousel-wrapper">
+
+        <!-- radios que controlam qual slide está ativo -->
+        <input type="radio" name="carousel" id="c1" checked>
+        <input type="radio" name="carousel" id="c2">
+        <input type="radio" name="carousel" id="c3">
+        <input type="radio" name="carousel" id="c4">
+        <input type="radio" name="carousel" id="c5">
+
+        <!-- container flex com os 5 slides -->
+        <div class="carousel-slides">
+        <label for="c1" class="slide" id="s1"
+                style="background-image:url('../imagens/nu_inicio.png')"></label>
+        <label for="c2" class="slide" id="s2"
+                style="background-image:url('../imagens/pagina-resumo.png')"></label>
+        <label for="c3" class="slide" id="s3"
+                style="background-image:url('../imagens/pagina-financeiro.png')"></label>
+        <label for="c4" class="slide" id="s4"
+                style="background-image:url('../imagens/pagina-atendimentos.png')"></label>
+        <label for="c5" class="slide" id="s5"
+                style="background-image:url('../imagens/pagina-prodecart.png')"></label>
+        </div>
+
+    </div>
+    </section>
+
+
+  </main>
+</body>
+</html>

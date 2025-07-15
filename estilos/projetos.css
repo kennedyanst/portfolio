@@ -1,0 +1,174 @@
+/* ========== FUNDOS E RESET ========== */
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fontes/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat_Black';
+  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Black.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../imagem_fundo_projetos.png");
+  background-position: center;
+  background-size: cover;
+
+}
+
+
+/* ========== HEADER ========== */
+
+header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: rgba(0,0,0,0.5);
+}
+
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #8e6de5; /* roxo */
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  transition: color 0.3s;
+}
+
+nav a.active,
+nav a:hover {
+  color: #8e6de5;
+  font-weight: 600;
+}
+
+/* ========== INTRODUÇÃO ========== */
+
+main.projects {
+  padding-top: 140px; /* para não ficar atrás do header */
+}
+
+.projects-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 60px;
+}
+
+.intro-text h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 7vw;
+  line-height: 1.1;
+  color: #8e6de5;
+}
+
+.intro-text h1 strong {
+  font-family: 'Montserrat_black', sans-serif;
+}
+
+.intro-text h1 span {
+  font-weight: 300;
+}
+
+.intro-text h1 strong {
+  display: block;
+  font-weight: 800;
+  font-size: 6vw;
+  margin-top: 0.2em;
+}
+
+.intro-paragraphs {
+  max-width: 25%;
+}
+
+.intro-paragraphs p {
+  color: #ccc;
+  font-size: 1.1vw;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 1.2em;
+}
+/* container geral do carrossel */
+.carousel-wrapper {
+  position: relative;
+  width: 1400px;
+  height: 500px; /* altura do carrossel */
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+/* esconde os inputs */
+.carousel-wrapper input { display: none; }
+
+/* container de slides em flex */
+.carousel-slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap : 20px; /* espaçamento entre os slides */
+  transition: transform 0.6s ease; /* transição suave */
+}
+
+/* estilo base de cada slide */
+.carousel-slides .slide {
+  border-radius: 15px;
+  flex-shrink: 0;
+  width: 6.5%;                    /* estado “colapsado” padrão */
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: width 0.6s ease 0.2s; /* delay geral de 0.2s */
+}
+
+/* quando #c1 estiver marcado, aumenta s1 e mantém as outras em 7.5% */
+#c1:checked ~ .carousel-slides #s1,
+#c2:checked ~ .carousel-slides #s2,
+#c3:checked ~ .carousel-slides #s3,
+#c4:checked ~ .carousel-slides #s4,
+#c5:checked ~ .carousel-slides #s5 {
+  width: 70%;
+  transition-delay: 0s;  /* expande sem delay */
+}
+
+/* opcional: hover para dar um feedback visual */
+.carousel-slides .slide:hover {
+  filter: brightness(1.1);
+}
+

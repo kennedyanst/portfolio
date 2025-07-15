@@ -18,7 +18,7 @@ body {
 body {
   background-color: #000000;
   color: #f0f0f0;
-  background-image: url('imagem_fundo.png');
+  background-image: url('../imagem_fundo.png');
   background-position: center;
   background-size: cover;
 
@@ -90,14 +90,14 @@ nav a.active {
 
 
 .about-text h1 {
-  font-size: 6rem;
+  font-size: 5vw;
   color: #fff;
   margin-bottom: 20px;
   letter-spacing: 2px;
 }
 
 .about-text h2 {
-  font-size: 2.5rem;
+  font-size: 2.2vw;
   color: #b87333; /* Marrom metálico */
   margin-bottom: 20px;
 }
@@ -108,9 +108,9 @@ nav a.active {
 
 .about-text p {
   text-align: justify;
-  font-size: 2rem;
+  font-size: 1.7vw;
   color: #ccc;
-  max-width: 50%;
+  max-width: 61%;
 }
 
 .about-image img {
