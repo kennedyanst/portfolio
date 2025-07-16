@@ -6,96 +6,123 @@
   <title>Projetos – Kennedy ANS</title>
   <link rel="stylesheet" href="estilos/projetos.css"><!-- estilos desta página -->
 </head>
-<body>
-  <!-- 1) Radios para controlar qual projeto está selecionado -->
+<body >
+  <!-- 1) Radios para controlar qual PROJETO está ativo -->
   <input type="radio" name="proj" id="proj1" checked hidden>
   <input type="radio" name="proj" id="proj2" hidden>
-  <input type="radio" name="proj" id="proj3" hidden>
-  <input type="radio" name="proj" id="proj4" hidden>
 
-  <!-- 2) Wrapper que permite trocarmos o background com CSS -->
+  <!-- 2) Wrapper que permite trocar o fundo e o tema com CSS -->
   <div class="page-bg">
-  <header>
-    <div class="logo">kennedy<span>ans.</span></div>
-    <nav>
-      <ul class="centered-nav">
-        <li><a href="sobre.html">SOBRE</a></li>
-        <li><a href="projetos.html" class="active">PROJETOS</a></li>
-        <li><a href="formacao.html">FORMAÇÃO</a></li>
-        <li><a href="experiencias.html">EXPERIÊNCIAS</a></li>
-        <li><a href="contato.html">CONTATOS</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+      <div class="logo">kennedy<span>ans.</span></div>
+      <nav>
+        <ul class="centered-nav">
+          <li><a href="sobre.html">SOBRE</a></li>
+          <li><a href="projetos.html" class="active">PROJETOS</a></li>
+          <li><a href="formacao.html">FORMAÇÃO</a></li>
+          <li><a href="experiencias.html">EXPERIÊNCIAS</a></li>
+          <li><a href="contato.html">CONTATOS</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main class="projects">
-    <!-- INTRODUÇÃO / TÍTULO PRINCIPAL -->
-    <section class="projects-intro">
-      <div class="intro-text">
-        <h1>
-          <span>Dashboards com</span><br>
-          <strong>Power BI</strong>
-        </h1>
-      </div>
-      <div class="intro-paragraphs">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat optio libero quibusdam ad corrupti minima cupiditate nostrum ipsa, quasi, illo fugiat?</p>
-        <p>Porro natus maxime molestias minima impedit tempora ut quas! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p>Quos ullam cupiditate dolore hic, libero magni corporis reprehenderit quidem, magnam facere, nemo eligendi alias adipisci minima aut fugit aliquam distinctio ratione.</p>
-      </div>
-    </section>
-        
-    <section class="projects-carousel">
-    <div class="carousel-wrapper">
+    <main class="projects">
+      <!-- Intro existente -->
+      <section class="projects-intro">
+        <div class="intro-text">
+          <h1>
+            <span>Dashboards com</span><br>
+            <strong>Power BI</strong>
+          </h1>
+        </div>
+        <div class="intro-paragraphs">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat optio libero quibusdam ad corrupti minima cupiditate nostrum ipsa, quasi, illo fugiat?</p>
+          <p>Porro natus maxime molestias minima impedit tempora ut quas! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>Quos ullam cupiditate dolore hic, libero magni corporis reprehenderit quidem, magnam facere, nemo eligendi alias adipisci minima aut fugit aliquam distinctio ratione.</p>
+        </div>
+      </section>
 
-        <!-- radios que controlam qual slide está ativo -->
-        <input type="radio" name="carousel" id="c1" checked>
-        <input type="radio" name="carousel" id="c2">
-        <input type="radio" name="carousel" id="c3">
-        <input type="radio" name="carousel" id="c4">
-        <input type="radio" name="carousel" id="c5">
+      <!-- 3) CARROSSEL PROJETO 1 (Nubank) -->
+      <section class="projects-carousel carousel-proj1">
+        <div class="carousel-wrapper">
+          <input type="radio" name="carousel1" id="c1a" checked>
+          <input type="radio" name="carousel1" id="c1b">
+          <input type="radio" name="carousel1" id="c1c">
+          <input type="radio" name="carousel1" id="c1d">
+          <input type="radio" name="carousel1" id="c1e">
 
-        <!-- container flex com os 5 slides -->
-        <div class="carousel-slides">
-        <label for="c1" class="slide" id="s1"
-                style="background-image:url('../imagens/nubank/nu_inicio.png')"></label>
-        <label for="c2" class="slide" id="s2"
-                style="background-image:url('../imagens/nubank/pagina-resumo.png')"></label>
-        <label for="c3" class="slide" id="s3"
-                style="background-image:url('../imagens/nubank/pagina-financeiro.png')"></label>
-        <label for="c4" class="slide" id="s4"
-                style="background-image:url('../imagens/nubank/pagina-atendimentos.png')"></label>
-        <label for="c5" class="slide" id="s5"
-                style="background-image:url('../imagens/nubank/pagina-prodecart.png')"></label>
+          <div class="carousel-slides">
+            <label for="c1a" class="slide" id="s1"
+                   style="background-image:url('./imagens/nubank/nu_inicio.png')"></label>
+            <label for="c1b" class="slide" id="s2"
+                   style="background-image:url('./imagens/nubank/pagina-resumo.png')"></label>
+            <label for="c1c" class="slide" id="s3"
+                   style="background-image:url('./imagens/nubank/pagina-financeiro.png')"></label>
+            <label for="c1d" class="slide" id="s4"
+                   style="background-image:url('./imagens/nubank/pagina-atendimentos.png')"></label>
+            <label for="c1e" class="slide" id="s5"
+                   style="background-image:url('./imagens/nubank/pagina-prodecart.png')"></label>
+          </div>
+          <div class="carousel-thumbs">
+            <label for="c1a" class="thumb"></label>
+            <label for="c1b" class="thumb"></label>
+            <label for="c1c" class="thumb"></label>
+            <label for="c1d" class="thumb"></label>
+            <label for="c1e" class="thumb"></label>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4) CARROSSEL PROJETO 2 (iFood) -->
+      <section class="projects-carousel carousel-proj2">
+        <div class="carousel-wrapper">
+          <input type="radio" name="carousel2" id="c2a" checked>
+          <input type="radio" name="carousel2" id="c2b">
+          <input type="radio" name="carousel2" id="c2c">
+          <input type="radio" name="carousel2" id="c2d">
+          <input type="radio" name="carousel2" id="c2e">
+
+          <div class="carousel-slides">
+            <label for="c2a" class="slide" id="t1"
+                   style="background-image:url('./imagens/ifood/pagina-capa.png')"></label>
+            <label for="c2b" class="slide" id="t2"
+                   style="background-image:url('./imagens/ifood/pagina-diario.png')"></label>
+            <label for="c2c" class="slide" id="t3"
+                   style="background-image:url('./imagens/ifood/pagina-downloads.png')"></label>
+            <label for="c2d" class="slide" id="t4"
+                   style="background-image:url('./imagens/ifood/pagina-empresas.png')"></label>
+            <label for="c2e" class="slide" id="t5"
+                   style="background-image:url('./imagens/ifood/pagina-regioes.png')"></label>
+          </div>
+          <div class="carousel-thumbs">
+            <label for="c2a" class="thumb"></label>
+            <label for="c2b" class="thumb"></label>
+            <label for="c2c" class="thumb"></label>
+            <label for="c2d" class="thumb"></label>
+            <label for="c2e" class="thumb"></label>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5) TÍTULO “PROJETOS” ENTRE DUAS LINHAS -->
+      <section class="projects-list">
+        <div class="projects-heading">
+          <div class="divider"></div>
+          <h2>PROJETOS</h2>
+          <div class="divider"></div>
         </div>
 
-    </div>
-    </section>
-
-
-  </main>
-  <!-- 3) Nova seção: TÍTULO + THUMBNAILS -->
-      <div class="projects-heading">
-        <div class="divider"></div>
-        <h2>PROJETOS</h2>
-        <div class="divider"></div>
-      </div>
-
+        <!-- 6) MINIS PARA SELECIONAR O PROJETO -->
         <div class="thumbnails">
-          <label for="proj1" class="proj-thumb proj1" style="background-image:url('../imagens/nubank/nu_inicio.png')">
+          <label for="proj1" class="proj-thumb proj1" style="background-image:url('./imagens/nubank/nu_inicio.png')">
             <span>nubank</span>
           </label>
-          <label for="proj2" class="proj-thumb proj2" style="background-image:url('../imagens/ifood/pagina-capa.png')">
+          <label for="proj2" class="proj-thumb proj2" style="background-image:url('./imagens/ifood/pagina-capa.png')">
             <span>ifood</span>
-          </label>
-          <label for="proj3" class="proj-thumb proj3" style="background-image:url('../imagens/ifood/pagina-capa.png')">
-            <span>Projeto 3</span>
-          </label>
-          <label for="proj4" class="proj-thumb proj4" style="background-image:url('../imagens/ifood/pagina-capa.png')">
-            <span>Projeto 4</span>
           </label>
         </div>
       </section>
     </main>
-  </div> <!-- .page-bg -->
+  </div> <!-- /.page-bg -->
 </body>
 </html>

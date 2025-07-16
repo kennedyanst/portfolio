@@ -2,34 +2,49 @@
 @font-face {
   font-family: 'Poppins';
   src: url('../fontes/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
-
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat Alternates';
   src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
-
 @font-face {
-  font-family: 'Montserrat_Black';
+  font-family: 'Montserrat Black';
   src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Black.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
 }
-
-body {
-  font-family: 'Poppins', sans-serif;
-}
-
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+body, html {
+  font-family: 'Poppins', sans-serif;
+  color: black;
+}
 
-
-
+/* ========== FUNDO DINÂMICO ========== */
+.page-bg {
+  background-image: url('../imagem_fundo_projetos.png');
+  background-size: cover;
+  transition: background 0.5s ease;
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+#proj2:checked ~ .page-bg {
+  background-image: url('../imagem_fundo_projetos2.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
 /* ========== HEADER ========== */
-
 header {
   position: fixed;
   top: 0; left: 0;
@@ -38,19 +53,21 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;
   background: rgba(0,0,0,0.5);
+  z-index: 1000;
 }
-
 .logo {
-  font-family: 'Poppins', sans-serif;
   font-size: 1.5rem;
-  color: #fff;
   font-weight: bold;
+  color: #fff;
+  white-space: nowrap;
 }
-
 .logo span {
-  color: #8e6de5; /* roxo */
+  color: #8e6de5;
+  transition: color 0.3s;
+}
+#proj2:checked ~ .page-bg header .logo span {
+  color: #e63946;
 }
 
 nav ul {
@@ -58,7 +75,6 @@ nav ul {
   gap: 2rem;
   list-style: none;
 }
-
 nav a {
   color: #fff;
   text-decoration: none;
@@ -66,152 +82,137 @@ nav a {
   letter-spacing: 0.15em;
   transition: color 0.3s;
 }
-
 nav a.active,
 nav a:hover {
   color: #8e6de5;
   font-weight: 600;
 }
+#proj2:checked ~ .page-bg header nav a.active,
+#proj2:checked ~ .page-bg header nav a:hover {
+  color: #e63946;
+}
 
 /* ========== INTRODUÇÃO ========== */
-
 main.projects {
   padding-top: 140px; /* para não ficar atrás do header */
 }
-
 .projects-intro {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 0 60px;
 }
-
 .intro-text h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 8vw;
-  line-height: 1;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 4vw;
+  line-height: 1.1;
   color: #8e6de5;
+  transition: color 0.3s;
 }
-
-.intro-text h1 strong {
-  font-family: 'Montserrat_black', sans-serif;
+#proj2:checked ~ .page-bg main .projects-intro h1 {
+  color: #e63946;
 }
-
 .intro-text h1 span {
   font-weight: 300;
 }
-
 .intro-text h1 strong {
   display: block;
+  font-family: 'Montserrat Black', sans-serif;
   font-weight: 800;
   font-size: 6vw;
   margin-top: 0.2em;
 }
-
 .intro-paragraphs {
-  max-width: 25%;
+  max-width: 35%;
 }
-
 .intro-paragraphs p {
   color: #ccc;
   font-size: 1.1vw;
-  line-height: 1.3;
+  line-height: 1.6;
   text-align: justify;
   margin-bottom: 1.2vw;
 }
-/* container geral do carrossel */
+
+/* ========== CARROSÉIS: OCULTAR / EXIBIR ========== */
+.projects-carousel {
+  display: none;
+}
+#proj1:checked ~ .page-bg main .carousel-proj1 {
+  display: block;
+}
+#proj2:checked ~ .page-bg main .carousel-proj2 {
+  display: block;
+}
+
+/* ========== CARROSSEL – ESTILOS COMUNS ========== */
 .carousel-wrapper {
   position: relative;
   width: 95vw;
-  height: 34vw; /* altura do carrossel */
-  margin: 2vw; /* centraliza o carrossel */
+  height: 34vw;
+  margin: 2vw auto;
 }
-
-/* esconde os inputs */
-.carousel-wrapper input { display: none; }
-
-/* container de slides em flex */
+.carousel-wrapper input {
+  display: none;
+}
 .carousel-slides {
   display: flex;
   width: 100%;
   height: 100%;
-  gap : 15px; /* espaçamento entre os slides */
-  transition: transform 0.6s ease; /* transição suave */
+  gap: 15px;
   overflow: hidden;
+  transition: transform 0.6s ease;
 }
-
-/* estilo base de cada slide */
 .carousel-slides .slide {
-  border-radius: 15px;
   flex-shrink: 0;
-  width: 6.5%;                    /* estado “colapsado” padrão */
+  width: 6.5%;
   height: 100%;
+  border-radius: 15px;
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  transition: width 0.6s ease 0.2s; /* delay geral de 0.2s */
+  transition: width 0.6s ease 0.2s;
 }
-
-/* quando #c1 estiver marcado, aumenta s1 e mantém as outras em 7.5% */
-#c1:checked ~ .carousel-slides #s1,
-#c2:checked ~ .carousel-slides #s2,
-#c3:checked ~ .carousel-slides #s3,
-#c4:checked ~ .carousel-slides #s4,
-#c5:checked ~ .carousel-slides #s5 {
-  width: 70%;
-  transition-delay: 0s;  /* expande sem delay */
-}
-
-/* opcional: hover para dar um feedback visual */
 .carousel-slides .slide:hover {
   filter: brightness(1.1);
 }
 
-/* ————————————— RESET E FONTES ————————————— */
- /* seu código atual permanece acima */
-
-/* ========== 2) FUNDO DINÂMICO ========== */
-body {
-  background-image: url("../imagem_fundo_projetos.png"); 
-  background-size: cover;
-  transition: background 0.5s ease;
+/* ========== EXPANSÃO DOS SLIDES – PROJETO 1 ========= */
+.carousel-proj1 #c1a:checked ~ .carousel-slides #s1,
+.carousel-proj1 #c1b:checked ~ .carousel-slides #s2,
+.carousel-proj1 #c1c:checked ~ .carousel-slides #s3,
+.carousel-proj1 #c1d:checked ~ .carousel-slides #s4,
+.carousel-proj1 #c1e:checked ~ .carousel-slides #s5 {
+  width: 70%;
+  transition-delay: 0;
 }
 
-/* quando projeto 2 estiver checked, troca o fundo */
-#proj2:checked ~ .page-bg {
-  background: url("../imagem_fundo_projetos2.png");
-  background-size: cover;
-  transition: background 0.5s ease;
+/* ========== EXPANSÃO DOS SLIDES – PROJETO 2 ========= */
+.carousel-proj2 #c2a:checked ~ .carousel-slides #t1,
+.carousel-proj2 #c2b:checked ~ .carousel-slides #t2,
+.carousel-proj2 #c2c:checked ~ .carousel-slides #t3,
+.carousel-proj2 #c2d:checked ~ .carousel-slides #t4,
+.carousel-proj2 #c2e:checked ~ .carousel-slides #t5 {
+  width: 70%;
+  transition-delay: 0;
 }
 
-/* ========== 5) TEMA VERMELHO PARA PROJETO 2 ========== */
-#proj2:checked ~ .page-bg .logo span,
-#proj2:checked ~ .page-bg nav a.active,
-#proj2:checked ~ .page-bg nav a:hover,
-#proj2:checked ~ .page-bg .projects-intro h1 {
-  color: #e63946;
+/* ========== SEÇÃO “PROJETOS” ========== */
+.projects-list {
+  text-align: center;
 }
-
-
-/* ========== 3) SEÇÃO PROJETOS ========== */
-/* 1) Container do título com linhas laterais */
 .projects-heading {
   display: flex;
   align-items: center;
-  gap: 2rem;               /* espaçamento entre linha e texto */
-  margin: 3rem 0 1.5rem;   /* ajuste vertical conforme desejar */
+  gap: 1rem;
+  margin: 3rem 0 1.5rem;
 }
-
-/* 2) As “linhas” se esticam para ocupar o espaço */
 .projects-heading .divider {
   flex: 1;
   height: 1px;
   background: rgba(255,255,255,0.3);
 }
-
-/* 3) O título centralizado */
 .projects-heading h2 {
-  font-family: 'Montserrat_Black', sans-serif;
+  font-family: 'Montserrat Black', sans-serif;
   color: #fff;
   font-size: 2rem;
   letter-spacing: 2px;
@@ -219,25 +220,22 @@ body {
   margin: 0;
 }
 
-/* ========== 4) THUMBNAILS ========== */
+/* ========== THUMBNAILS ========== */
 .thumbnails {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: 2rem;
 }
-
 .proj-thumb {
   position: relative;
-  width: 370px;
-  height: 180px;
+  width: 27.3vw;
+  height: 14vw;
   background-size: cover;
   background-position: center;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.3s ease, margin-bottom 0.3s ease;
+  transition: transform 0.3s ease;
 }
-
 .proj-thumb span {
   position: absolute;
   bottom: -1.8rem;
@@ -247,32 +245,10 @@ body {
   font-size: 1rem;
   white-space: nowrap;
 }
-
-/* hover nas que não estão selecionadas */
 .proj-thumb:hover {
   transform: translateY(-8px);
 }
-
-/* thumb selecionada “sobe” mais */
 #proj1:checked ~ .page-bg .thumbnails .proj1,
-#proj2:checked ~ .page-bg .thumbnails .proj2,
-#proj3:checked ~ .page-bg .thumbnails .proj3,
-#proj4:checked ~ .page-bg .thumbnails .proj4 {
+#proj2:checked ~ .page-bg .thumbnails .proj2 {
   transform: translateY(-15px);
-  margin-bottom: 10px;
-}
-
-/* ========== 6) ATUALIZAR SLIDE PRINCIPAL ========== */
-/* Aqui você “injetaria” a capa do projeto no primeiro slide: */
-#proj1:checked ~ .page-bg .carousel-slides #s1 {
-  background-image: url('../imagens/nubank/nu_inicio.png');
-}
-#proj2:checked ~ .page-bg .carousel-slides #s1 {
-  background-image: url('../imagens/ifood/pagina-capa.png');
-}
-#proj3:checked ~ .page-bg .carousel-slides #s1 {
-  background-image: url('../imagens/proj3/proj3_inicio.png');
-}
-#proj4:checked ~ .page-bg .carousel-slides #s1 {
-  background-image: url('../imagens/proj4/proj4_inicio.png');
 }
