@@ -4,10 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projetos – Kennedy ANS</title>
-  <link rel="stylesheet" href="estilos/style.css"><!-- seus estilos globais -->
   <link rel="stylesheet" href="estilos/projetos.css"><!-- estilos desta página -->
 </head>
 <body>
+  <!-- 1) Radios para controlar qual projeto está selecionado -->
+  <input type="radio" name="proj" id="proj1" checked hidden>
+  <input type="radio" name="proj" id="proj2" hidden>
+  <input type="radio" name="proj" id="proj3" hidden>
+  <input type="radio" name="proj" id="proj4" hidden>
+
+  <!-- 2) Wrapper que permite trocarmos o background com CSS -->
+  <div class="page-bg">
   <header>
     <div class="logo">kennedy<span>ans.</span></div>
     <nav>
@@ -50,15 +57,15 @@
         <!-- container flex com os 5 slides -->
         <div class="carousel-slides">
         <label for="c1" class="slide" id="s1"
-                style="background-image:url('../imagens/nu_inicio.png')"></label>
+                style="background-image:url('../imagens/nubank/nu_inicio.png')"></label>
         <label for="c2" class="slide" id="s2"
-                style="background-image:url('../imagens/pagina-resumo.png')"></label>
+                style="background-image:url('../imagens/nubank/pagina-resumo.png')"></label>
         <label for="c3" class="slide" id="s3"
-                style="background-image:url('../imagens/pagina-financeiro.png')"></label>
+                style="background-image:url('../imagens/nubank/pagina-financeiro.png')"></label>
         <label for="c4" class="slide" id="s4"
-                style="background-image:url('../imagens/pagina-atendimentos.png')"></label>
+                style="background-image:url('../imagens/nubank/pagina-atendimentos.png')"></label>
         <label for="c5" class="slide" id="s5"
-                style="background-image:url('../imagens/pagina-prodecart.png')"></label>
+                style="background-image:url('../imagens/nubank/pagina-prodecart.png')"></label>
         </div>
 
     </div>
@@ -66,5 +73,29 @@
 
 
   </main>
+  <!-- 3) Nova seção: TÍTULO + THUMBNAILS -->
+      <div class="projects-heading">
+        <div class="divider"></div>
+        <h2>PROJETOS</h2>
+        <div class="divider"></div>
+      </div>
+
+        <div class="thumbnails">
+          <label for="proj1" class="proj-thumb proj1" style="background-image:url('../imagens/nubank/nu_inicio.png')">
+            <span>nubank</span>
+          </label>
+          <label for="proj2" class="proj-thumb proj2" style="background-image:url('../imagens/ifood/pagina-capa.png')">
+            <span>ifood</span>
+          </label>
+          <label for="proj3" class="proj-thumb proj3" style="background-image:url('../imagens/ifood/pagina-capa.png')">
+            <span>Projeto 3</span>
+          </label>
+          <label for="proj4" class="proj-thumb proj4" style="background-image:url('../imagens/ifood/pagina-capa.png')">
+            <span>Projeto 4</span>
+          </label>
+        </div>
+      </section>
+    </main>
+  </div> <!-- .page-bg -->
 </body>
 </html>
