@@ -197,7 +197,7 @@ body {
 .projects-heading {
   display: flex;
   align-items: center;
-  gap: 1rem;               /* espaçamento entre linha e texto */
+  gap: 2rem;               /* espaçamento entre linha e texto */
   margin: 3rem 0 1.5rem;   /* ajuste vertical conforme desejar */
 }
 
@@ -222,7 +222,7 @@ body {
 .thumbnails {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   margin-top: 1.5rem;
 }
 
@@ -267,7 +267,7 @@ body {
   background-image: url('../imagens/nubank/nu_inicio.png');
 }
 #proj2:checked ~ .page-bg .carousel-slides #s1 {
-  background-image: url('../imagens/ifood/ifood_inicio.png');
+  background-image: url('../imagens/ifood/pagina-capa.png');
 }
 #proj3:checked ~ .page-bg .carousel-slides #s1 {
   background-image: url('../imagens/proj3/proj3_inicio.png');
