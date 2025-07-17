@@ -416,6 +416,7 @@ main.projects {
   transition: transform 0.3s ease;
 }
 .proj-thumb span {
+  font-family: 'Montserrat Alternates', sans-serif;
   position: absolute;
   bottom: -2.8rem;
   left: 50%;
@@ -425,8 +426,16 @@ main.projects {
   white-space: nowrap;
 }
 .proj-thumb:hover {
-  transform: translateY(-8px);
+  transform: translateY(-12px);
 }
+
+.proj-thumb:hover span {
+  font-size: 1.8rem;
+  transition: font-size 0.7s;
+  font-family: 'Montserrat Black', sans-serif;
+}
+
+
 #proj1:checked ~ .page-bg .thumbnails .proj1,
 #proj2:checked ~ .page-bg .thumbnails .proj2,
 #proj3:checked ~ .page-bg .thumbnails .proj3,
@@ -458,33 +467,6 @@ main.projects {
   margin-left: 2.7rem;
 }
 
-/* ③ Miniaturas continuam iguais */
-.thumbnails {
-  display: flex;
-  gap: 2.7rem;
-}
-.proj-thumb {
-  position: relative;
-  width: 19.5vw;
-  height: 10vw;
-  background-size: cover;
-  background-position: center;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.proj-thumb span {
-  position: absolute;
-  bottom: -2.8rem;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #fff;
-  font-size: 1.5rem;
-  white-space: nowrap;
-}
-.proj-thumb:hover {
-  transform: translateY(-8px);
-}
 
 /* ④ Keyframes: desloca exatamente 50% do wrapper (ou seja, uma sequência de thumbs) */
 @keyframes marquee {
@@ -492,6 +474,6 @@ main.projects {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
