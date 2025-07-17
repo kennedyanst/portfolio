@@ -44,6 +44,30 @@ body, html {
   background-attachment: fixed;
 }
 
+#proj3:checked ~ .page-bg {
+  background-image: url('../imagem_fundo_projetos3.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#proj4:checked ~ .page-bg {
+  background-image: url('../imagem_fundo_projetos4.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#proj5:checked ~ .page-bg {
+  background-image: url('../imagem_fundo_projetos5.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 /* ========== HEADER ========== */
 header {
   position: fixed;
@@ -66,8 +90,21 @@ header {
   color: #8e6de5;
   transition: color 0.3s;
 }
+
 #proj2:checked ~ .page-bg header .logo span {
-  color: #e63946;
+  color: #F43737;
+}
+
+#proj3:checked ~ .page-bg header .logo span {
+  color: #DA9AA8;
+}
+
+#proj4:checked ~ .page-bg header .logo span {
+  color: #49f842;
+}
+
+#proj5:checked ~ .page-bg header .logo span {
+  color: #5261F0;
 }
 
 nav ul {
@@ -89,7 +126,22 @@ nav a:hover {
 }
 #proj2:checked ~ .page-bg header nav a.active,
 #proj2:checked ~ .page-bg header nav a:hover {
-  color: #e63946;
+  color: #F43737;
+}
+
+#proj3:checked ~ .page-bg header nav a.active,
+#proj3:checked ~ .page-bg header nav a:hover {
+  color: #DA9AA8;
+}
+
+#proj4:checked ~ .page-bg header nav a.active,
+#proj4:checked ~ .page-bg header nav a:hover {
+  color: #49f842;
+}
+
+#proj5:checked ~ .page-bg header nav a.active,
+#proj5:checked ~ .page-bg header nav a:hover {
+  color: #5261F0;
 }
 
 /* ========== INTRODUÇÃO ========== */
@@ -100,18 +152,30 @@ main.projects {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 0 60px;
+  margin-left: 30px;
 }
 .intro-text h1 {
   font-family: 'Montserrat Alternates', sans-serif;
-  font-size: 4vw;
-  line-height: 1.1;
+  font-size: 6.5vw;
+  line-height: 1.4;
   color: #8e6de5;
   transition: color 0.3s;
 }
 #proj2:checked ~ .page-bg main .projects-intro h1 {
-  color: #e63946;
+  color: #F43737;
 }
+
+#proj3:checked ~ .page-bg main .projects-intro h1 {
+  color: #DA9AA8;
+}
+#proj4:checked ~ .page-bg main .projects-intro h1 {
+  color: #49f842;
+}
+
+#proj5:checked ~ .page-bg main .projects-intro h1 {
+  color: #5261F0;
+}
+
 .intro-text h1 span {
   font-weight: 300;
 }
@@ -120,7 +184,6 @@ main.projects {
   font-family: 'Montserrat Black', sans-serif;
   font-weight: 800;
   font-size: 6vw;
-  margin-top: 0.2em;
 }
 .intro-paragraphs {
   max-width: 35%;
@@ -141,6 +204,15 @@ main.projects {
   display: block;
 }
 #proj2:checked ~ .page-bg main .carousel-proj2 {
+  display: block;
+}
+#proj3:checked ~ .page-bg main .carousel-proj3 {
+  display: block;
+}
+#proj4:checked ~ .page-bg main .carousel-proj4 {
+  display: block;
+}
+#proj5:checked ~ .page-bg main .carousel-proj5 {
   display: block;
 }
 
@@ -196,6 +268,103 @@ main.projects {
   transition-delay: 0;
 }
 
+/* ========== EXPANSÃO DOS SLIDES – PROJETO 3 ========= */
+.carousel-proj3 #c3a:checked ~ .carousel-slides #u1,
+.carousel-proj3 #c3b:checked ~ .carousel-slides #u2,
+.carousel-proj3 #c3c:checked ~ .carousel-slides #u3,
+.carousel-proj3 #c3d:checked ~ .carousel-slides #u4,
+.carousel-proj3 #c3e:checked ~ .carousel-slides #u5 {
+  width: 70%;
+  transition-delay: 0;
+}
+
+/* ========== EXPANSÃO DOS SLIDES – PROJETO 4 ========= */
+.carousel-proj4 #c4a:checked ~ .carousel-slides #v1,
+.carousel-proj4 #c4b:checked ~ .carousel-slides #v2,
+.carousel-proj4 #c4c:checked ~ .carousel-slides #v3,
+.carousel-proj4 #c4d:checked ~ .carousel-slides #v4,
+.carousel-proj4 #c4e:checked ~ .carousel-slides #v5 {
+  width: 70%;
+  transition-delay: 0;
+}
+
+/* ========== EXPANSÃO DOS SLIDES – PROJETO 5 ========= */
+.carousel-proj5 #c5a:checked ~ .carousel-slides #w1,
+.carousel-proj5 #c5b:checked ~ .carousel-slides #w2,
+.carousel-proj5 #c5c:checked ~ .carousel-slides #w3,
+.carousel-proj5 #c5d:checked ~ .carousel-slides #w4,
+.carousel-proj5 #c5e:checked ~ .carousel-slides #w5 {
+  width: 70%;
+  transition-delay: 0;
+}
+
+/* Se quiser um overlay sem usar filter, adicione este ::before */
+.carousel-slides .slide {
+  position: relative;
+  overflow: hidden; /* garante que pseudo-elements não vazem */
+}
+
+/* camada de vidro principal */
+.carousel-slides .slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.15);               /* brilho levemente branco */
+  border: 1px solid rgba(255,255,255,0.3);           /* contorno sutil */
+  box-shadow: inset 0 0 20px rgba(255,255,255,0.2);  /* glow interno pra profundidade */
+  backdrop-filter: blur(6px) saturate(180%);         /* desfoque mais forte + saturação */
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+
+/* reflexo de luz */
+.carousel-slides .slide::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: -30%;
+  width: 80%;
+  height: 40%;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.25) 0%,
+    rgba(255,255,255,0) 60%
+  );
+  transform: rotate(-20deg);
+  filter: blur(8px);
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+
+.carousel-proj1 #c1a:checked ~ .carousel-slides .slide:not(#s1)::before,
+.carousel-proj1 #c1b:checked ~ .carousel-slides .slide:not(#s2)::before,
+.carousel-proj1 #c1c:checked ~ .carousel-slides .slide:not(#s3)::before,
+.carousel-proj1 #c1d:checked ~ .carousel-slides .slide:not(#s4)::before,
+.carousel-proj1 #c1e:checked ~ .carousel-slides .slide:not(#s5)::before,
+.carousel-proj2 #c2a:checked ~ .carousel-slides .slide:not(#t1)::before,
+.carousel-proj2 #c2b:checked ~ .carousel-slides .slide:not(#t2)::before,
+.carousel-proj2 #c2c:checked ~ .carousel-slides .slide:not(#t3)::before,
+.carousel-proj2 #c2d:checked ~ .carousel-slides .slide:not(#t4)::before,
+.carousel-proj2 #c2e:checked ~ .carousel-slides .slide:not(#t5)::before,
+.carousel-proj3 #c3a:checked ~ .carousel-slides .slide:not(#u1)::before,
+.carousel-proj3 #c3b:checked ~ .carousel-slides .slide:not(#u2)::before,
+.carousel-proj3 #c3c:checked ~ .carousel-slides .slide:not(#u3)::before,
+.carousel-proj3 #c3d:checked ~ .carousel-slides .slide:not(#u4)::before,
+.carousel-proj3 #c3e:checked ~ .carousel-slides .slide:not(#u5)::before,
+.carousel-proj4 #c4a:checked ~ .carousel-slides .slide:not(#v1)::before,
+.carousel-proj4 #c4b:checked ~ .carousel-slides .slide:not(#v2)::before,
+.carousel-proj4 #c4c:checked ~ .carousel-slides .slide:not(#v3)::before,
+.carousel-proj4 #c4d:checked ~ .carousel-slides .slide:not(#v4)::before,
+.carousel-proj4 #c4e:checked ~ .carousel-slides .slide:not(#v5)::before,
+.carousel-proj5 #c5a:checked ~ .carousel-slides .slide:not(#w1)::before,
+.carousel-proj5 #c5b:checked ~ .carousel-slides .slide:not(#w2)::before,
+.carousel-proj5 #c5c:checked ~ .carousel-slides .slide:not(#w3)::before,
+.carousel-proj5 #c5d:checked ~ .carousel-slides .slide:not(#w4)::before,
+.carousel-proj5 #c5e:checked ~ .carousel-slides .slide:not(#w5)::before {
+  opacity: 1;
+}
+
 /* ========== SEÇÃO “PROJETOS” ========== */
 .projects-list {
   text-align: center;
@@ -224,12 +393,12 @@ main.projects {
 .thumbnails {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 0.7rem;
 }
 .proj-thumb {
   position: relative;
-  width: 27.3vw;
-  height: 14vw;
+  width: 19.5vw;
+  height: 10vw;
   background-size: cover;
   background-position: center;
   border-radius: 8px;
@@ -249,6 +418,9 @@ main.projects {
   transform: translateY(-8px);
 }
 #proj1:checked ~ .page-bg .thumbnails .proj1,
-#proj2:checked ~ .page-bg .thumbnails .proj2 {
+#proj2:checked ~ .page-bg .thumbnails .proj2,
+#proj3:checked ~ .page-bg .thumbnails .proj3,
+#proj4:checked ~ .page-bg .thumbnails .proj4,
+#proj5:checked ~ .page-bg .thumbnails .proj5 {
   transform: translateY(-15px);
 }
