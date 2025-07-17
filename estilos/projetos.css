@@ -435,13 +435,22 @@ main.projects {
   font-family: 'Montserrat Black', sans-serif;
 }
 
-
 #proj1:checked ~ .page-bg .thumbnails .proj1,
 #proj2:checked ~ .page-bg .thumbnails .proj2,
 #proj3:checked ~ .page-bg .thumbnails .proj3,
 #proj4:checked ~ .page-bg .thumbnails .proj4,
 #proj5:checked ~ .page-bg .thumbnails .proj5 {
   transform: translateY(-15px);
+}
+
+#proj1:checked ~ .page-bg .thumbnails .proj1 span,
+#proj2:checked ~ .page-bg .thumbnails .proj2 span,
+#proj3:checked ~ .page-bg .thumbnails .proj3 span,
+#proj4:checked ~ .page-bg .thumbnails .proj4 span,
+#proj5:checked ~ .page-bg .thumbnails .proj5 span {
+  font-family: 'Montserrat Black', sans-serif;
+  transition: font-size 0.7s;
+  font-size: 1.8rem;
 }
 
 /* ① Área que *esconde* tudo que passar das bordas */
@@ -458,7 +467,7 @@ main.projects {
   display: flex;
   /* O total é 2x a largura de um conjunto de thumbs */
   /* Ajuste o tempo conforme a quantidade de thumbs para ficar suave */
-  animation: marquee 15s linear infinite;
+  animation: marquee 25s linear infinite;
 }
 
 /* GAP NA EMENDA ENTRE AS DUAS SEQUÊNCIAS ——— */
