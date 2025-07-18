@@ -187,14 +187,17 @@ main.projects {
 }
 .intro-paragraphs {
   max-width: 35%;
+  margin-bottom: 2.2vw;
+  margin-right: 2.2vw;
+
 }
 .intro-paragraphs p {
   color: #ccc;
   font-size: 1.1vw;
   line-height: 1.6;
   text-align: justify;
-  margin-bottom: 1.2vw;
-}
+  margin-bottom: 1.5rem;
+  }
 
 /* ========== CARROSÉIS: OCULTAR / EXIBIR ========== */
 .projects-carousel {
@@ -485,4 +488,76 @@ main.projects {
   to {
     transform: translateX(-100%);
   }
+}
+
+/* ========== SUBMENU SUSPENSO ========== */
+nav ul li {
+  position: relative; /* para ancorar o submenu */
+}
+
+/* 1) Garante que o link fique acima do submenu */
+.has-submenu > a {
+  position: relative;
+  z-index: 2;
+}
+
+/* 1) sempre block, mas escondido via opacity & scaleY */
+.has-submenu .submenu {
+  visibility: hidden;
+  opacity: 0;
+  /* posicionamento igual ao que você já tinha */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%) scaleY(0);
+  transform-origin: center top;
+  
+  /* tamanho e estilo como antes */
+  width: 150px;
+  background: linear-gradient(to bottom, #11091D 15%, #784CBC 80%);
+  border: 1px solid #784CBC;
+  border-radius: 5px;
+  padding: 3rem 0.5rem 0.5rem;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  z-index: 1;
+
+  /* 2) animação de crescimento + fade */
+  transition: transform 0.4s ease-out 0.1s,
+              opacity   0.3s ease-out  0.1s,
+              visibility 0s linear      0.5s; 
+  /* visibility só troca depois que a animação termina */
+}
+
+/* 3) mostra no hover, invertendo delays */
+.has-submenu:hover .submenu {
+  visibility: visible;  /* imediatamente */
+  opacity: 1;           /* fade in */
+  transform: translate(-50%, -20%) scaleY(1); /* cresce verticalmente */
+  transition-delay: 0.1s, 0.2s, 0s; 
+  /* opacity tem leve delay pra dar “peso”,
+     visibility volta direto antes de aparecer */
+}
+
+
+
+/* links internos */
+.has-submenu .submenu a {
+  font-family: 'Montserrat Alternates', sans-serif;
+  display: block;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 0.4rem 0;
+  margin-top: 0.3rem;
+  text-align: center;
+  font-size: 0.85rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* hover / ativo */
+.has-submenu .submenu a:hover,
+.has-submenu .submenu .sub-active {
+  color: #FFFFFF;
+  font-weight: 600;
 }
