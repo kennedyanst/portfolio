@@ -537,37 +537,7 @@ nav ul li {
   border-color: #49f842;
 }
 
-/* PROJETO 5 (azul) */
-#proj5:checked ~ .page-bg header nav ul li.has-submenu .submenu {
-  background: linear-gradient(to bottom, #11091D 0%, #5261F0 100%);
-  border-color: #5261F0;
-}
 
-/* ajustar o hover/ativo do link interno para usar o accent do projeto */
-#proj1:checked ~ .page-bg header nav ul li.has-submenu .submenu a:hover,
-#proj1:checked ~ .page-bg header nav ul li.has-submenu .submenu .sub-active {
-  background: rgba(142,109,229,0.2);
-}
-
-#proj2:checked ~ .page-bg header nav ul li.has-submenu .submenu a:hover,
-#proj2:checked ~ .page-bg header nav ul li.has-submenu .submenu .sub-active {
-  background: rgba(244,55,55,0.2);
-}
-
-#proj3:checked ~ .page-bg header nav ul li.has-submenu .submenu a:hover,
-#proj3:checked ~ .page-bg header nav ul li.has-submenu .submenu .sub-active {
-  background: rgba(218,154,168,0.2);
-}
-
-#proj4:checked ~ .page-bg header nav ul li.has-submenu .submenu a:hover,
-#proj4:checked ~ .page-bg header nav ul li.has-submenu .submenu .sub-active {
-  background: rgba(73,248,66,0.2);
-}
-
-#proj5:checked ~ .page-bg header nav ul li.has-submenu .submenu a:hover,
-#proj5:checked ~ .page-bg header nav ul li.has-submenu .submenu .sub-active {
-  background: rgba(82,97,240,0.2);
-}
 
 
 /* 1) Garante que o link fique acima do submenu */
