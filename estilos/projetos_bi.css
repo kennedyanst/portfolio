@@ -376,6 +376,22 @@ main.projects {
   opacity: 1;
 }
 
+/* remove qualquer background antigo */
+.video-slide {
+  background: none !important;
+}
+
+/* faz o vídeo cobrir todo o slide */
+.slide-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;    /* permite clicar no label por cima */
+}
+
+
 /* ========== SEÇÃO “PROJETOS” ========== */
 .projects-list {
   text-align: center;
@@ -494,6 +510,65 @@ main.projects {
 nav ul li {
   position: relative; /* para ancorar o submenu */
 }
+
+/* ─── SUBMENU DINÂMICO POR PROJETO ─── */
+
+/* PROJETO 1 (padrão roxo) */
+#proj1:checked ~ .page-bg header nav ul li.has-submenu .submenu {
+  background: linear-gradient(to bottom, #11091D 0%, #8e6de5 100%);
+  border-color: #8e6de5;
+}
+
+/* PROJETO 2 (vermelho) */
+#proj2:checked ~ .page-bg header nav ul li.has-submenu .submenu {
+  background: linear-gradient(to bottom, #11091D 0%, #F43737 100%);
+  border-color: #F43737;
+}
+
+/* PROJETO 3 (rosa) */
+#proj3:checked ~ .page-bg header nav ul li.has-submenu .submenu {
+  background: linear-gradient(to bottom, #11091D 0%, #DA9AA8 100%);
+  border-color: #DA9AA8;
+}
+
+/* PROJETO 4 (verde) */
+#proj4:checked ~ .page-bg header nav ul li.has-submenu .submenu {
+  background: linear-gradient(to bottom, #11091D 0%, #49f842 100%);
+  border-color: #49f842;
+}
+
+/* PROJETO 5 (azul) */
+#proj5:checked ~ .page-bg header nav ul li.has-submenu .submenu {
+  background: linear-gradient(to bottom, #11091D 0%, #5261F0 100%);
+  border-color: #5261F0;
+}
+
+/* ajustar o hover/ativo do link interno para usar o accent do projeto */
+#proj1:checked ~ .page-bg header nav ul li.has-submenu .submenu a:hover,
+#proj1:checked ~ .page-bg header nav ul li.has-submenu .submenu .sub-active {
+  background: rgba(142,109,229,0.2);
+}
+
+#proj2:checked ~ .page-bg header nav ul li.has-submenu .submenu a:hover,
+#proj2:checked ~ .page-bg header nav ul li.has-submenu .submenu .sub-active {
+  background: rgba(244,55,55,0.2);
+}
+
+#proj3:checked ~ .page-bg header nav ul li.has-submenu .submenu a:hover,
+#proj3:checked ~ .page-bg header nav ul li.has-submenu .submenu .sub-active {
+  background: rgba(218,154,168,0.2);
+}
+
+#proj4:checked ~ .page-bg header nav ul li.has-submenu .submenu a:hover,
+#proj4:checked ~ .page-bg header nav ul li.has-submenu .submenu .sub-active {
+  background: rgba(73,248,66,0.2);
+}
+
+#proj5:checked ~ .page-bg header nav ul li.has-submenu .submenu a:hover,
+#proj5:checked ~ .page-bg header nav ul li.has-submenu .submenu .sub-active {
+  background: rgba(82,97,240,0.2);
+}
+
 
 /* 1) Garante que o link fique acima do submenu */
 .has-submenu > a {
