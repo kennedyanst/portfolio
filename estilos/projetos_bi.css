@@ -124,6 +124,7 @@ nav a:hover {
   color: #8e6de5;
   font-weight: 600;
 }
+
 #proj2:checked ~ .page-bg header nav a.active,
 #proj2:checked ~ .page-bg header nav a:hover {
   color: #F43737;
