@@ -23,6 +23,7 @@
 body, html {
   font-family: 'Poppins', sans-serif;
   background: #010101 url('../imagem_fundo_ux.png') center/cover no-repeat;
+  background-attachment: fixed;
   color: #eee;
 }
 
@@ -34,14 +35,19 @@ header {
   display:flex; align-items:center; justify-content:space-between;
   padding: 1rem 4rem; z-index:1000;
 }
+
 .logo { font-size:1.5rem; font-weight:700; color:#fff }
 .logo span { color:#E23E8C }
+
 nav ul { display:flex; gap:2rem; list-style:none }
+
 nav ul li { position: relative }
+
 nav a {
   color:#fff; text-decoration:none; letter-spacing:.1em;
   transition: color .3s;
 }
+
 nav a.active,
 nav a:hover { color:#E23E8C; font-weight:600 }
 
@@ -87,7 +93,7 @@ main.ux-page { padding-top:6rem }
   padding: 6rem 4rem 2rem;
 }
 .intro-ux h1 {
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Montserrat Black', sans-serif;
   font-size: 9vw; font-weight:800; line-height:1;
   color: #E23E8C;
 }
@@ -115,8 +121,8 @@ main.ux-page { padding-top:6rem }
     width: 90%;
     border: 2px solid #eee;
     height: 90%;
-    object-fit: cover;
     border-radius: 10px;
+    object-fit: cover;
 }
 .slider .list .item::after{
     content: '';
