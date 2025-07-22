@@ -1,0 +1,108 @@
+<!-- ux.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projetos UX Design — Kennedy Ans</title>
+  <link rel="stylesheet" href="./estilos/projetos_ux.css"/>
+  <!-- Swiper styles -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
+
+</head>
+<body>
+  <header>
+    <div class="logo">kennedy<span>ans.</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">SOBRE</a></li>
+        <li class="has-submenu">
+          <a href="projetos.html" class="active">PROJETOS</a>
+          <div class="submenu">
+            <a href="projetos-bi.html">Power BI</a>
+            <a href="projetos-python.html">Python/R</a>
+            <a href="ux.html" class="sub-active">UX Design</a>
+          </div>
+        </li>
+        <li><a href="formacao.html">FORMAÇÃO</a></li>
+        <li><a href="experiencias.html">EXPERIÊNCIAS</a></li>
+        <li><a href="contatos.html">CONTATOS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="ux-page">
+    <!-- INTRO -->
+    <section class="intro-ux">
+      <h1>UX<br/>Design</h1>
+      <div class="ux-text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat optio libero quibusdam ad corrupti minima cupiditate nostrum ipsa, quasi, illo fugiat?</p>
+        <p>Porro natus maxime molestias minima impedit tempora ut quas! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Quos ullam cupiditate dolore hic, libero magni corporis reprehenderit quidem, magnam facere, nemo eligendi alias adipisci minima aut fugit aliquam distinctio ratione.</p>
+      </div>
+    </section>
+    
+    <section class="ux-carousel">
+        <div class="swiper ux-swiper">
+            <div class="swiper-wrapper">
+            <!-- 10 slides -->
+            <div class="swiper-slide"><img src="imagem_fundo.png" alt=""/></div>
+            <div class="swiper-slide"><img src="imagem_fundo.png" alt=""/></div>
+            <div class="swiper-slide"><img src="imagem_fundo.png" alt=""/></div>
+            <div class="swiper-slide"><img src="imagem_fundo.png" alt=""/></div>
+            <div class="swiper-slide"><img src="imagem_fundo.png" alt=""/></div>
+            <div class="swiper-slide"><img src="imagem_fundo.png" alt=""/></div>
+            <div class="swiper-slide"><img src="imagem_fundo.png" alt=""/></div>
+            <div class="swiper-slide"><img src="imagem_fundo.png" alt=""/></div>
+            <div class="swiper-slide"><img src="imagem_fundo.png" alt=""/></div>
+            <div class="swiper-slide"><img src="imagem_fundo.png" alt=""/></div>
+            </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    </section>
+
+
+  </main>
+  <!-- Swiper script -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+</body>
+</html>
+<script>
+  const swiper = new Swiper('.ux-swiper', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+
+    /* mostra exatamente 5 slides */
+    slidesPerView: 5,
+
+    /* gap entre eles */
+    spaceBetween: 12,
+
+    loop: true,
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 200,
+      modifier: 1,
+      slideShadows: false,
+    },
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+  });
+</script>
+
+
+
