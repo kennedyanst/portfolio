@@ -52,6 +52,11 @@ nav a.active,
 nav a:hover { color:#E23E8C; font-weight:600 }
 
 
+/* 1) Garante que o <li> funcione como referência para o absoluto */
+nav ul li.has-submenu {
+  position: relative; /* :contentReference[oaicite:0]{index=0} */
+}
+
 /* 1) Garante que o link fique acima do submenu */
 .has-submenu > a {
   position: relative;
@@ -71,7 +76,7 @@ nav a:hover { color:#E23E8C; font-weight:600 }
   
   /* tamanho e estilo como antes */
   width: 150px;
-  background: linear-gradient(to bottom, #000000 15%, #E23E8C 80%);
+  background: linear-gradient(to bottom, #11091D 15%, #E23E8C 80%);
   border: 1px solid #E23E8C;
   border-radius: 5px;
   padding: 3rem 0.5rem 0.5rem;
@@ -118,6 +123,7 @@ nav a:hover { color:#E23E8C; font-weight:600 }
   color: #FFFFFF;
   font-weight: 600;
 }
+
 
 /* ─── INTRO UX ─── */
 main.ux-page { padding-top:6rem }

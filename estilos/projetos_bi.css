@@ -538,6 +538,12 @@ nav ul li {
   border-color: #49f842;
 }
 
+/* PROJETO 5 (azul) */
+#proj5:checked ~ .page-bg header nav ul li.has-submenu .submenu {
+  background: linear-gradient(to bottom, #11091D 0%, #5261F0 100%);
+  border-color: #5261F0;
+}
+
 
 
 
