@@ -30,6 +30,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
+  background: rgba(0,0,0,0.5);
   padding: 20px 60px;
   display: flex;
   align-items: center;
@@ -147,10 +148,8 @@ main.ux-page { padding-top:6rem }
 .ux-text p {
   margin-bottom:1.5rem; color:#ccc;
   line-height:1.6; text-align:justify;
-  animation:focus-in-expand 6s cubic-bezier(.25,.46,.45,.94) both
+  animation:text-focus-in 2s cubic-bezier(.55,.085,.68,.53) both;
 }
-
-@keyframes focus-in-expand{0%{letter-spacing:-.5em;filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
 
 .slider{
     height: 100vh;
