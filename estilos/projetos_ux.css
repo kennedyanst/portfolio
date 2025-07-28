@@ -103,7 +103,6 @@ nav ul li.has-submenu {
 }
 
 
-
 /* links internos */
 .has-submenu .submenu a {
   font-family: 'Montserrat Alternates', sans-serif;
@@ -129,11 +128,11 @@ nav ul li.has-submenu {
 main.ux-page { padding-top:6rem }
 .intro-ux {
   display: flex; justify-content: space-between; align-items:flex-start;
-  padding: 6rem 4rem 2rem;
+  padding: 2rem 4rem 2rem;
 }
 .intro-ux h1 {
   font-family: 'Montserrat Black', sans-serif;
-  font-size: 9vw; font-weight:800; line-height:1;
+  font-size: 11vw; font-weight:800; line-height:1;
   color: #E23E8C;
 }
 .ux-text {

@@ -1,55 +1,52 @@
-// apenas após o DOM carregar
-window.addEventListener('DOMContentLoaded', ()=>{
+// pega todos os cards e os elementos que vamos atualizar
+const cards    = document.querySelectorAll('.tilt-card');
+const mainImg  = document.getElementById('mainImage');
+const p1       = document.getElementById('para1');
+const p2       = document.getElementById('para2');
+const p3       = document.getElementById('para3');
 
-  // mapeia cards e elementos principais
-  const cards      = document.querySelectorAll('.py-cards .card');
-  const mainImage  = document.getElementById('mainImage');
-  const para1      = document.getElementById('para1');
-  const para2      = document.getElementById('para2');
-  const para3      = document.getElementById('para3');
-
-  // dados para cada card
-  const data = {
-    estatistica: {
-      img:    './imagens/python_r/siade-capa.png',
-      p1:     'Este projeto de análise estatística usa Python e R para validar hipóteses, gerar gráficos e relatórios de forma automatizada.',
-      p2:     'Integra módulos de amostragem, testes de significância e visualização interativa.',
-      p3:     'Usuário pode carregar dados em CSV ou Excel e obter saídas prontas em PDF ou HTML.'
-    },
-    ml: {
-      img:    'imgs/py-ml.png',
-      p1:     'No módulo de Machine Learning implementamos regressão, classificação e clustering.',
-      p2:     'Utilizamos scikit-learn e TensorFlow para treinar e avaliar modelos.',
-      p3:     'Resultados são apresentados com gráficos dinâmicos em dashboards interativos.'
-    },
-    automacao: {
-      img:    'imgs/py-automacao.png',
-      p1:     'A camada de automação exporta relatórios via e-mail, gera alertas e executa tarefas em lote.',
-      p2:     'Usamos cronjobs, Airflow e scripts Python para agendar processos.',
-      p3:     'Logs detalhados garantem auditabilidade e fácil manutenção.'
-    }
-  };
-
-  // função que atualiza tudo quando um card é clicado
-  function activate(id){
-    // desmarca todos
-    cards.forEach(c=>c.classList.remove('active'));
-    // marca o escolhido
-    const card = document.querySelector(`.card[data-id="${id}"]`);
-    card.classList.add('active');
-
-    // atualiza conteúdo
-    mainImage.src        = data[id].img;
-    para1.textContent    = data[id].p1;
-    para2.textContent    = data[id].p2;
-    para3.textContent    = data[id].p3;
-  }
-
-  // ligar o clique de cada card
-  cards.forEach(c=>{
-    c.addEventListener('click', ()=> activate(c.dataset.id));
+cards.forEach(card => {
+  // ─── 1) Efeito de tilt ───
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x    = e.clientX - rect.left  - rect.width  / 2;
+    const y    = e.clientY - rect.top   - rect.height / 2;
+    const rotateY =  ( x / (rect.width  / 2)) * 10;  
+    const rotateX = -( y / (rect.height / 2)) * 10; 
+    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
   });
 
-  // inicializa com 'estatistica'
-  activate('estatistica');
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+  });
+
+  // ─── 2) Seleção via clique ───
+  card.addEventListener('click', () => {
+    // remove a classe de todos e marca o clicado
+    cards.forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+
+    // escolhe qual conteúdo carregar
+    if (card.classList.contains('card-stat')) {
+      mainImg.src    = './imagens/python_r/siade-capa.png';
+      mainImg.alt    = 'Estatística com Python/R';
+      p1.textContent = 'Este projeto é um sistema web de análise estatística usando Python para validar hipóteses, gerar gráficos e relatórios de forma automatizada.';
+      p2.textContent = 'Integra módulos de amostragem, testes de significância, visualização interativa e outras técnicas estatísticas relevantes.';
+      p3.textContent = 'Usuário pode carregar dados em CSV ou Excel e obter saídas prontas em PDF ou HTML.';
+    }
+    else if (card.classList.contains('card-ml')) {
+      mainImg.src    = './imagens/python_r/ml-capa.png';
+      mainImg.alt    = 'Machine Learning com Python/R';
+      p1.textContent = 'Modelos de Machine Learning para classificação e regressão, usando scikit-learn e TensorFlow.';
+      p2.textContent = 'Pipeline de limpeza de dados, seleção de features, validação cruzada e tuning de hiperparâmetros.';
+      p3.textContent = 'Gera relatórios comparativos de desempenho e gráficos interativos dos resultados.';
+    }
+    else if (card.classList.contains('card-auto')) {
+      mainImg.src    = './imagens/python_r/auto-capa.png';
+      mainImg.alt    = 'Automação com Python/R';
+      p1.textContent = 'Automatizamos tarefas repetitivas, desde raspagem web até geração de relatórios e envio de e-mail.';
+      p2.textContent = 'Usa Selenium, Requests e Pandas para coleta, API calls e ETL.';
+      p3.textContent = 'Agendamento de execuções, notificações e interface simples em Tkinter.';
+    }
+  });
 });
