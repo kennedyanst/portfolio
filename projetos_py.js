@@ -30,23 +30,23 @@ cards.forEach(card => {
     if (card.classList.contains('card-stat')) {
       mainImg.src    = './imagens/python_r/siade-capa.png';
       mainImg.alt    = 'Estatística com Python/R';
-      p1.textContent = 'Este projeto é um sistema web de análise estatística usando Python para validar hipóteses, gerar gráficos e relatórios de forma automatizada.';
-      p2.textContent = 'Integra módulos de amostragem, testes de significância, visualização interativa e outras técnicas estatísticas relevantes.';
-      p3.textContent = 'Usuário pode carregar dados em CSV ou Excel e obter saídas prontas em PDF ou HTML.';
+      p1.textContent = 'Um exemplo de projeto que desenvolvi para a área da estatística, é o SIADE (Sistema de Análise de Dados Estatísticos).';
+      p2.textContent = 'É uma ferramenta que facilita a análise de dados estatísticos, permitindo que usuários realizem análises complexas de forma intuitiva e rápida.';
+      p3.textContent = 'Cada página deste projeto é dedicada a um aspecto específico do SIADE, como a análise de dados, visualização de resultados e geração de relatórios.';
     }
     else if (card.classList.contains('card-ml')) {
       mainImg.src    = './imagens/python_r/ml-capa.png';
       mainImg.alt    = 'Machine Learning com Python/R';
-      p1.textContent = 'Modelos de Machine Learning para classificação e regressão, usando scikit-learn e TensorFlow.';
-      p2.textContent = 'Pipeline de limpeza de dados, seleção de features, validação cruzada e tuning de hiperparâmetros.';
-      p3.textContent = 'Gera relatórios comparativos de desempenho e gráficos interativos dos resultados.';
+      p1.textContent = 'Modelos de Machine Learning para classificação e regressão, usando scikit-learn, h2o, caret entre outros bibliotecas/libs.';
+      p2.textContent = 'No exemplo ao lado, é apresentado um script python que salva os melhores parametros dos modelos mais precisos na base, ';
+      p3.textContent = 'Antes de criar os modelos, foi feito uma análise exploratória dos dados, limpeza e preparação, além de seleção de variáveis e comparações de resultados.';
     }
     else if (card.classList.contains('card-auto')) {
       mainImg.src    = './imagens/python_r/auto-capa.png';
       mainImg.alt    = 'Automação com Python/R';
       p1.textContent = 'Automatizamos tarefas repetitivas, desde raspagem web até geração de relatórios e envio de e-mail.';
-      p2.textContent = 'Usa Selenium, Requests e Pandas para coleta, API calls e ETL.';
-      p3.textContent = 'Agendamento de execuções, notificações e interface simples em Tkinter.';
+      p2.textContent = 'Utilizando as bibliotecas Selenium, BeautifulSoup e Requests, conseguimos extrair dados de sites, processar informações e gerar relatórios automatizados.';
+      p3.textContent = 'Agendamento de execuções, envio de e-mails e integração com outras ferramentas são algumas das funcionalidades que implementei.';
     }
   });
 });
