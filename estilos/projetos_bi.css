@@ -1,13 +1,8 @@
 /* ========== FUNDOS E RESET ========== */
-@font-face {
-  font-family: 'Poppins';
-  src: url('../fontes/Poppins/Poppins-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+
 @font-face {
   font-family: 'Montserrat Alternates';
-  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Regular.ttf') format('truetype');
+  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Thin.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -80,15 +75,16 @@ header {
   background: rgba(0,0,0,0.5);
   z-index: 1000;
 }
+
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
   color: #fff;
   white-space: nowrap;
 }
+
 .logo span {
   color: #8e6de5;
-  transition: color 0.3s;
 }
 
 #proj2:checked ~ .page-bg header .logo span {
@@ -161,7 +157,14 @@ main.projects {
   line-height: 1.4;
   color: #8e6de5;
   transition: color 0.3s;
+  animation: initialAnimation 2s ease-in-out;
 }
+
+@keyframes initialAnimation {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
 #proj2:checked ~ .page-bg main .projects-intro h1 {
   color: #F43737;
 }
@@ -190,7 +193,18 @@ main.projects {
   max-width: 35%;
   margin-bottom: 2.2vw;
   margin-right: 2.2vw;
+  animation: aparecer 1.5s ease-in-out;
+}
 
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .intro-paragraphs p {
   color: #ccc;

@@ -1,10 +1,5 @@
 /* ─── RESET & BODY ─── */
-@font-face {
-  font-family: 'Poppins';
-  src: url('../fontes/Poppins/Poppins-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+
 @font-face {
   font-family: 'Montserrat Alternates';
   src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Thin.ttf') format('truetype');
@@ -13,13 +8,14 @@
 }
 @font-face {
   font-family: 'Montserrat Black';
-  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Black.ttf') format('truetype');
+  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Bold.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
 }
 
 
 * { margin:0; padding:0; box-sizing:border-box }
+
 body {
   font-family: 'Poppins', sans-serif;
   background-image: url('../imagem_fundo_projetos_py.png');
@@ -31,11 +27,16 @@ body {
 
 /* ─── HEADER & NAV ─── */
 header {
-  position: fixed; top:0; left:0; right:0;
-  display: flex; justify-content: space-between; align-items:center;
-  padding: 1rem 3rem;
-  background: rgba(0,0,0,0.6);
-  z-index:1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* permite quebrar se necessário */
 }
 
 .logo { font-size:1.5rem; font-weight:bold; color:#fff }
@@ -139,7 +140,10 @@ nav ul li.has-submenu {
   font-family: 'Montserrat Alternates', sans-serif;
   margin-bottom:6rem;
   color: #09F5FF; /* amarelo Python */
+  animation: focus-in-expand 2s cubic-bezier(.25,.46,.45,.94) both;
 }
+
+@keyframes focus-in-expand{0%{letter-spacing:-.5em;filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
 
 .py-intro h1 strong { 
     font-family:'Montserrat Black', sans-serif;
@@ -208,8 +212,8 @@ nav ul li.has-submenu {
 
 /* O próprio cartão que vai girar */
 .tilt-card {
-  width: 380px;
-  height: 580px;
+  width: 25vw;
+  height: 40vw;
   background: #001A27;
   border: cyan 1px solid;
   border-radius: 16px;
@@ -226,7 +230,7 @@ nav ul li.has-submenu {
   background: #001A27;
   border-color: #00FFFF; /* ciano */
   box-shadow: 0 10px 20px rgba(0, 255, 255, 0.5);
-  animation: shadow-pulse1 5s infinite alternate;
+  animation: shadow-pulse1 2s infinite alternate;
 }
 
 @keyframes shadow-pulse1 {
@@ -240,7 +244,7 @@ nav ul li.has-submenu {
   background: #060B1E;
   border-color: #004E96; /* magenta */
   box-shadow: 0 10px 20px rgba(68, 0, 255, 0.5);
-  animation: shadow-pulse2 5s infinite alternate;
+  animation: shadow-pulse2 2s infinite alternate;
 }
 
 @keyframes shadow-pulse2 {
@@ -254,7 +258,7 @@ nav ul li.has-submenu {
   background: #0C1A20;
   border-color: #32A1BC; /* amarelo */
   box-shadow: 0 10px 20px #32A1BC;
-  animation: shadow-pulse3 5s infinite alternate;
+  animation: shadow-pulse3 2s infinite alternate;
 }
 
 @keyframes shadow-pulse3 {
@@ -282,18 +286,18 @@ nav ul li.has-submenu {
 }
 .card-body small {
   display: block;
-  font-size: 1rem;
+  font-size: 1vw;
   margin-bottom: 0.5rem;
   color: #04FFFF;
 }
 .card-body h3 {
   margin: 0 0 0.75rem;
-  font-size: 2rem;
+  font-size: 2vw;
   color: #fff;
 }
 .card-body p {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.2vw;
   text-align: justify;
   line-height: 1.4;
   color: #ccc;
