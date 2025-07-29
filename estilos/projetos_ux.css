@@ -146,7 +146,7 @@ main.ux-page { padding-top:6rem }
   max-width: 40%;
 }
 .ux-text p {
-  margin-bottom:1.5rem; color:#ccc;
+  margin-bottom:1.5vw; color:#ccc; font-size: 1.2vw;
   line-height:1.6; text-align:justify;
   animation:text-focus-in 2s cubic-bezier(.55,.085,.68,.53) both;
 }
@@ -166,7 +166,6 @@ main.ux-page { padding-top:6rem }
 }
 .slider .list .item img{
     width: 90%;
-    border: 2px solid #E23E8C;
     height: 90%;
     border-radius: 10px;
     object-fit: cover;
@@ -185,7 +184,7 @@ main.ux-page { padding-top:6rem }
 .slider .list .item .content{
     position: absolute;
     left: 10%;
-    top: 20%;
+    top: 15%;
     width: 500px;
     max-width: 80%;
     z-index: 1;
@@ -197,6 +196,7 @@ main.ux-page { padding-top:6rem }
 .slider .list .item .content h2{
     font-size: 100px;
     margin: 0;
+    letter-spacing: .3vw;
 }
 .slider .list .item.active{
     opacity: 1;
