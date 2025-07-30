@@ -244,13 +244,18 @@ nav ul li.has-submenu {
   grid-area: courses;
   position: relative;
   width: 100%;
+  
 }
+
 .courses-card {
+  display: flex;
+  flex-direction: column;      /* aqui empilha h2 + ul verticalmente */
   position: absolute;
   bottom: 0;
   height: 700px;
+  width: 100%;
   margin-right: 30px;
-  padding: 30px;
+  padding: 20px;
 
   /* por cima da cor, a imagem */
   background-image: url('../cursos-comple.png');
@@ -258,65 +263,45 @@ nav ul li.has-submenu {
   background-size: cover;
   background-repeat: no-repeat;
 
-  /* cor semitransparente que deixa o backdrop-filter “ver” o que está atrás */
-  background-color: rgba(7, 7, 7, 0.05);
-
-  /* o blur e saturate que escurece o fundo */
-  -webkit-backdrop-filter: blur(8px) saturate(380%);
-          backdrop-filter: blur(8px) saturate(380%);
-
   /* borda e cantos */
-  border: 1px solid rgba(255,255,255,0.3);
+  border-top: 1px solid rgb(255, 255, 255);
+  border-right: 1px solid rgb(255, 255, 255);
+  border-left: 1px solid rgb(255, 255, 255);
+  border-bottom: none;
   border-radius: 20px 20px 0 0;
-
   
 }
 
 .courses-card h2 {
+  position: relative;
+  font-family: 'Montserrat Bold', sans-serif;
   font-size: 1.8rem;
   margin-bottom: 12px;
   text-align: center;
   letter-spacing: 1px;
+  padding-bottom: 10px;
 }
 
-/* 3) Mantém o conteúdo acima da imagem */
-.courses-card > * {
-  position: relative;
-  z-index: 1;
+/* 2. Desenha a linha por baixo, com margens laterais */
+.courses-card h2::after {
+  content: "";
+  position: absolute;
+  left: 5px;               /* distancia do início do h2 */
+  right: 5px;              /* distancia do fim do h2 */
+  bottom: 0;                /* no final do padding-bottom */
+  height: 1px;              /* espessura da linha */
+  background-color: rgba(255,255,255,0.6);
 }
 
-/* 4) Força título e lista em bloco e em coluna */
-.courses-card h2,
+/* Deixando o ul embaixo do titulo */
 .courses-card ul {
-  display: block;
-}
-
-/* 5) Garante que a lista comece abaixo do título */
-.courses-card ul {
-  margin-top: 1rem;
-  padding-left: 1.2em; /* já tinha, mas reforça indent */
-}
-
-/* 6) Se houver algum container flex em volta das <li>, aplique coluna */
-.courses-card ul {
+  font-family: 'Montserrat Light', sans-serif;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 10px;
 }
 
-.courses-card li {
-  color: #fff;
-  line-height: 1.6;
-  font-size: 1rem;
-  margin: 8px 0;
-  position: relative;
-}
-.courses-card li::before {
-  content: "•";
-  position: absolute;
-  left: -1.2em;
-  color: #fff;
-}
 
 /* 2) Só para o card de graduação (card-grad):
    inverte a ordem dos flex items para imagem à esquerda */
