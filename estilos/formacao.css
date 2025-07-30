@@ -1,4 +1,33 @@
 /* estilos/formacao.css */
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Light';
+  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Black';
+  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Bold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+
 
 /* RESET & FONTE */
 * {
@@ -124,25 +153,30 @@ nav ul li.has-submenu {
   grid-template-areas:
     "title    title"
     "cards    courses";
-  gap: 30px;
 }
+
 .formation-page > h1 {
+  font-family: 'Montserrat Regular', sans-serif;
   grid-area: title;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 300;
   letter-spacing: 2px;
-  margin-bottom: 10px;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   text-align: left;
 }
 
 /* CARDS ESQUERDA */
 .cards-left {
   grid-area: cards;
+  width: 93%;
   display: flex;
   flex-direction: column;
   gap: 30px;
   margin-left: 1px;
 }
+
 .card {
   position: relative;
   display: flex;
@@ -163,10 +197,11 @@ nav ul li.has-submenu {
   padding: 0 44px 24px;
 }
 .card-content .label {
+  font-family: 'Montserrat Bold', sans-serif;
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(135deg, #001A27, #0057B7);
+  background: linear-gradient(135deg, #0057B7, #001A27);
   padding: 6px 46px;
   /* borda inferior arredondada para combinar com o card */
   border-radius: 0 0 18px 0;
@@ -185,7 +220,7 @@ nav ul li.has-submenu {
   font-size: 2.5rem;
   margin-bottom: 4px;
   margin-top: 98px;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Montserrat Bold', sans-serif;
 }
 .card-content h3 {
   font-size: 1rem;
@@ -208,28 +243,70 @@ nav ul li.has-submenu {
 .card-right {
   grid-area: courses;
   position: relative;
+  width: 100%;
 }
 .courses-card {
   position: absolute;
-  bottom: 0; right: 0;
-  width: 100%;
+  bottom: 0;
+  height: 700px;
+  margin-right: 30px;
   padding: 30px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(8px) saturate(180%);
+
+  /* por cima da cor, a imagem */
+  background-image: url('../cursos-comple.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* cor semitransparente que deixa o backdrop-filter “ver” o que está atrás */
+  background-color: rgba(7, 7, 7, 0.05);
+
+  /* o blur e saturate que escurece o fundo */
+  -webkit-backdrop-filter: blur(8px) saturate(380%);
+          backdrop-filter: blur(8px) saturate(380%);
+
+  /* borda e cantos */
   border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 20px 0 0 20px;
+  border-radius: 20px 20px 0 0;
+
+  
 }
+
 .courses-card h2 {
   font-size: 1.8rem;
   margin-bottom: 12px;
   text-align: center;
   letter-spacing: 1px;
 }
-.courses-card ul {
-  list-style: none;
-  padding-left: 20px;
+
+/* 3) Mantém o conteúdo acima da imagem */
+.courses-card > * {
+  position: relative;
+  z-index: 1;
 }
+
+/* 4) Força título e lista em bloco e em coluna */
+.courses-card h2,
+.courses-card ul {
+  display: block;
+}
+
+/* 5) Garante que a lista comece abaixo do título */
+.courses-card ul {
+  margin-top: 1rem;
+  padding-left: 1.2em; /* já tinha, mas reforça indent */
+}
+
+/* 6) Se houver algum container flex em volta das <li>, aplique coluna */
+.courses-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .courses-card li {
+  color: #fff;
+  line-height: 1.6;
   font-size: 1rem;
   margin: 8px 0;
   position: relative;
@@ -240,6 +317,44 @@ nav ul li.has-submenu {
   left: -1.2em;
   color: #fff;
 }
+
+/* 2) Só para o card de graduação (card-grad):
+   inverte a ordem dos flex items para imagem à esquerda */
+.card-grad {
+  display: flex;
+  flex-direction: row; /* garante imagem e conteúdo lado a lado */
+  margin-bottom: 40px;
+}
+
+.card-grad .card-image {
+  order: 0;      /* imagem vem primeiro */
+  width: 40%;    /* ajusta conforme desejar */
+}
+
+.card-grad .label.dark{
+  right: 0;
+  left: auto; /* garante que fique alinhada à direita */
+  border-radius: 0 20px; /* arredonda apenas o canto superior direito */
+  padding: 6px 52px;
+  font-size: 2.5rem;
+}
+
+.card-grad .card-content {
+  order: 1;      /* conteúdo vem depois */
+  width: 60%;    /* ajusta conforme desejar */
+  padding: 6px 46px; /* mesmo padding dos outros cards */
+}
+
+.card-grad h2 {
+  font-size: 2.5rem;
+  text-align: right;
+}
+
+.card-grad h3 {
+  text-align: right;
+  margin-bottom: 16px;
+}
+
 
 /* RESPONSIVO */
 @media (max-width: 900px) {
@@ -264,3 +379,4 @@ nav ul li.has-submenu {
     border-radius: 0 0 15px 15px;
   }
 }
+
