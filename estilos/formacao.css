@@ -57,15 +57,14 @@ header {
   flex-wrap: wrap; /* permite quebrar se necessário */
 }
 
-.logo { font-size:1.5rem; font-weight:bold; color:#fff }
+.logo { font-size:1.5vw; font-weight:bold; color:#fff }
 .logo span { color:#507df8 }
 
-nav ul { display:flex; gap:2rem; list-style:none }
-
+nav ul { display:flex; gap:3vw; list-style:none }
 
 
 nav a {
-  color:#fff; text-decoration:none; letter-spacing: 0.15em;
+  font-size:1vw; color:#fff; text-decoration:none; letter-spacing: 0.15em;
   transition: color .3s;
 }
 
@@ -149,7 +148,6 @@ nav ul li.has-submenu {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto 1fr;
   grid-template-areas:
     "title    title"
     "cards    courses";
@@ -245,23 +243,22 @@ nav ul li.has-submenu {
   position: relative;
   width: 100%;
   
+  
 }
 
 .courses-card {
   display: flex;
   flex-direction: column;      /* aqui empilha h2 + ul verticalmente */
-  position: absolute;
-  bottom: 0;
-  height: 700px;
+  right: 30px;
+  padding: 20px 20px 0 20px;
   width: 100%;
-  margin-right: 30px;
-  padding: 20px;
+  height: 100%;
 
   /* por cima da cor, a imagem */
   background-image: url('../cursos-comple.png');
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
+
 
   /* borda e cantos */
   border-top: 1px solid rgb(255, 255, 255);
@@ -289,14 +286,17 @@ nav ul li.has-submenu {
   left: 5px;               /* distancia do início do h2 */
   right: 5px;              /* distancia do fim do h2 */
   bottom: 0;                /* no final do padding-bottom */
-  height: 1px;              /* espessura da linha */
-  background-color: rgba(255,255,255,0.6);
+  height: 2px;              /* espessura da linha */
+  background-color: rgb(255, 255, 255);
 }
 
 /* Deixando o ul embaixo do titulo */
 .courses-card ul {
-  font-family: 'Montserrat Light', sans-serif;
-  text-align: center;
+  margin-top: 20px;
+  list-style: disc inside;
+  font-family: 'Montserrat Regular', sans-serif;
+  font-size: 22px;
+  text-align: justify;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -308,7 +308,6 @@ nav ul li.has-submenu {
 .card-grad {
   display: flex;
   flex-direction: row; /* garante imagem e conteúdo lado a lado */
-  margin-bottom: 40px;
 }
 
 .card-grad .card-image {
