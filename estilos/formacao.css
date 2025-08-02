@@ -149,21 +149,29 @@ nav ul li.has-submenu {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-areas:
-    "title    title"
+    "title    courses"
     "cards    courses";
 }
 
 .formation-page > h1 {
+   /* mantém grid-area: title mas ocupa só a 1ª coluna */
+  grid-column: 1 / 2 !important;
+  /* largura justa ao conteúdo */
+  width: fit-content;
+  /* margens: top, horizontal auto (pra não ocupar a 2ª coluna), bottom, left */
+  margin: 30px auto 30px 30px;
   font-family: 'Montserrat Regular', sans-serif;
   grid-area: title;
-  font-size: 3.5rem;
+  font-size: 4vw;
   font-weight: 300;
   letter-spacing: 2px;
-  margin-left: 30px;
-  margin-top: 30px;
-  margin-bottom: 30px;
   text-align: left;
+  animation:focus-in-expand 1.8s cubic-bezier(.25,.46,.45,.94) both
 }
+
+
+@keyframes focus-in-expand{0%{letter-spacing:-.5em;filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
+
 
 /* CARDS ESQUERDA */
 .cards-left {
@@ -243,7 +251,6 @@ nav ul li.has-submenu {
   position: relative;
   width: 100%;
   
-  
 }
 
 .courses-card {
@@ -252,7 +259,7 @@ nav ul li.has-submenu {
   right: 30px;
   padding: 20px 20px 0 20px;
   width: 100%;
-  height: 100%;
+  margin-top: 50px;
 
   /* por cima da cor, a imagem */
   background-image: url('../cursos-comple.png');
@@ -266,8 +273,13 @@ nav ul li.has-submenu {
   border-left: 1px solid rgb(255, 255, 255);
   border-bottom: none;
   border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  animation:scale-in-ver-bottom 1.5s cubic-bezier(.25,.46,.45,.94) both;
+  animation-delay: 3.7s;
   
 }
+
+@keyframes scale-in-ver-bottom{0%{transform:scaleY(0);transform-origin:0 100%;opacity:1}100%{transform:scaleY(1);transform-origin:0 100%;opacity:1}}
 
 .courses-card h2 {
   position: relative;
@@ -277,6 +289,8 @@ nav ul li.has-submenu {
   text-align: center;
   letter-spacing: 1px;
   padding-bottom: 10px;
+  animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;
+  animation-delay: 5.2s;
 }
 
 /* 2. Desenha a linha por baixo, com margens laterais */
@@ -295,19 +309,41 @@ nav ul li.has-submenu {
   margin-top: 20px;
   list-style: disc inside;
   font-family: 'Montserrat Regular', sans-serif;
-  font-size: 22px;
+  font-size: 1.22vw;
   text-align: justify;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1.6vw;
+  padding-bottom: 2.5vw;
+  animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;
+  animation-delay: 5.8s;
+}
+.card-postgrad{
+  animation:scale-in-hor-left 1.5s cubic-bezier(.25,.46,.45,.94) both;
+  animation-delay: 2s;
 }
 
+.card-postgrad .card-content {
+  animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;
+  animation-delay: 4.5s;
+}
+
+.card-grad .card-content {
+  animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;
+  animation-delay: 5s;
+}
+
+@keyframes text-focus-in{0%{filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
+
+@keyframes scale-in-hor-left{0%{transform:scaleX(0);transform-origin:0 0;opacity:1}100%{transform:scaleX(1);transform-origin:0 0;opacity:1}}
 
 /* 2) Só para o card de graduação (card-grad):
    inverte a ordem dos flex items para imagem à esquerda */
 .card-grad {
   display: flex;
   flex-direction: row; /* garante imagem e conteúdo lado a lado */
+  animation: scale-in-hor-left 1.5s cubic-bezier(.25,.46,.45,.94) both;
+  animation-delay: 2.5s;
 }
 
 .card-grad .card-image {
