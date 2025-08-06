@@ -60,11 +60,11 @@ header {
 .logo { font-size:1.5vw; font-weight:bold; color:#fff }
 .logo span { color:#507df8 }
 
-nav ul { display:flex; gap:3vw; list-style:none }
+nav ul { display:flex; gap:2vw; list-style:none }
 
 
 nav a {
-  font-size:1vw; color:#fff; text-decoration:none; letter-spacing: 0.15em;
+  color:#fff; text-decoration:none; letter-spacing: 0.15em;
   transition: color .3s;
 }
 
@@ -310,10 +310,9 @@ nav ul li.has-submenu {
   list-style: disc inside;
   font-family: 'Montserrat Regular', sans-serif;
   font-size: 1.22vw;
-  text-align: justify;
   display: flex;
   flex-direction: column;
-  gap: 1.6vw;
+  gap: 1vw;
   padding-bottom: 2.5vw;
   animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;
   animation-delay: 5.8s;
@@ -362,7 +361,7 @@ nav ul li.has-submenu {
 .card-grad .card-content {
   order: 1;      /* conteúdo vem depois */
   width: 60%;    /* ajusta conforme desejar */
-  padding: 6px 46px; /* mesmo padding dos outros cards */
+  padding: 6px 48px; /* mesmo padding dos outros cards */
 }
 
 .card-grad h2 {
@@ -373,6 +372,12 @@ nav ul li.has-submenu {
 .card-grad h3 {
   text-align: right;
   margin-bottom: 16px;
+}
+
+.card-grad p {
+  text-align: right;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 
