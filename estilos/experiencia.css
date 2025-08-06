@@ -1,0 +1,194 @@
+/* experiencia.css */
+
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Light';
+  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Black';
+  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Bold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  /* imagem de fundo atrás de tudo */
+  background: 
+    url('../imagem_fundo_experiencia.png') no-repeat center center fixed;,
+    linear-gradient(to bottom, #3e2b1f, #b86e20);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* 2. Crie um wrapper que vai “segurar” o conteúdo com margens e gradiente leve */
+.main-wrapper {
+  margin: 80px 0;                /* 80px em cima e embaixo */
+  padding: 2rem;                 /* espaçamento interno */
+  background:                     /* gradiente semi-transparente */
+    linear-gradient(
+      #381F10,
+      #B45E2A
+    );
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  background: rgba(0,0,0,0.4);
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+.logo span {
+  color: #b86e20;
+}
+
+nav {
+  margin-left: auto;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: .1em;
+  transition: color .3s;
+}
+nav a:hover,
+nav a.active {
+  color: #b86e20;
+  font-weight: 600;
+}
+
+/* MAIN */
+main {
+  padding: 0;
+}
+
+/* TÍTULO DA PÁGINA */
+.page-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  margin-bottom: 150px;
+}
+.page-title h1 {
+  font-size: 6vw;
+  font-family: 'Montserrat Black', sans-serif;
+}
+.page-title h1 span {
+  border-bottom: 6px solid #b86e20;
+  padding-bottom: .1rem;
+}
+.page-title .underline {
+  position: absolute;
+
+  width: 60%;
+  height: 2px;
+  background: #b86e20;
+  opacity: .6;
+}
+
+/* EXPERIÊNCIAS EM COLUNAS */
+.experiences {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.exp-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.exp-card h3 {
+  font-size: 2vw;
+  font-family: 'Montserrat Bold', sans-serif;
+  font-weight: 600;
+  text-transform: lowercase;
+  margin-bottom: .4rem;
+}
+
+.exp-card .company {
+  font-size: 1vw;
+  font-family: 'Montserrat regular', sans-serif;
+  font-weight: 300;
+  margin-bottom: .6rem;
+  text-transform: lowercase;
+}
+
+.exp-card .period {
+    font-family: 'Montserrat Light', sans-serif;
+  font-size: .9rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 1rem;
+}
+
+.exp-card ul {
+  list-style: none;
+  padding-left: 1.2rem;
+}
+.exp-card ul li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: .8rem;
+  font-size: .95vw;
+  line-height: 1.4;
+}
+.exp-card ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #dfd8d0;
+  font-size: 1rem;
+  line-height: 1;
+}
