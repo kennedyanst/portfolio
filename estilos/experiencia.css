@@ -22,8 +22,8 @@
 }
 
 @font-face {
-  font-family: 'Montserrat Black';
-  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Bold.ttf') format('truetype');
+  font-family: 'Montserrat SemiBold';
+  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-SemiBold.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
 }
@@ -152,14 +152,16 @@ nav ul li.has-submenu {
 }
 
 main {
-  padding: 220px 0 40px 0;
+  padding: 8vw 0 1.3vw 0;
 }
+
 
 /* 2. Crie um wrapper que vai “segurar” o conteúdo com margens e gradiente leve */
 .main-wrapper {
   padding: 2rem;                 /* espaçamento interno */
   background:                     /* gradiente semi-transparente */
-    linear-gradient( to bottom, #381F10 35%, #B45E2A 65%);
+    linear-gradient(#381F10 35%, #7e421d 65%);
+  
 }
 
 
@@ -174,37 +176,38 @@ main {
 
 .underline-left {
   position: absolute;
-  margin-top: 50px;
+  margin-top: 10px;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
   width: 45%;
-  height: 5px;
+  height: 1px;
   background: #C19163;
+  animation:scale-in-hor-left 1.5s cubic-bezier(.25,.46,.45,.94) both;
 }
+
+@keyframes scale-in-hor-left{0%{transform:scaleX(0);transform-origin:0 0;opacity:1}100%{transform:scaleX(1);transform-origin:0 0;opacity:1}}
 
 .page-title h1 {
-  font-size: 5vw;
-  font-family: 'Montserrat Black', sans-serif;
+  font-size: 7vw;
+  font-family: 'Montserrat SemiBold', sans-serif;
+  animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;
+  animation-delay: 1.5s;
 }
 .page-title h1 span {
-  border-bottom: 13px solid #DFAE7D;
+  border-bottom: 12px solid #DFAE7D;
   padding-bottom: .1rem;
+  animation:focus-in-expand .8s cubic-bezier(.25,.46,.45,.94) both;
+  animation-delay: 2.7s;
 }
-.page-title .underline {
-  position: absolute;
 
-  width: 60%;
-  height: 2px;
-  background: #b86e20;
-  opacity: .6;
-}
+@keyframes focus-in-expand{0%{letter-spacing:-.5em;filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
 
 /* EXPERIÊNCIAS EM COLUNAS */
 .experiences {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 8vw;
+  gap: 7.5vw;
   margin-top: 2rem;
 }
 
@@ -218,7 +221,6 @@ main {
   font-size: 2.2vw;
   font-family: 'Montserrat Bold', sans-serif;
   font-weight: 600;
-  text-transform: lowercase;
   margin-bottom: .4rem;
 }
 
@@ -243,7 +245,7 @@ main {
   padding-left: 1.2rem;
 }
 .exp-card ul li {
-  max-width: 80%;
+  max-width: 90%;
   position: relative;
   padding-left: 1.2rem;
   margin-bottom: .8rem;
@@ -259,3 +261,20 @@ main {
   font-size: 1rem;
   line-height: 1;
 }
+
+.exp-card.nn{
+  animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;
+  animation-delay: 2.5s;
+}
+
+.exp-card.ic{
+  animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;
+  animation-delay: 2.7s;
+}
+
+.exp-card.central-it{
+  animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;
+  animation-delay: 2.9s;
+}
+
+@keyframes text-focus-in{0%{filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
