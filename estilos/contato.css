@@ -1,0 +1,159 @@
+/* experiencia.css */
+
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Light';
+  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat SemiBold';
+  src: url('../fontes/Montserrat_Alternates/MontserratAlternates-SemiBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  /* imagem de fundo atrás de tudo */
+  background-color: #000;
+  color: #fff;
+}
+
+
+/* ─── HEADER & NAV ─── */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.774);
+  padding: 20px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* permite quebrar se necessário */
+}
+
+.logo { font-size:1.5vw; font-weight:bold; color:#fff }
+.logo span { color:#B45E2A }
+
+nav ul { display:flex; gap:2vw; list-style:none }
+
+
+nav a {
+  color:#fff; text-decoration:none; letter-spacing: 0.15em;
+  transition: color .3s;
+}
+
+nav a.active,
+nav a:hover { color:#B45E2A; font-weight:600 }
+
+
+/* 1) Garante que o <li> funcione como referência para o absoluto */
+nav ul li.has-submenu {
+  position: relative; /* :contentReference[oaicite:0]{index=0} */
+}
+
+/* 1) Garante que o link fique acima do submenu */
+.has-submenu > a {
+  position: relative;
+  z-index: 2;
+}
+
+/* 1) sempre block, mas escondido via opacity & scaleY */
+.has-submenu .submenu {
+  visibility: hidden;
+  opacity: 0;
+  /* posicionamento igual ao que você já tinha */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%) scaleY(0);
+  transform-origin: center top;
+  
+  /* tamanho e estilo como antes */
+  width: 150px;
+  background: linear-gradient(to bottom, #11091D 15%, #B45E2A 80%);
+  border: 1px solid #B45E2A;
+  border-radius: 5px;
+  padding: 3rem 0.5rem 0.5rem;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  z-index: 1;
+
+  /* 2) animação de crescimento + fade */
+  transition: transform 0.4s ease-out 0.1s,
+              opacity   0.3s ease-out  0.1s,
+              visibility 0s linear      0.5s; 
+  /* visibility só troca depois que a animação termina */
+}
+
+/* 3) mostra no hover, invertendo delays */
+.has-submenu:hover .submenu {
+  visibility: visible;  /* imediatamente */
+  opacity: 1;           /* fade in */
+  transform: translate(-50%, -20%) scaleY(1); /* cresce verticalmente */
+  transition-delay: 0.1s, 0.2s, 0s; 
+  /* opacity tem leve delay pra dar “peso”,
+     visibility volta direto antes de aparecer */
+}
+
+
+/* links internos */
+.has-submenu .submenu a {
+  font-family: 'Montserrat Alternates', sans-serif;
+  display: block;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 0.4rem 0;
+  margin-top: 0.3rem;
+  text-align: center;
+  font-size: 0.85rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* hover / ativo */
+.has-submenu .submenu a:hover,
+.has-submenu .submenu .sub-active {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+/* Canvas de fundo estilo "beams" */
+#beams {
+  position: fixed;
+  inset: 0;
+  z-index: -1;        /* fica atrás de tudo */
+  pointer-events: none;
+  background: #000;   /* base escura */
+}
