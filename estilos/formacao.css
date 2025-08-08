@@ -312,7 +312,7 @@ nav ul li.has-submenu {
   font-size: 1.22vw;
   display: flex;
   flex-direction: column;
-  gap: 1vw;
+  gap: 2vw;
   padding-bottom: 2.5vw;
   animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;
   animation-delay: 5.8s;
