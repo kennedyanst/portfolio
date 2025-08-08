@@ -149,11 +149,30 @@ nav ul li.has-submenu {
   font-weight: 600;
 }
 
-/* Canvas de fundo estilo "beams" */
-#beams {
+/* Garante que o wrapper ocupe a tela e permita um fundo fixo atrás */
+.page-bg {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden; /* evita qualquer overflow do conteúdo */
+}
+
+.beams-iframe{
   position: fixed;
   inset: 0;
-  z-index: -1;        /* fica atrás de tudo */
-  pointer-events: none;
-  background: #000;   /* base escura */
+  width: 100%;
+  height: 100%;
+  border: 0;
+  z-index: -2;           /* atrás de tudo */
+  pointer-events: none;  /* não captura cliques */
+}
+
+/* (opcional) uma leve máscara para escurecer diagonal */
+.page-bg::after{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(1200px 800px at 85% 90%, rgba(0,0,0,.55), transparent 60%),
+    linear-gradient(135deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,0) 40%);
 }

@@ -1,0 +1,10 @@
+/* Faz o Canvas preencher a tela e ficar transparente/aceitar overlay */
+html, body, #root { height: 100%; margin: 0; background: transparent; }
+
+.beams-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  pointer-events: none; /* não bloquear cliques do site principal */
+}
