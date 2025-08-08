@@ -102,7 +102,7 @@ nav ul li.has-submenu {
   
   /* tamanho e estilo como antes */
   width: 150px;
-  background: linear-gradient(to bottom, #11091D 15%, #989898 80%);
+  background: linear-gradient(to bottom, #11091D 15%, #353535 80%);
   border: 1px solid #989898;
   border-radius: 5px;
   padding: 3rem 0.5rem 0.5rem;
@@ -278,4 +278,12 @@ nav ul li.has-submenu {
 .sr-only{
   position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
   clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
+
+/* Fallback LinkedIn se a CDN for bloqueada */
+.glyph.linkedin{
+  --mask: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>\
+<path d='M20.452 20.452h-3.554V14.8c0-1.345-.027-3.075-1.877-3.075-1.88 0-2.168 1.463-2.168 2.973v5.754H9.3V9h3.414v1.561h.049c.476-.9 1.636-1.848 3.367-1.848 3.6 0 4.266 2.37 4.266 5.451v6.288zM5.337 7.433A2.065 2.065 0 013.27 5.367 2.065 2.065 0 015.337 3.3a2.065 2.065 0 012.067 2.067 2.067 2.067 0 01-2.067 2.066zM6.9 20.452H3.772V9H6.9v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.728v20.543C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.728C24 .774 23.2 0 22.222 0h.003z'/>\
+</svg>");
 }
