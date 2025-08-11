@@ -46,10 +46,11 @@ header {
 
 nav ul {
   display: flex;
-  gap: 2rem;
+  gap: 2vw;
   list-style: none;
 }
 nav a {
+  font-size: 0.7vw;
   color: #fff;
   text-decoration: none;
   font-weight: 300;
@@ -84,7 +85,7 @@ nav ul li.has-submenu {
   transform-origin: center top;
   
   /* tamanho e estilo como antes */
-  width: 150px;
+  width: 8vw;
   background: linear-gradient(to bottom, #11091D 15%, #057f83 80%);
   border: 1px solid #09F5FF;
   border-radius: 5px;
@@ -121,7 +122,7 @@ nav ul li.has-submenu {
   padding: 0.4rem 0;
   margin-top: 0.3rem;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.7vw;
   transition: background 0.3s, color 0.3s;
 }
 

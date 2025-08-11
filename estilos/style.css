@@ -58,6 +58,7 @@ nav ul {
 }
 
 nav a {
+  font-size: 0.7vw;
   text-decoration: none;
   color: #ffffff;
   font-weight: 300;
@@ -76,16 +77,16 @@ nav a.active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
-  margin-top: 170px;
-  margin-left: 200px;
+  gap: 4vw;
+  margin-top: 12vw;
+  margin-left: 12vw;
 }
 
 
 .about-text h1 {
   font-size: 5vw;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 2vw;
   letter-spacing: 2px;
   animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both}
 
@@ -153,7 +154,7 @@ nav ul li.has-submenu > a {
   transform-origin: center top;
   
   /* tamanho e estilo como antes */
-  width: 150px;
+  width: 8vw;
   background: linear-gradient(to bottom, #11091D 15%, #d35400 80%);
   border: 1px solid #d35400;
   border-radius: 5px;
@@ -191,7 +192,7 @@ nav ul li.has-submenu > a {
   padding: 0.4rem 0;
   margin-top: 0.3rem;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.7vw;
   transition: background 0.3s, color 0.3s;
 }
 

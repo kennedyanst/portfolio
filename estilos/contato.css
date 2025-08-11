@@ -70,6 +70,7 @@ nav ul { display:flex; gap:2vw; list-style:none }
 
 
 nav a {
+  font-size: 0.7vw;
   color:#fff; text-decoration:none; letter-spacing: 0.15em;
   transition: color .3s;
 }
@@ -101,7 +102,7 @@ nav ul li.has-submenu {
   transform-origin: center top;
   
   /* tamanho e estilo como antes */
-  width: 150px;
+  width: 8vw;
   background: linear-gradient(to bottom, #11091D 15%, #353535 80%);
   border: 1px solid #989898;
   border-radius: 5px;
@@ -138,7 +139,7 @@ nav ul li.has-submenu {
   padding: 0.4rem 0;
   margin-top: 0.3rem;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.7vw;
   transition: background 0.3s, color 0.3s;
 }
 
@@ -180,8 +181,7 @@ nav ul li.has-submenu {
 /* ====== HERO (título, texto e ícones) ====== */
 .contact-hero{
   position: relative;
-  z-index: 1;                 /* acima do background */
-  max-width: 880px;
+  z-index: 1; 
   padding: 180px 130px 80px;   /* espaço do header + margem esquerda bonita */
 }
 
@@ -189,7 +189,7 @@ nav ul li.has-submenu {
   font-family: 'Montserrat Bold', system-ui, sans-serif;
   font-size: 9vw;
   line-height: .95;
-  letter-spacing: .5px;
+  letter-spacing: 1.5px;
   color: #fff;
   margin: 0 0 40px;
   text-shadow: 0 10px 40px rgba(0,0,0,.55);
