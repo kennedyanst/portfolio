@@ -263,6 +263,7 @@ nav ul li.has-submenu {
 
   /* por cima da cor, a imagem */
   background-image: url('../cursos-comple.png');
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
