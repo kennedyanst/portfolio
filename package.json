@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Portfolio",
+  "homepage": "https://kennedyanst.github.io/portfolioV2",  
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
