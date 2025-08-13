@@ -56,7 +56,7 @@ body, html {
 }
 
 #proj5:checked ~ .page-bg {
-  background-image: url('../imagem_fundo_projetos5.png');
+  background-image: url('../imagem_fundo_projetos5.webp');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
