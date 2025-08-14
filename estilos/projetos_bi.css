@@ -25,14 +25,14 @@ body, html {
 
 /* ========== FUNDO DINÂMICO ========== */
 .page-bg {
-  background-image: url('../imagem_fundo_projetos.png');
+  background-image: url('../backgrounds/img-fundo-pj1.jpg');
   background-size: cover;
   transition: background 0.5s ease;
   overflow: hidden;
   padding-bottom: 30px;
 }
 #proj2:checked ~ .page-bg {
-  background-image: url('../imagem_fundo_projetos2.png');
+  background-image: url('../backgrounds/img-fundo-pj2.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -40,7 +40,7 @@ body, html {
 }
 
 #proj3:checked ~ .page-bg {
-  background-image: url('../imagem_fundo_projetos3.png');
+  background-image: url('../backgrounds/img-fundo-pj3.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -48,7 +48,7 @@ body, html {
 }
 
 #proj4:checked ~ .page-bg {
-  background-image: url('../imagem_fundo_projetos4.png');
+  background-image: url('../backgrounds/img-fundo-pj4.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -56,7 +56,7 @@ body, html {
 }
 
 #proj5:checked ~ .page-bg {
-  background-image: url('../imagem_fundo_projetos5.webp');
+  background-image: url('../backgrounds/img-fundo-pj5.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

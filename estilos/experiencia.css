@@ -43,7 +43,7 @@ body, html {
 
 body {
   /* imagem de fundo atrás de tudo */
-  background-image: url('../imagem_fundo_experiencia.png');
+  background-image: url('../backgrounds/img-fundo-exp.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;

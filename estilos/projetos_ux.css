@@ -17,7 +17,7 @@
 * { margin:0; padding:0; box-sizing:border-box }
 body, html {
   font-family: 'Poppins', sans-serif;
-  background: #010101 url('../imagem_fundo_ux.png') center/cover no-repeat;
+  background: #010101 url('../backgrounds/img-fundo-ux.jpg') center/cover no-repeat;
   background-attachment: fixed;
   color: #eee;
 }
