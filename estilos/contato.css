@@ -71,8 +71,11 @@ nav ul { display:flex; gap:2vw; list-style:none }
 
 nav a {
   font-size: 0.7vw;
-  color:#fff; text-decoration:none; letter-spacing: 0.15em;
+  color:#fff; 
+  text-decoration:none; 
+  letter-spacing: 0.15vw;
   transition: color .3s;
+  font-weight: 300;
 }
 
 nav a.active,
