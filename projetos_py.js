@@ -44,8 +44,8 @@ cards.forEach(card => {
     else if (card.classList.contains('card-auto')) {
       mainImg.src    = './imagens/python_r/auto-capa.png';
       mainImg.alt    = 'Automação com Python/R';
-      p1.textContent = 'Automatizamos tarefas repetitivas, desde raspagem web até geração de relatórios e envio de e-mail.';
-      p2.textContent = 'Utilizando as bibliotecas Selenium, BeautifulSoup e Requests, conseguimos extrair dados de sites, processar informações e gerar relatórios automatizados.';
+      p1.textContent = 'Consigo utilizar scripts para automatizar tarefas repetitivas, desde raspagem web até geração de relatórios e envio de e-mail.';
+      p2.textContent = 'Utilizando as bibliotecas Selenium, BeautifulSoup e Requests, posso extrair dados de sites, processar informações e gerar relatórios automatizados.';
       p3.textContent = 'Agendamento de execuções, envio de e-mails e integração com outras ferramentas são algumas das funcionalidades que implementei.';
     }
   });

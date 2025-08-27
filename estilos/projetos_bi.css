@@ -145,7 +145,7 @@ nav a:hover {
 
 /* ========== INTRODUÇÃO ========== */
 main.projects {
-  padding-top: 140px; /* para não ficar atrás do header */
+  padding-top: 120px; /* para não ficar atrás do header */
 }
 .projects-intro {
   display: flex;
@@ -156,11 +156,11 @@ main.projects {
 .intro-text h1 {
   font-family: 'Montserrat Alternates', sans-serif;
   font-size: 6.5vw;
-  line-height: 1.4;
   color: #8e6de5;
   transition: color 0.3s;
   animation: initialAnimation 2s ease-in-out;
 }
+
 
 @keyframes initialAnimation {
   0% { opacity: 0; transform: translateY(-20px); }
@@ -190,10 +190,11 @@ main.projects {
   font-family: 'Montserrat Black', sans-serif;
   font-weight: 800;
   font-size: 6vw;
+  margin-top: 2vw;
 }
 .intro-paragraphs {
   max-width: 35%;
-  margin-bottom: 2.2vw;
+  margin-top: 1.3vw;
   margin-right: 2.2vw;
   animation: aparecer 1.5s ease-in-out;
 }
@@ -211,7 +212,7 @@ main.projects {
 .intro-paragraphs p {
   color: #ccc;
   font-size: 1.1vw;
-  line-height: 1.6;
+  line-height: 2vw;
   text-align: justify;
   margin-bottom: 1.5rem;
   }
