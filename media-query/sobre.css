@@ -1,0 +1,11 @@
+@media screen and (max-width: 768px) {
+    body, html{
+        background-image: url("../backgrounds-mq/sobre.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+
+}
