@@ -1,11 +1,131 @@
-@media screen and (max-width: 768px) {
-    body, html{
-        background-image: url("../backgrounds-mq/sobre.jpg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
+/* ======= MOBILE (<= 768px) ======= */
+@media (max-width: 768px) {
+
+  /* Fundo mobile (mantém o que você já tinha) */
+  html, body {
+    background-image: url("../backgrounds-mq/sobre.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  :root { --pad: 20px; }
 
 
+  /* =================== LOGO: maior no canto inferior direito =================== */
+  header .logo {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 1100;
+    font-size: clamp(28px, 8.5vw, 40px); /* maior no mobile */
+    line-height: 1;
+    transform-origin: right bottom;
+    /* pequeno brilho para destacar sobre fundos escuros */
+    text-shadow:
+      0 1px 0 rgba(255,255,255,.03),
+      0 0 24px rgba(255,140,0,.25);
+  }
+
+  /* garante que o header não “empurre” o conteúdo */
+  header {
+    position: relative;
+    z-index: 1000;
+    background: transparent;
+  }
+
+  /* =================== NAV: off-canvas “hambúrguer” sem HTML/JS =================== */
+
+  /* Container do nav: vira gaveta à esquerda */
+  header nav {
+    position: fixed;
+    inset: 0 auto 0 0;      /* top:0; left:0; bottom:0 */
+    width: 78vw;
+    max-width: 340px;
+    transform: translateX(-100%);
+    transition: transform .35s ease;
+    background: linear-gradient(180deg, rgba(5,7,11,.85), rgba(5,7,11,.75));
+    backdrop-filter: blur(10px) saturate(140%);
+    -webkit-backdrop-filter: blur(10px) saturate(140%);
+    border-right: 1px solid rgba(255,255,255,.08);
+    padding: 84px 20px 24px; /* espaço para respiro superior */
+    z-index: 1050;
+  }
+
+  /* Empilha os links em coluna e com alvo confortável */
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  header nav a {
+    display: block;
+    padding: 12px 8px;
+    font-size: 1.05rem;
+    letter-spacing: .04em;
+  }
+
+  /* --- Trigger sem mexer no HTML ---
+     1) Tocar/FOCAR a logo abre o menu (CSS :has).
+     2) Hover como fallback em desktop touchpad. */
+  header:has(.logo:focus) nav,
+  header:hover nav {
+    transform: translateX(0);
+  }
+
+  /* Mostra um “área de toque” visual na logo (dica de uso) */
+  header .logo {
+    outline: none; /* remover outline padrão */
+  }
+  header .logo:focus {
+    filter: drop-shadow(0 0 12px rgba(255,140,0,.35));
+  }
+
+  /* Overlay para escurecer o fundo enquanto o menu está aberto */
+  header::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease;
+    z-index: 1040;
+  }
+  header:has(.logo:focus)::before,
+  header:hover::before {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Empurra o conteúdo principal um pouco para cima
+     (já que a logo ocupa o canto inferior direito) */
+  main {
+    padding-bottom: 90px;
+  }
+
+  .about {
+    max-width: 100%;
+    margin: auto;
+    align-items: center;
+  }
+    .about-text h1{
+    font-size: 7vw;
+    text-align: center;
+    margin-top: 20vw;
+  }
+
+  .about-text h2{
+    font-size: 5vw;
+    text-align: center;
+    margin-top: 10vw;
+  }
+
+  .about-text p{
+    font-size: 4vw;
+    text-align: justify;
+    margin: auto;
+    max-width: 90%;
+  }
 }
