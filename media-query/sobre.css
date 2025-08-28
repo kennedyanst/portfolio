@@ -10,122 +10,89 @@
     background-attachment: fixed;
   }
 
-  :root { --pad: 20px; }
-
-
-  /* =================== LOGO: maior no canto inferior direito =================== */
-  header .logo {
-    position: fixed;
-    right: 16px;
-    bottom: 16px;
-    z-index: 1100;
-    font-size: clamp(28px, 8.5vw, 40px); /* maior no mobile */
-    line-height: 1;
-    transform-origin: right bottom;
-    /* pequeno brilho para destacar sobre fundos escuros */
-    text-shadow:
-      0 1px 0 rgba(255,255,255,.03),
-      0 0 24px rgba(255,140,0,.25);
+  /* ÍCONE CENTRAL para abrir o menu (reaproveitando .logo) */
+  :root{
+    --menu-icon: url("../backgrounds-mq/icon-menu.png");  /* <-- ajuste o caminho */
   }
 
-  /* garante que o header não “empurre” o conteúdo */
-  header {
-    position: relative;
-    z-index: 1000;
-    background: transparent;
+  header .logo{
+    position: fixed;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 56px;
+    height: 56px;
+    background: var(--menu-icon) center/contain no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow:
+      0 2px 10px rgba(0,0,0,.35),
+      inset 0 0 18px rgba(255,255,255,.08);
+    z-index: 1060;         /* acima do conteúdo */
+    cursor: pointer;
+    outline: none;
   }
 
-  /* =================== NAV: off-canvas “hambúrguer” sem HTML/JS =================== */
-
-  /* Container do nav: vira gaveta à esquerda */
-  header nav {
+  /* Gaveta lateral (mantém seu visual) */
+  header nav{
     position: fixed;
-    inset: 0 auto 0 0;      /* top:0; left:0; bottom:0 */
+    inset: 0 auto 0 0;
     width: 78vw;
     max-width: 340px;
     transform: translateX(-100%);
     transition: transform .35s ease;
-    background: linear-gradient(180deg, rgba(5,7,11,.85), rgba(5,7,11,.75));
+    background: linear-gradient(180deg, rgba(5,7,11,.88), rgba(5,7,11,.78));
     backdrop-filter: blur(10px) saturate(140%);
     -webkit-backdrop-filter: blur(10px) saturate(140%);
     border-right: 1px solid rgba(255,255,255,.08);
-    padding: 84px 20px 24px; /* espaço para respiro superior */
-    z-index: 1050;
+    padding: 88px 18px 22px;
+    z-index: 1050;         /* sobre a logo quando aberto */
   }
+  header nav ul{ display:flex; flex-direction:column; gap:12px; }
+  header nav a{ display:block; padding:12px 10px; font-size:1.06rem; }
 
-  /* Empilha os links em coluna e com alvo confortável */
-  header nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  header nav a {
-    display: block;
-    padding: 12px 8px;
-    font-size: 1.05rem;
-    letter-spacing: .04em;
-  }
-
-  /* --- Trigger sem mexer no HTML ---
-     1) Tocar/FOCAR a logo abre o menu (CSS :has).
-     2) Hover como fallback em desktop touchpad. */
+  /* ABRIR MENU com 1 toque: foco na logo ou foco dentro do nav */
   header:has(.logo:focus) nav,
-  header:hover nav {
+  header:has(nav:focus-within) nav{
     transform: translateX(0);
   }
 
-  /* Mostra um “área de toque” visual na logo (dica de uso) */
-  header .logo {
-    outline: none; /* remover outline padrão */
-  }
-  header .logo:focus {
-    filter: drop-shadow(0 0 12px rgba(255,140,0,.35));
+  /* Logo fica atrás do menu quando aberto */
+  header:has(.logo:focus) .logo,
+  header:has(nav:focus-within) .logo{
+    z-index: 1030;
   }
 
-  /* Overlay para escurecer o fundo enquanto o menu está aberto */
-  header::before {
-    content: "";
+  /* Overlay clicável atrás da gaveta */
+  header::before{
+    content:"";
     position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.35);
-    opacity: 0;
-    pointer-events: none;
+    inset:0;
+    background: rgba(0,0,0,.38);
+    opacity:0;
+    pointer-events:none;
     transition: opacity .25s ease;
-    z-index: 1040;
+    z-index:1040;
   }
   header:has(.logo:focus)::before,
-  header:hover::before {
-    opacity: 1;
-    pointer-events: auto;
+  header:has(nav:focus-within)::before{
+    opacity:1;
+    pointer-events:auto;
   }
 
-  /* Empurra o conteúdo principal um pouco para cima
-     (já que a logo ocupa o canto inferior direito) */
-  main {
-    padding-bottom: 90px;
-  }
+  /* ============ SUBMENU .has-submenu (acordeão) ============ */
+  
 
-  .about {
-    max-width: 100%;
-    margin: auto;
-    align-items: center;
-  }
-    .about-text h1{
-    font-size: 7vw;
-    text-align: center;
-    margin-top: 20vw;
-  }
+  /* Conteúdo principal: respiro no final */
+  main{ padding-bottom: 96px; }
 
-  .about-text h2{
-    font-size: 5vw;
-    text-align: center;
-    margin-top: 10vw;
-  }
+  /* Títulos e texto centralizados (como você pediu antes) */
+  .about{ max-width: 100%; margin: auto; align-items: center; }
+  .about-text h1{ font-size: 7vw; text-align: center; margin-top: 20vw; }
+  .about-text h2{ font-size: 5vw; text-align: center; margin-top: 10vw; }
+  .about-text p{font-size: 4vw; text-align: justify; margin: auto; max-width: 90%;}
 
-  .about-text p{
-    font-size: 4vw;
-    text-align: justify;
-    margin: auto;
-    max-width: 90%;
-  }
 }
+
+
