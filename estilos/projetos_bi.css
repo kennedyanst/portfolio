@@ -695,15 +695,4 @@ nav ul li {
 #proj4:checked ~ .page-bg main .example-section .embed-ratio { border-color: #49f842; }
 #proj5:checked ~ .page-bg main .example-section .embed-ratio { border-color: #5261F0; }
 
-/* Responsivo */
-@media (max-width: 980px) {
-  .example-grid {
-    width: 92vw;
-    flex-direction: column;
-  }
-  .example-text {
-    max-width: 100%;
-    font-size: 0.98rem;
-    line-height: 1.6rem;
-  }
-}
+
