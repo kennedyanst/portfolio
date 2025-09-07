@@ -630,3 +630,80 @@ nav ul li {
   color: #FFFFFF;
   font-weight: 600;
 }
+
+/* ========== EXEMPLO (título entre linhas + texto + iframe) ========== */
+.example-section {
+  margin: 3.5rem auto 2rem;
+}
+
+.example-grid {
+  width: 95vw;
+  margin: 0 auto 3rem;
+  display: flex;
+  align-items: stretch;
+  gap: 2rem;
+}
+
+.example-text {
+  flex: 1;
+  max-width: 40%;
+  color: #ccc;
+  font-size: 1.05vw;
+  line-height: 1.9vw;
+  text-align: justify;
+}
+
+
+.example-embed {
+  flex: 1.6;
+  display: flex;
+}
+
+.embed-ratio {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #8e6de5;           /* cor padrão (proj1) */
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35),
+              inset 0 0 20px rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px) saturate(160%);
+}
+
+.embed-ratio iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.embed-ratio img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .9;
+}
+
+/* Cores dinâmicas por projeto (igual ao restante do site) */
+#proj2:checked ~ .page-bg main .example-section .embed-ratio { border-color: #F43737; }
+#proj3:checked ~ .page-bg main .example-section .embed-ratio { border-color: #DA9AA8; }
+#proj4:checked ~ .page-bg main .example-section .embed-ratio { border-color: #49f842; }
+#proj5:checked ~ .page-bg main .example-section .embed-ratio { border-color: #5261F0; }
+
+/* Responsivo */
+@media (max-width: 980px) {
+  .example-grid {
+    width: 92vw;
+    flex-direction: column;
+  }
+  .example-text {
+    max-width: 100%;
+    font-size: 0.98rem;
+    line-height: 1.6rem;
+  }
+}
