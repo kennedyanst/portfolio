@@ -1,8 +1,9 @@
 /* ======= MOBILE (<= 768px) ======= */
 @media (max-width: 768px) {
-
-  /* Fundo mobile (mantém o que você já tinha) */
+  
+  /* Fundo mobile */
   html, body {
+    font-family: 'Poppins', sans-serif;
     background-image: url("../backgrounds-mq/sobre.jpg");
     background-position: center;
     background-size: cover;
@@ -10,12 +11,12 @@
     background-attachment: fixed;
   }
 
-  /* ÍCONE CENTRAL para abrir o menu (reaproveitando .logo) */
-  :root{
-    --menu-icon: url("../backgrounds-mq/icon-menu.png");  /* <-- ajuste o caminho */
+  /* ÍCONE CENTRAL para abrir o menu */
+  :root {
+    --menu-icon: url("../backgrounds-mq/icon-menu.png");  /* ajuste o caminho */
   }
 
-  header .logo{
+  header .logo {
     position: fixed;
     top: 18px;
     left: 50%;
@@ -27,72 +28,169 @@
     overflow: hidden;
     border-radius: 14px;
     box-shadow:
-      0 2px 10px rgba(0,0,0,.35),
-      inset 0 0 18px rgba(255,255,255,.08);
-    z-index: 1060;         /* acima do conteúdo */
+      0 2px 10px rgba(0, 0, 0, 0.35),
+      inset 0 0 18px rgba(255, 255, 255, 0.08);
+    z-index: 1060; /* acima do conteúdo */
     cursor: pointer;
     outline: none;
   }
 
-  /* Gaveta lateral (mantém seu visual) */
-  header nav{
+  /* Menu lateral (gaveta) */
+  header nav {
     position: fixed;
     inset: 0 auto 0 0;
     width: 78vw;
     max-width: 340px;
     transform: translateX(-100%);
-    transition: transform .35s ease;
-    background: linear-gradient(180deg, rgba(5,7,11,.88), rgba(5,7,11,.78));
+    transition: transform 0.35s ease;
+    background: linear-gradient(180deg, rgba(5, 7, 11, 0.88), rgba(5, 7, 11, 0.78));
     backdrop-filter: blur(10px) saturate(140%);
     -webkit-backdrop-filter: blur(10px) saturate(140%);
-    border-right: 1px solid rgba(255,255,255,.08);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
     padding: 88px 18px 22px;
-    z-index: 1050;         /* sobre a logo quando aberto */
+    z-index: 1050;
   }
-  header nav ul{ display:flex; flex-direction:column; gap:12px; }
-  header nav a{ display:block; padding:12px 10px; font-size:1.06rem; }
+
+  /* Links do menu */
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  header nav a {
+    display: block;
+    padding: 12px 10px;
+    font-size: 1.06rem;
+    color: #fff;  /* Definindo a cor do texto */
+  }
 
   /* ABRIR MENU com 1 toque: foco na logo ou foco dentro do nav */
   header:has(.logo:focus) nav,
-  header:has(nav:focus-within) nav{
+  header:has(nav:focus-within) nav {
     transform: translateX(0);
   }
 
   /* Logo fica atrás do menu quando aberto */
   header:has(.logo:focus) .logo,
-  header:has(nav:focus-within) .logo{
+  header:has(nav:focus-within) .logo {
     z-index: 1030;
   }
 
   /* Overlay clicável atrás da gaveta */
-  header::before{
-    content:"";
+  header::before {
+    content: "";
     position: fixed;
-    inset:0;
-    background: rgba(0,0,0,.38);
-    opacity:0;
-    pointer-events:none;
-    transition: opacity .25s ease;
-    z-index:1040;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.38);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 1040;
   }
+
   header:has(.logo:focus)::before,
-  header:has(nav:focus-within)::before{
-    opacity:1;
-    pointer-events:auto;
+  header:has(nav:focus-within)::before {
+    opacity: 1;
+    pointer-events: auto;
+  }
+    /* ======= SUBMENU (Acordeão) ======= */
+  
+  
+  /* 1. Transforma o <li> em um container de posicionamento */
+  .has-submenu {
+    position: relative;
   }
 
-  /* ============ SUBMENU .has-submenu (acordeão) ============ */
+  /* 2. Posiciona o submenu de forma absoluta em relação ao <li> */
+  .has-submenu .submenu {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #d35400;
+    transition: max-height 0.4s ease-out;
+    
+    /* --- A CORREÇÃO DEFINITIVA --- */
+    position: absolute; /* Posicionamento absoluto para ignorar o pai */
+    left: -18px;      /* Alinha com a borda esquerda da NAV (anula o padding) */
+    right: -18px;     /* Alinha com a borda direita da NAV (anula o padding) */
+    top: 100%;        /* Posiciona logo abaixo do link "PROJETOS" */
+    
+    /* Reseta/Limpa outros estilos */
+    width: auto;
+    transform: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  /* 3. Expande o submenu quando o item pai (li) recebe foco */
+  .has-submenu:focus-within .submenu {
+    max-height: 200px;
+  }
+
+  /* 4. Estiliza o link principal do submenu */
+  .has-submenu > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* 5. Adiciona e estiliza a seta */
+  .has-submenu > a::after {
+    content: '▼';
+    font-size: 0.6em;
+    transition: transform 0.3s ease;
+  }
+
+  /* 6. Gira a seta quando o submenu está aberto */
+  .has-submenu:focus-within > a::after {
+    transform: rotate(180deg);
+  }
   
+  /* 7. Estiliza os links do submenu */
+  .submenu a {
+    display: block;
+    padding: 14px 24px;
+    font-size: 0.9rem;
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 0;
+    margin-bottom: 0;
+  }
 
-  /* Conteúdo principal: respiro no final */
-  main{ padding-bottom: 96px; }
+  /* Remove a borda do último item */
+  .submenu a:last-child {
+    border-bottom: none;
+  }
 
-  /* Títulos e texto centralizados (como você pediu antes) */
-  .about{ max-width: 100%; margin: auto; align-items: center; }
-  .about-text h1{ font-size: 7vw; text-align: center; margin-top: 20vw; }
-  .about-text h2{ font-size: 5vw; text-align: center; margin-top: 10vw; }
-  .about-text p{font-size: 4vw; text-align: justify; margin: auto; max-width: 90%;}
+  /* Títulos e texto centralizados */
+  .about {
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+  }
 
+  .about-text h1 {
+    font-size: 7vw;
+    margin-top: 20vw;
+  }
+
+  .about-text h2 {
+    font-size: 5vw;
+    margin-top: 10vw;
+  }
+
+  .about-text p {
+    font-size: 4vw;
+    text-align: justify;
+    margin: auto;
+    max-width: 90%;
+  }
+
+  /* Espaço abaixo do conteúdo principal */
+  main {
+    padding-bottom: 96px;
+  }
 }
-
-
