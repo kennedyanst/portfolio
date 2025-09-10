@@ -663,9 +663,8 @@ nav ul li {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: 14px;
   overflow: hidden;
-  border: 1px solid #8e6de5;           /* cor padrão (proj1) */
+  border: 2px solid #8e6de5;           /* cor padrão (proj1) */
   background: rgba(255,255,255,0.06);
   box-shadow: 0 8px 32px rgba(0,0,0,0.35),
               inset 0 0 20px rgba(255,255,255,0.08);
