@@ -369,7 +369,7 @@ main.projects {
 }
 
 .proj-thumb:hover span {
-  font-size: 3rem;
+  font-size: 1.5vw;
   transition: font-size 0.7s;
   font-family: 'Montserrat Black', sans-serif;
 }
