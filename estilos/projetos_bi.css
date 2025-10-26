@@ -361,7 +361,7 @@ main.projects {
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
-  font-size: 3rem;
+  font-size: 1.5vw;
   white-space: nowrap;
 }
 .proj-thumb:hover {
