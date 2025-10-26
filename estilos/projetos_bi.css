@@ -113,7 +113,7 @@ header {
 }
 
 #proj6:checked ~ .page-bg header .logo span {
-  color: #ffffff;
+  color: #818181;
 }
 
 nav ul {
