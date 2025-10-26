@@ -357,7 +357,7 @@ main.projects {
 .proj-thumb span {
   font-family: 'Montserrat Alternates', sans-serif;
   position: absolute;
-  bottom: -4.2rem;
+  bottom: -2.3vw;
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
