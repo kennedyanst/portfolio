@@ -391,7 +391,7 @@ main.projects {
 #proj6:checked ~ .page-bg .thumbnails .proj6 span {
   font-family: 'Montserrat Black', sans-serif;
   transition: font-size 0.7s;
-  font-size: 3.5rem;
+  font-size: 2vw;
 }
 
 /* ① Área que *esconde* tudo que passar das bordas */
