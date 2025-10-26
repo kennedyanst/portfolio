@@ -116,6 +116,74 @@ header {
   color: #818181;
 }
 
+
+/* 1) Garante que o link fique acima do submenu */
+.has-submenu > a {
+  position: relative;
+  z-index: 2;
+}
+
+/* 1) sempre block, mas escondido via opacity & scaleY */
+.has-submenu .submenu {
+  visibility: hidden;
+  opacity: 0;
+  /* posicionamento igual ao que você já tinha */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%) scaleY(0);
+  transform-origin: center top;
+  
+  /* tamanho e estilo como antes */
+  width: 8vw;
+  background: linear-gradient(to bottom, #11091D 15%, #784CBC 80%);
+  border: 1px solid #784CBC;
+  border-radius: 5px;
+  padding: 3rem 0.5rem 0.5rem;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  z-index: 1;
+
+  /* 2) animação de crescimento + fade */
+  transition: transform 0.4s ease-out 0.1s,
+              opacity   0.3s ease-out  0.1s,
+              visibility 0s linear      0.5s; 
+  /* visibility só troca depois que a animação termina */
+}
+
+/* 3) mostra no hover, invertendo delays */
+.has-submenu:hover .submenu {
+  visibility: visible;  /* imediatamente */
+  opacity: 1;           /* fade in */
+  transform: translate(-50%, -20%) scaleY(1); /* cresce verticalmente */
+  transition-delay: 0.1s, 0.2s, 0s; 
+  /* opacity tem leve delay pra dar “peso”,
+     visibility volta direto antes de aparecer */
+}
+
+
+
+/* links internos */
+.has-submenu .submenu a {
+  font-family: 'Montserrat Alternates', sans-serif;
+  display: block;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 0.6rem 0;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.7vw;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* hover / ativo */
+.has-submenu .submenu a:hover,
+.has-submenu .submenu .sub-active {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
 nav ul {
   display: flex;
   gap: 2vw;
@@ -129,10 +197,16 @@ nav a {
   letter-spacing: 0.15vw;
   transition: color 0.3s;
 }
+
 nav a.active,
 nav a:hover {
-  color: #8e6de5;
   font-weight: 600;
+}
+
+
+#proj1:checked ~ .page-bg header nav a.active,
+#proj1:checked ~ .page-bg header nav a:hover {
+  color: #8e6de5;
 }
 
 #proj2:checked ~ .page-bg header nav a.active,
@@ -257,7 +331,7 @@ main.projects {
 .projects-heading h2 {
   font-family: 'Montserrat Black', sans-serif;
   color: #fff;
-  font-size: 5rem;
+  font-size: 2vw;
   letter-spacing: 2px;
   white-space: nowrap;
   margin: 0;
@@ -400,72 +474,6 @@ nav ul li {
 
 
 
-/* 1) Garante que o link fique acima do submenu */
-.has-submenu > a {
-  position: relative;
-  z-index: 2;
-}
-
-/* 1) sempre block, mas escondido via opacity & scaleY */
-.has-submenu .submenu {
-  visibility: hidden;
-  opacity: 0;
-  /* posicionamento igual ao que você já tinha */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -20%) scaleY(0);
-  transform-origin: center top;
-  
-  /* tamanho e estilo como antes */
-  width: 8vw;
-  background: linear-gradient(to bottom, #11091D 15%, #784CBC 80%);
-  border: 1px solid #784CBC;
-  border-radius: 5px;
-  padding: 3rem 0.5rem 0.5rem;
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-  z-index: 1;
-
-  /* 2) animação de crescimento + fade */
-  transition: transform 0.4s ease-out 0.1s,
-              opacity   0.3s ease-out  0.1s,
-              visibility 0s linear      0.5s; 
-  /* visibility só troca depois que a animação termina */
-}
-
-/* 3) mostra no hover, invertendo delays */
-.has-submenu:hover .submenu {
-  visibility: visible;  /* imediatamente */
-  opacity: 1;           /* fade in */
-  transform: translate(-50%, -20%) scaleY(1); /* cresce verticalmente */
-  transition-delay: 0.1s, 0.2s, 0s; 
-  /* opacity tem leve delay pra dar “peso”,
-     visibility volta direto antes de aparecer */
-}
-
-
-
-/* links internos */
-.has-submenu .submenu a {
-  font-family: 'Montserrat Alternates', sans-serif;
-  display: block;
-  color: #FFFFFF;
-  text-decoration: none;
-  padding: 0.6rem 0;
-  margin-top: 0.5rem;
-  text-align: center;
-  font-size: 0.7vw;
-  transition: background 0.3s, color 0.3s;
-}
-
-/* hover / ativo */
-.has-submenu .submenu a:hover,
-.has-submenu .submenu .sub-active {
-  color: #FFFFFF;
-  font-weight: 600;
-}
 
 /* ========== EXEMPLO (título entre linhas + texto + iframe) ========== */
 .example-section {
