@@ -361,7 +361,7 @@ main.projects {
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
-  font-size: 1.2vw;
+  font-size: 1.5vw;
   white-space: nowrap;
 }
 .proj-thumb:hover {
@@ -369,7 +369,7 @@ main.projects {
 }
 
 .proj-thumb:hover span {
-  font-size: 1.5vw;
+  font-size: 2vw;
   transition: font-size 0.7s;
   font-family: 'Montserrat Black', sans-serif;
 }
@@ -391,7 +391,7 @@ main.projects {
 #proj6:checked ~ .page-bg .thumbnails .proj6 span {
   font-family: 'Montserrat Black', sans-serif;
   transition: font-size 0.7s;
-  font-size: 1.5vw;
+  font-size: 2vw;
 }
 
 /* ① Área que *esconde* tudo que passar das bordas */
