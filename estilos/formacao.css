@@ -204,7 +204,7 @@ nav ul li.has-submenu {
 .cert-card {
   width: 35vw;
   height: 11.8vw;
-  border-radius: 16px;
+  border-radius: 10px;
   gap: 30vw;
   overflow: hidden;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
