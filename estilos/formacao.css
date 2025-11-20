@@ -187,6 +187,38 @@ nav ul li.has-submenu {
   margin-left: 1px;
 }
 
+.card-right {
+  grid-area: courses;
+  position: relative;
+  gap: 1vw;
+  width: 100%;
+  height: 80%;
+  margin-top: 8vw;
+  padding: 0 50px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 1º card em cima, último embaixo */
+  align-items: flex-end;          /* encosta os cards na borda direita */
+}
+
+.cert-card {
+  width: 35vw;
+  height: 11.8vw;
+  border-radius: 16px;
+  gap: 30vw;
+  overflow: hidden;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+  background: #000; /* fallback caso a imagem não carregue */
+}
+
+.cert-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
 .card {
   position: relative;
   display: flex;
@@ -247,14 +279,6 @@ nav ul li.has-submenu {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* CARD DIREITA */
-.card-right {
-  grid-area: courses;
-  position: relative;
-  width: 100%;
-  
 }
 
 .courses-card {
@@ -386,7 +410,6 @@ nav ul li.has-submenu {
 }
 
 
-/* RESPONSIVO */
 @media (max-width: 900px) {
   .formation-page {
     grid-template-columns: 1fr;
@@ -395,18 +418,35 @@ nav ul li.has-submenu {
       "cards"
       "courses";
   }
+
   .cards-left,
   .card-right {
     width: 100%;
   }
+
+  .card-right {
+    padding: 20px 0 0 0;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .cert-card {
+    width: 100%;
+    max-width: 642px;
+  }
+
   .card {
     flex-direction: column;
   }
+
   .card-image {
     width: 100%;
   }
+
   .card-image img {
     border-radius: 0 0 15px 15px;
   }
 }
+
 
