@@ -192,6 +192,7 @@ nav ul li.has-submenu {
   position: relative;
   gap: 1vw;
   width: 100%;
+  height: 35vw;
   margin-top: 7vw;
   padding: 0 1vw 0 0;
   display: flex;
