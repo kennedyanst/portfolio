@@ -183,7 +183,7 @@ nav ul li.has-submenu {
   display: flex;
   width: 95%;
   flex-direction: column;
-  gap: 30px;
+  gap: 1vw;
   margin-left: 1px;
 }
 
