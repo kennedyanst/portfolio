@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projetos – Databricks</title>
+  <link rel="stylesheet" href="estilos/projetos_db.css" />
+  <link rel="shortcut icon" href="./favicons/favicon-pj.png" type="image/x-icon" />
+</head>
+<body>
+  <div class="page-bg">
+    <header>
+      <div class="logo">kennedy<span>anst.</span></div>
+
+      <nav aria-label="Menu principal">
+        <ul class="centered-nav">
+          <li><a href="index.html">SOBRE</a></li>
+
+          <li class="has-submenu">
+            <a href="projetos_bi.html" class="active">PROJETOS</a>
+            <div class="submenu">
+              <a href="projetos_bi.html">Power BI</a>
+              <a href="projetos_py.html">Python/R</a>
+              <a href="databricks.html" class="sub-active">Databricks</a>
+              <a href="projetos_ux.html">UX Design</a>
+            </div>
+          </li>
+
+          <li><a href="formacao.html">FORMAÇÃO</a></li>
+          <li><a href="experiencias.html">EXPERIÊNCIAS</a></li>
+          <li><a href="contato.html">CONTATOS</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="projects">
+      <section class="projects-intro" aria-label="Resumo do projeto Databricks">
+        <div class="intro-text">
+          <h1>DATABRICKS</h1>
+        </div>
+
+        <div class="intro-paragraphs">
+          <p>Projeto Bike Store Lakehouse: Engenharia de Dados com Azure e Databricks</p>
+        </div>
+      </section>
+
+      <section class="stack-section" aria-label="Stack tecnológica utilizada no projeto">
+        <h2>Stack Tecnológica</h2>
+        <ul>
+          <li><strong>Cloud:</strong> Azure (Resource Groups, ADLS Gen2, Access Connector).</li>
+          <li><strong>Processamento:</strong> Apache Spark (PySpark e Spark SQL) no Azure Databricks.</li>
+          <li><strong>Armazenamento:</strong> Delta Lake (Transações ACID e Time Travel).</li>
+          <li><strong>Governança:</strong> Unity Catalog (Catálogos, Schemas e Volumes).</li>
+          <li><strong>Orquestração:</strong> Databricks Jobs (Workflows) e Azure Data Factory (ADF).</li>
+          <li><strong>BI:</strong> Power BI e Figma (Design de UI/UX).</li>
+        </ul>
+      </section>
+
+      <section class="project-showcase" aria-label="Detalhes visuais do projeto Databricks">
+        <div class="showcase-media">
+          <div class="showcase-controls" aria-label="Controles do projeto">
+            <button type="button" id="previousProject" aria-label="Imagem anterior">&lt;</button>
+            <button type="button" id="nextProject" aria-label="Próxima imagem">&gt;</button>
+          </div>
+
+          <div class="showcase-image-card">
+            <img
+              id="projectImage"
+              src="imagens/databricks/jobs-pipeline.png"
+              alt="Print da etapa Jobs e Pipelines no Azure Databricks"
+            />
+          </div>
+        </div>
+
+        <!-- Conteúdo dinâmico controlado inteiramente pelo JS -->
+        <article class="showcase-content" aria-live="polite">
+          <h2 id="projectImageTitle"></h2>
+          <div id="projectImageDescription" class="showcase-description"></div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="databricks.js"></script>
+</body>
+</html>
