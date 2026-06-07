@@ -72,6 +72,14 @@ body, html {
   background-attachment: fixed;
 }
 
+#proj7:checked ~ .page-bg {
+  background-image: url('../backgrounds/img-fundo-pj4.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 /* ========== HEADER ========== */
 header {
   position: fixed;
@@ -114,6 +122,10 @@ header {
 
 #proj6:checked ~ .page-bg header .logo span {
   color: #818181;
+}
+
+#proj7:checked ~ .page-bg header .logo span {
+  color: #f7900b;
 }
 
 
@@ -234,6 +246,11 @@ nav a:hover {
   color: #ffffff;
 }
 
+#proj7:checked ~ .page-bg header nav a.active,
+#proj7:checked ~ .page-bg header nav a:hover {
+  color: #f7900b;
+}
+
 /* ========== INTRODUÇÃO ========== */
 main.projects {
   padding-top: 120px; /* para não ficar atrás do header */
@@ -274,6 +291,9 @@ main.projects {
 }
 #proj6:checked ~ .page-bg main .projects-intro h1 {
   color: #ffffff;
+}
+#proj7:checked ~ .page-bg main .projects-intro h1 {
+  color: #f7900b;
 }
 
 .intro-text h1 span {
@@ -379,7 +399,8 @@ main.projects {
 #proj3:checked ~ .page-bg .thumbnails .proj3,
 #proj4:checked ~ .page-bg .thumbnails .proj4,
 #proj5:checked ~ .page-bg .thumbnails .proj5,
-#proj6:checked ~ .page-bg .thumbnails .proj6 {
+#proj6:checked ~ .page-bg .thumbnails .proj6,
+#proj7:checked ~ .page-bg .thumbnails .proj7 {
   transform: translateY(-15px);
 }
 
@@ -388,7 +409,8 @@ main.projects {
 #proj3:checked ~ .page-bg .thumbnails .proj3 span,
 #proj4:checked ~ .page-bg .thumbnails .proj4 span,
 #proj5:checked ~ .page-bg .thumbnails .proj5 span,
-#proj6:checked ~ .page-bg .thumbnails .proj6 span {
+#proj6:checked ~ .page-bg .thumbnails .proj6 span,
+#proj7:checked ~ .page-bg .thumbnails .proj7 span {
   font-family: 'Montserrat Black', sans-serif;
   transition: font-size 0.7s;
   font-size: 2vw;
@@ -471,6 +493,12 @@ nav ul li {
   border-color: #ffffff;
 }
 
+/* PROJETO 7 (laranja) */
+#proj7:checked ~ .page-bg header nav ul li.has-submenu .submenu {
+  background: linear-gradient(to bottom, #11091D 0%, #f7900b 100%);
+  border-color: #f7900b;
+}
+
 
 
 
@@ -530,5 +558,5 @@ nav ul li {
 #proj4:checked ~ .page-bg main .example-section .embed-ratio { border-color: #FFA022; }
 #proj5:checked ~ .page-bg main .example-section .embed-ratio { border-color: #5261F0; }
 #proj6:checked ~ .page-bg main .example-section .embed-ratio { border-color: #ffffff; }
-
+#proj7:checked ~ .page-bg main .example-section .embed-ratio { border-color: #f7900b; }
 
