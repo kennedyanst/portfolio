@@ -80,6 +80,14 @@ body, html {
   background-attachment: fixed;
 }
 
+#proj8:checked ~ .page-bg {
+  background-image: url('../backgrounds/img-fundo-pj5.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 /* ========== HEADER ========== */
 header {
   position: fixed;
@@ -128,6 +136,9 @@ header {
   color: #f7900b;
 }
 
+#proj8:checked ~ .page-bg header .logo span {
+  color: #6f7df5;
+}
 
 /* 1) Garante que o link fique acima do submenu */
 .has-submenu > a {
@@ -251,6 +262,11 @@ nav a:hover {
   color: #f7900b;
 }
 
+#proj8:checked ~ .page-bg header nav a.active,
+#proj8:checked ~ .page-bg header nav a:hover {
+  color: #6f7df5;
+}
+
 /* ========== INTRODUÇÃO ========== */
 main.projects {
   padding-top: 120px; /* para não ficar atrás do header */
@@ -294,6 +310,9 @@ main.projects {
 }
 #proj7:checked ~ .page-bg main .projects-intro h1 {
   color: #f7900b;
+}
+#proj8:checked ~ .page-bg main .projects-intro h1 {
+  color: #6f7df5;
 }
 
 .intro-text h1 span {
@@ -400,7 +419,8 @@ main.projects {
 #proj4:checked ~ .page-bg .thumbnails .proj4,
 #proj5:checked ~ .page-bg .thumbnails .proj5,
 #proj6:checked ~ .page-bg .thumbnails .proj6,
-#proj7:checked ~ .page-bg .thumbnails .proj7 {
+#proj7:checked ~ .page-bg .thumbnails .proj7,
+#proj8:checked ~ .page-bg .thumbnails .proj8 {
   transform: translateY(-15px);
 }
 
@@ -410,7 +430,8 @@ main.projects {
 #proj4:checked ~ .page-bg .thumbnails .proj4 span,
 #proj5:checked ~ .page-bg .thumbnails .proj5 span,
 #proj6:checked ~ .page-bg .thumbnails .proj6 span,
-#proj7:checked ~ .page-bg .thumbnails .proj7 span {
+#proj7:checked ~ .page-bg .thumbnails .proj7 span,
+#proj8:checked ~ .page-bg .thumbnails .proj8 span {
   font-family: 'Montserrat Black', sans-serif;
   transition: font-size 0.7s;
   font-size: 2vw;
@@ -499,6 +520,11 @@ nav ul li {
   border-color: #f7900b;
 }
 
+/* PROJETO 8 (azul claro) */
+#proj8:checked ~ .page-bg header nav ul li.has-submenu .submenu {
+  background: linear-gradient(to bottom, #11091D 0%, #6f7df5 100%);
+  border-color: #6f7df5;
+}
 
 
 
@@ -559,4 +585,5 @@ nav ul li {
 #proj5:checked ~ .page-bg main .example-section .embed-ratio { border-color: #5261F0; }
 #proj6:checked ~ .page-bg main .example-section .embed-ratio { border-color: #ffffff; }
 #proj7:checked ~ .page-bg main .example-section .embed-ratio { border-color: #f7900b; }
+#proj8:checked ~ .page-bg main .example-section .embed-ratio { border-color: #6f7df5; }
 
